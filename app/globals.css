@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8f2ea;
+  --surface: #fffdf8;
+  --cream: #efe4d6;
+  --sand: #d8c3aa;
+  --warm-beige: #c9ae91;
+  --terracotta: #c8755b;
+  --soft-terracotta: #d99a82;
+  --sage: #7d876d;
+  --soft-sage: #a7ad98;
+  --brown: #5a3323;
+  --light-brown: #8a5a44;
+  --blush: #e5b8a9;
+  --line: #e2d4c4;
+  --ink: #241a15;
+  --font-heading: "Cormorant Garamond";
+  --font-body: Montserrat;
+  --font-script: Allura;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: Montserrat, Avenir, "Segoe UI", system-ui, sans-serif;
+  background: var(--background);
+  color: var(--brown);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+}
+
+.font-script {
+  font-family: Allura, "Segoe Script", "Brush Script MT", cursive;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: var(--blush);
+  color: var(--brown);
+}
+
+.botanical-wash {
+  background:
+    radial-gradient(circle at 12% 10%, rgba(217, 154, 130, 0.24), transparent 30%),
+    radial-gradient(circle at 88% 18%, rgba(125, 135, 109, 0.20), transparent 28%),
+    linear-gradient(135deg, #fffdf8 0%, #f8f2ea 56%, #efe4d6 100%);
+}
