@@ -1,6 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-background: #f8f2ea;
+  --color-surface: #fffdf8;
+  --color-cream: #efe4d6;
+  --color-sand: #d8c3aa;
+  --color-warm-beige: #c9ae91;
+  --color-terracotta: #c8755b;
+  --color-soft-terracotta: #d99a82;
+  --color-sage: #7d876d;
+  --color-soft-sage: #a7ad98;
+  --color-brown: #5a3323;
+  --color-light-brown: #8a5a44;
+  --color-blush: #e5b8a9;
+  --color-line: #e2d4c4;
+  --color-ink: #241a15;
+  --font-heading: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: Montserrat, Avenir, "Segoe UI", system-ui, sans-serif;
+  --font-script: Allura, "Segoe Script", "Brush Script MT", cursive;
+  --shadow-soft: 0 18px 45px rgb(90 51 35 / 0.08);
+  --shadow-lift: 0 26px 70px rgb(90 51 35 / 0.14);
+  --radius-card: 8px;
+  --spacing-18: 4.5rem;
+}
 
 :root {
   --background: #f8f2ea;
@@ -24,6 +47,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -34,6 +58,8 @@ body {
   color: var(--brown);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+  overflow-x: hidden;
 }
 
 h1,
@@ -52,6 +78,10 @@ h6 {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 button,

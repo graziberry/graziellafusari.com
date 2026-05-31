@@ -10,44 +10,46 @@ import { essentialDeliverables, pillars, processSteps } from "@/lib/site-content
 export default function HomePage() {
   return (
     <PageShell>
-      <section className="relative min-h-[86vh] overflow-hidden">
+      <section className="relative isolate min-h-[calc(100svh-72px)] overflow-hidden bg-ink">
         <Image
           src="/hero-interior.png"
           alt="Sala elegante com luz natural, plantas e texturas acolhedoras"
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-[58%_center]"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(36,26,21,0.86),rgba(90,51,35,0.58)_46%,rgba(90,51,35,0.10))]" />
-        <div className="relative mx-auto flex min-h-[86vh] max-w-7xl items-end px-5 pb-14 pt-28 md:px-8 md:pb-20">
-          <div className="max-w-3xl text-surface">
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-blush">
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(36,26,21,0.90)_0%,rgba(90,51,35,0.72)_38%,rgba(90,51,35,0.22)_72%,rgba(36,26,21,0.10)_100%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-ink/62 to-transparent" />
+
+        <div className="relative mx-auto flex min-h-[calc(100svh-72px)] max-w-7xl items-center px-5 py-16 md:px-8 md:py-20">
+          <div className="w-full max-w-[calc(100vw-40px)] text-surface drop-shadow-[0_2px_18px_rgba(36,26,21,0.32)] md:max-w-[760px]">
+            <p className="max-w-[18rem] text-[0.68rem] font-bold uppercase leading-6 tracking-[0.16em] text-blush md:max-w-[34rem] md:text-xs md:tracking-[0.22em]">
               Arquitetura terapêutica e interiores sensoriais
             </p>
-            <h1 className="mt-5 font-heading text-5xl font-semibold leading-[0.96] md:text-7xl">
+            <h1 className="mt-5 max-w-[11ch] font-heading text-[3.4rem] font-semibold leading-[0.92] md:text-[5.9rem]">
               Casas com beleza, presença e bem-estar.
             </h1>
-            <p className="mt-7 max-w-2xl text-base leading-8 text-surface/82 md:text-lg">
-              Graziella Fusari transforma ambientes por meio de um olhar que une função, estética,
-              biofilia, aromas e energia para criar espaços que acolhem a vida real.
+            <p className="mt-6 max-w-[21rem] text-base font-medium leading-8 text-surface/88 md:max-w-2xl md:text-lg">
+              Ambientes pensados para acolher a vida real, unindo função, estética, biofilia, aromas e
+              energia com delicadeza.
             </p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row">
               <Link
                 href="/contato"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-terracotta px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-surface transition hover:bg-soft-terracotta"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-terracotta px-6 py-3 text-[0.72rem] font-bold uppercase tracking-[0.13em] text-surface shadow-soft transition hover:bg-soft-terracotta"
               >
                 Agendar conversa
                 <ArrowRight size={16} />
               </Link>
               <Link
                 href="/servicos"
-                className="inline-flex items-center justify-center rounded-full border border-surface/35 px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] transition hover:bg-surface/10"
+                className="inline-flex min-h-12 items-center justify-center rounded-full border border-surface/55 px-6 py-3 text-[0.72rem] font-bold uppercase tracking-[0.13em] text-surface transition hover:bg-surface/12"
               >
                 Conhecer serviços
               </Link>
             </div>
-            <p className="mt-10 font-script text-4xl text-blush">
+            <p className="mt-8 max-w-[22rem] font-script text-[2.2rem] leading-none text-blush md:max-w-xl md:text-5xl">
               A casa revela. A pessoa aprofunda. O aroma ancora.
             </p>
           </div>
