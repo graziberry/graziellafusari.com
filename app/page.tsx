@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ContactCTA } from "@/components/ContactCTA";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
+import { ServiceOverviewCards } from "@/components/ServiceOverviewCards";
 import { architectureHighlights, homePillars, whatsappHref } from "@/lib/site-content";
 
 export const metadata: Metadata = {
@@ -49,7 +50,7 @@ export default function HomePage() {
                 Agendar conversa pelo WhatsApp
               </a>
               <Link
-                href="/arquitetura-terapeutica"
+                href="/servicos"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-surface/55 px-6 py-3 text-[0.72rem] font-bold uppercase tracking-[0.13em] text-surface transition hover:bg-surface/12"
               >
                 Conhecer os serviços
@@ -79,6 +80,26 @@ export default function HomePage() {
               A Arquitetura Terapêutica olha para a casa como parte ativa da sua experiência de vida.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="py-18 md:py-24">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <SectionHeading
+            eyebrow="Serviços"
+            title="Como posso cuidar do seu espaço e da sua energia"
+            subtitle="Escolha o caminho que mais conversa com o seu momento: transformar a casa, criar uma atmosfera sensorial ou iniciar um cuidado terapêutico individual."
+          />
+          <div className="mt-12">
+            <ServiceOverviewCards compact />
+          </div>
+          <Link
+            href="/servicos"
+            className="mt-10 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-brown px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-surface transition hover:bg-terracotta"
+          >
+            Entender qual serviço é ideal para mim
+            <ArrowRight size={16} />
+          </Link>
         </div>
       </section>
 

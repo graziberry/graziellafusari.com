@@ -21,15 +21,61 @@ export const contactEmail = "contato@graziellafusari.com";
 
 export const navLinks = [
   { href: "/", label: "Início" },
+  { href: "/processo", label: "Método" },
   { href: "/servicos", label: "Serviços" },
   { href: "/sobre", label: "Sobre" },
   { href: "/contato", label: "Contato" },
 ];
 
 export const serviceNavLinks = [
-  { href: "/arquitetura-terapeutica", label: "Arquitetura Terapêutica" },
-  { href: "/perfumaria-terapeutica", label: "Perfumaria Terapêutica" },
-  { href: "/terapias-individuais", label: "Terapias Individuais" },
+  {
+    href: "/servicos/arquitetura-terapeutica",
+    label: "Arquitetura Terapêutica",
+    microcopy: "Ambientes que cuidam",
+  },
+  {
+    href: "/servicos/perfumaria-terapeutica",
+    label: "Perfumaria Terapêutica",
+    microcopy: "Aromas e rituais sensoriais",
+  },
+  {
+    href: "/servicos/atendimentos-terapeuticos-individuais",
+    label: "Atendimentos Terapêuticos Individuais",
+    microcopy: "Cuidado energético e pessoal",
+  },
+];
+
+export const serviceOverviewCards = [
+  {
+    title: "Arquitetura Terapêutica",
+    summary: "Para transformar ambientes em espaços de acolhimento, equilíbrio e presença.",
+    description:
+      "Um olhar profundo para a casa como extensão da vida. A consultoria identifica bloqueios, excessos, necessidades práticas e sensoriais do ambiente, criando direcionamentos para que o espaço acolha melhor a rotina, o corpo e a energia de quem vive nele.",
+    cta: "Conhecer Arquitetura Terapêutica",
+    href: "/servicos/arquitetura-terapeutica",
+    featured: true,
+    icon: Home,
+  },
+  {
+    title: "Perfumaria Terapêutica",
+    summary: "Para criar aromas, rituais e experiências sensoriais conectadas ao espaço.",
+    description:
+      "A criação de aromas terapêuticos amplia a experiência do cuidado no espaço. Por meio de fragrâncias naturais, rituais olfativos e composições sensoriais, o ambiente ganha presença, memória e identidade.",
+    cta: "Conhecer Perfumaria Terapêutica",
+    href: "/servicos/perfumaria-terapeutica",
+    featured: false,
+    icon: Flower2,
+  },
+  {
+    title: "Atendimentos Terapêuticos Individuais",
+    summary: "Para processos pessoais de cuidado energético, escuta e reorganização interna.",
+    description:
+      "Sessões voltadas ao cuidado energético, emocional e pessoal, apoiando processos de reorganização interna, clareza e reconexão. Um espaço de escuta sensível para quem busca cuidado além do ambiente físico.",
+    cta: "Conhecer Atendimentos",
+    href: "/servicos/atendimentos-terapeuticos-individuais",
+    featured: false,
+    icon: HeartHandshake,
+  },
 ];
 
 export const architectureServices: Array<{
@@ -101,22 +147,22 @@ export const homePillars = [
     icon: Home,
     title: "Arquitetura Terapêutica",
     text: "O principal caminho de transformação da marca. Inclui diagnóstico do espaço, leitura sensível do ambiente, harmonização, organização de fluxos, orientação estética e soluções para tornar a casa mais equilibrada e funcional.",
-    href: "/arquitetura-terapeutica",
+    href: "/servicos/arquitetura-terapeutica",
     cta: "Conhecer a Consultoria Essencial",
     featured: true,
   },
   {
     icon: HeartHandshake,
-    title: "Terapias Individuais",
+    title: "Atendimentos Terapêuticos Individuais",
     text: "Atendimentos voltados para a pessoa, quando o processo pede um olhar mais profundo para padrões, bloqueios, fases de transição ou questões individuais que impactam a relação com a vida e com o ambiente.",
-    href: "/terapias-individuais",
+    href: "/servicos/atendimentos-terapeuticos-individuais",
     cta: "Agendar atendimento individual",
   },
   {
     icon: Flower2,
     title: "Perfumaria Terapêutica",
     text: "A dimensão sensorial do cuidado. Aromas, perfumes e composições autorais que ajudam a sustentar a experiência de bem-estar, presença e harmonia no espaço.",
-    href: "/perfumaria-terapeutica",
+    href: "/servicos/perfumaria-terapeutica",
     cta: "Conhecer criações olfativas",
   },
 ];

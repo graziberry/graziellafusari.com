@@ -7,16 +7,16 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { therapyResources, whatsappHref } from "@/lib/site-content";
 
 export const metadata: Metadata = {
-  title: "Terapias Individuais",
+  title: "Atendimentos Terapêuticos Individuais",
   description:
-    "Atendimentos individuais que complementam o cuidado com a casa e apoiam processos de reorganização, equilíbrio e transformação pessoal.",
+    "Atendimentos terapêuticos individuais que complementam o cuidado com a casa e apoiam processos de reorganização, equilíbrio e transformação pessoal.",
 };
 
 export default function TerapiasIndividuaisPage() {
   return (
     <PageShell>
       <PageHero
-        eyebrow="Terapias Individuais"
+        eyebrow="Atendimentos Terapêuticos Individuais"
         title="Quando o cuidado também precisa olhar para a pessoa"
         subtitle="Alguns processos não estão apenas no ambiente. Eles também pedem escuta, reorganização interna e cuidado individual."
       />
@@ -29,8 +29,8 @@ export default function TerapiasIndividuaisPage() {
           />
           <div className="space-y-5 text-sm leading-8 text-light-brown md:text-base">
             <p>
-              As Terapias Individuais complementam o trabalho com a casa quando a transformação pede um olhar mais
-              profundo para a pessoa.
+              Os Atendimentos Terapêuticos Individuais complementam o trabalho com a casa quando a transformação
+              pede um olhar mais profundo para a pessoa.
             </p>
             <p>
               Elas podem apoiar momentos de transição, bloqueios, sobrecargas, padrões repetitivos ou fases em que
@@ -71,7 +71,7 @@ export default function TerapiasIndividuaisPage() {
 
       <ContactCTA
         title="Quer entender se este cuidado faz sentido para o seu momento?"
-        text="A primeira conversa ajuda a compreender se o atendimento individual é o melhor caminho agora ou se a Arquitetura Terapêutica deve ser o ponto de partida."
+        text="A primeira conversa ajuda a compreender se o atendimento terapêutico individual é o melhor caminho agora ou se a Arquitetura Terapêutica deve ser o ponto de partida."
         cta="Agendar atendimento individual"
       />
     </PageShell>

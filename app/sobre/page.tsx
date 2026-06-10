@@ -42,7 +42,7 @@ export default function SobrePage() {
               <p>
                 Por isso, seu trabalho propõe uma transformação integrada: olhar para o espaço, compreender sua
                 energia, reorganizar sua função, trazer beleza com sentido e, quando necessário, aprofundar o cuidado
-                por meio de terapias individuais e recursos sensoriais.
+                por meio de atendimentos terapêuticos individuais e recursos sensoriais.
               </p>
               <p>
                 A marca Graziella Fusari não separa técnica e sensibilidade. Ela une olhar profissional, escuta,
@@ -58,7 +58,7 @@ export default function SobrePage() {
           <SectionHeading
             eyebrow="Ecossistema"
             title="Casa, pessoa e sentidos em um mesmo cuidado"
-            subtitle="Arquitetura Terapêutica é a entrada principal. Terapias Individuais e Perfumaria Terapêutica aparecem como aprofundamentos complementares quando fazem sentido para o processo."
+            subtitle="Arquitetura Terapêutica é a entrada principal. Atendimentos Terapêuticos Individuais e Perfumaria Terapêutica aparecem como aprofundamentos complementares quando fazem sentido para o processo."
             centered
           />
           <div className="mt-12 grid gap-5 md:grid-cols-3">

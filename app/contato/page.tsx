@@ -7,7 +7,7 @@ import { contactEmail, contactPaths, whatsappHref } from "@/lib/site-content";
 export const metadata: Metadata = {
   title: "Contato",
   description:
-    "Entre em contato para conversar sobre consultoria de arquitetura terapêutica, projetos, terapias individuais ou perfumaria terapêutica.",
+    "Entre em contato para conversar sobre consultoria de arquitetura terapêutica, projetos, atendimentos terapêuticos individuais ou perfumaria terapêutica.",
 };
 
 export default function ContatoPage() {
@@ -52,7 +52,7 @@ export default function ContatoPage() {
             </p>
             <p>
               A partir disso, será possível indicar o caminho mais adequado: Consultoria Essencial, Consultoria
-              Completa, Projeto Integral, Terapia Individual ou Perfumaria Terapêutica.
+              Completa, Projeto Integral, Atendimentos Terapêuticos Individuais ou Perfumaria Terapêutica.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a

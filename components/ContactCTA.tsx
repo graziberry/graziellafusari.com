@@ -28,7 +28,7 @@ export function ContactCTA({
             {cta}
           </a>
           <Link
-            href="/arquitetura-terapeutica"
+            href="/servicos"
             className="inline-flex items-center justify-center gap-2 rounded-full border border-surface/30 px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] transition hover:bg-surface/10"
           >
             Conhecer os serviços

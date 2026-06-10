@@ -1,8 +1,38 @@
+"use client";
+
 import { ChevronDown, Flower2, MessageCircle } from "lucide-react";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import { navLinks, serviceNavLinks, whatsappHref } from "@/lib/site-content";
 
 export function SiteHeader() {
+  const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const servicesRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handlePointerDown(event: PointerEvent) {
+      if (!servicesRef.current?.contains(event.target as Node)) {
+        setDesktopServicesOpen(false);
+      }
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setDesktopServicesOpen(false);
+        setMobileServicesOpen(false);
+      }
+    }
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   return (
     <header className="sticky top-0 z-50 border-b border-line/70 bg-surface/95 shadow-[0_8px_24px_rgba(90,51,35,0.06)] backdrop-blur-xl">
       <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 md:px-8">
@@ -20,25 +50,53 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-5 lg:flex">
+        <nav className="hidden items-center gap-5 lg:flex" aria-label="Navegação principal">
           {navLinks.map((link) =>
             link.label === "Serviços" ? (
-              <div key={link.href} className="group relative">
+              <div
+                key={link.href}
+                ref={servicesRef}
+                className="relative"
+                onMouseEnter={() => setDesktopServicesOpen(true)}
+                onMouseLeave={() => setDesktopServicesOpen(false)}
+              >
                 <Link
                   href={link.href}
-                  className="flex items-center gap-1.5 py-6 text-sm font-semibold text-light-brown transition hover:text-terracotta"
+                  aria-haspopup="menu"
+                  aria-expanded={desktopServicesOpen}
+                  className="flex min-h-11 items-center gap-1.5 py-6 text-sm font-semibold text-light-brown transition hover:text-terracotta focus:text-terracotta"
+                  onFocus={() => setDesktopServicesOpen(true)}
+                  onKeyDown={(event) => {
+                    if (event.key === " ") {
+                      event.preventDefault();
+                      setDesktopServicesOpen((open) => !open);
+                    }
+                  }}
                 >
                   {link.label}
-                  <ChevronDown size={15} className="transition group-hover:rotate-180" />
+                  <ChevronDown
+                    size={15}
+                    className={`transition ${desktopServicesOpen ? "rotate-180 text-terracotta" : ""}`}
+                  />
                 </Link>
-                <div className="invisible absolute left-1/2 top-[calc(100%-4px)] w-72 -translate-x-1/2 rounded-card border border-line bg-surface p-2 opacity-0 shadow-lift transition duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                <div
+                  role="menu"
+                  className={`absolute left-1/2 top-[calc(100%-4px)] w-80 -translate-x-1/2 rounded-card border border-line bg-surface p-2 shadow-lift transition duration-150 ${
+                    desktopServicesOpen ? "visible opacity-100" : "invisible opacity-0"
+                  }`}
+                >
                   {serviceNavLinks.map((service) => (
                     <Link
                       key={service.href}
                       href={service.href}
-                      className="block rounded-[6px] px-4 py-3 text-sm font-semibold leading-5 text-light-brown transition hover:bg-background hover:text-terracotta focus:bg-background focus:text-terracotta"
+                      role="menuitem"
+                      className="block min-h-12 rounded-[6px] px-4 py-3 transition hover:bg-background focus:bg-background"
+                      onClick={() => setDesktopServicesOpen(false)}
                     >
-                      {service.label}
+                      <span className="block text-sm font-semibold leading-5 text-brown">{service.label}</span>
+                      <span className="mt-1 block text-xs font-medium leading-5 text-light-brown">
+                        {service.microcopy}
+                      </span>
                     </Link>
                   ))}
                 </div>
@@ -47,7 +105,7 @@ export function SiteHeader() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-semibold text-light-brown transition hover:text-terracotta"
+                className="flex min-h-11 items-center text-sm font-semibold text-light-brown transition hover:text-terracotta focus:text-terracotta"
               >
                 {link.label}
               </Link>
@@ -64,12 +122,59 @@ export function SiteHeader() {
           <span>Agendar</span>
         </a>
       </div>
-      <nav className="flex gap-4 overflow-x-auto border-t border-line/70 px-5 py-3 text-[0.72rem] font-bold uppercase tracking-[0.12em] text-light-brown md:px-8 lg:hidden">
-        {[navLinks[0], ...serviceNavLinks, navLinks[2], navLinks[3]].map((link) => (
-          <Link key={link.href} href={link.href} className="shrink-0 transition hover:text-terracotta">
-            {link.label}
-          </Link>
-        ))}
+
+      <nav
+        className="border-t border-line/70 px-5 py-3 text-[0.72rem] font-bold uppercase tracking-[0.12em] text-light-brown md:px-8 lg:hidden"
+        aria-label="Navegação mobile"
+      >
+        <div className="flex gap-4 overflow-x-auto">
+          {navLinks.map((link) =>
+            link.label === "Serviços" ? (
+              <button
+                key={link.href}
+                type="button"
+                aria-haspopup="menu"
+                aria-expanded={mobileServicesOpen}
+                className="flex min-h-11 shrink-0 items-center gap-1.5 transition hover:text-terracotta"
+                onClick={() => setMobileServicesOpen((open) => !open)}
+              >
+                {link.label}
+                <ChevronDown size={14} className={`transition ${mobileServicesOpen ? "rotate-180" : ""}`} />
+              </button>
+            ) : (
+              <Link key={link.href} href={link.href} className="flex min-h-11 shrink-0 items-center transition hover:text-terracotta">
+                {link.label}
+              </Link>
+            )
+          )}
+          <a href={whatsappHref} className="flex min-h-11 shrink-0 items-center text-terracotta">
+            Agendar
+          </a>
+        </div>
+        {mobileServicesOpen ? (
+          <div role="menu" className="mt-2 grid gap-2 rounded-card border border-line bg-surface p-2 shadow-soft">
+            <Link
+              href="/servicos"
+              role="menuitem"
+              className="min-h-11 rounded-[6px] px-4 py-3 text-sm font-semibold normal-case tracking-normal text-brown transition hover:bg-background"
+              onClick={() => setMobileServicesOpen(false)}
+            >
+              Ver todos os serviços
+            </Link>
+            {serviceNavLinks.map((service) => (
+              <Link
+                key={service.href}
+                href={service.href}
+                role="menuitem"
+                className="min-h-11 rounded-[6px] px-4 py-3 normal-case tracking-normal transition hover:bg-background"
+                onClick={() => setMobileServicesOpen(false)}
+              >
+                <span className="block text-sm font-semibold text-brown">{service.label}</span>
+                <span className="mt-1 block text-xs font-medium text-light-brown">{service.microcopy}</span>
+              </Link>
+            ))}
+          </div>
+        ) : null}
       </nav>
     </header>
   );
