@@ -1,10 +1,10 @@
 import { Check } from "lucide-react";
-import { services } from "@/lib/site-content";
+import { architectureServices } from "@/lib/site-content";
 
 export function ServiceGrid() {
   return (
     <div className="grid gap-5 lg:grid-cols-3">
-      {services.map((service) => (
+      {architectureServices.map((service) => (
         <article
           key={service.title}
           className={`rounded-card border p-7 shadow-soft ${
@@ -13,7 +13,7 @@ export function ServiceGrid() {
         >
           {service.featured ? (
             <span className="mb-5 inline-flex rounded-full bg-blush/55 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-brown">
-              Ideal para começar
+              Principal porta de entrada
             </span>
           ) : null}
           <service.icon className="text-sage" size={31} />
@@ -22,7 +22,7 @@ export function ServiceGrid() {
           <ul className="mt-7 space-y-3 text-sm font-medium text-brown">
             {service.items.map((item) => (
               <li key={item} className="flex items-center gap-3">
-                <Check className="text-terracotta" size={17} />
+                <Check className="shrink-0 text-terracotta" size={17} />
                 {item}
               </li>
             ))}

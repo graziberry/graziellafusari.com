@@ -8,7 +8,7 @@ export function SiteFooter() {
         <div>
           <p className="font-heading text-3xl font-semibold text-brown">Graziella Fusari</p>
           <p className="mt-3 max-w-xl text-sm leading-7 text-light-brown">
-            Arquitetura terapêutica, interiores sensoriais, aromas e bem-estar para casas que acolhem a vida real.
+            Arquitetura terapêutica, harmonização de ambientes, terapias integrativas e perfumaria terapêutica.
           </p>
         </div>
         <div className="flex flex-wrap gap-x-5 gap-y-3 text-sm font-medium text-light-brown md:justify-end">

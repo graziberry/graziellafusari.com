@@ -1,72 +1,139 @@
 import type { LucideIcon } from "lucide-react";
 import {
+  Armchair,
   Brush,
   CheckCircle2,
   ClipboardList,
   Flower2,
+  HeartHandshake,
   Home,
   Leaf,
   Map,
-  Moon,
+  MessageCircle,
+  MoveRight,
   Sparkles,
   SunMedium,
+  Wind,
 } from "lucide-react";
+
+export const whatsappHref = process.env.NEXT_PUBLIC_WHATSAPP_URL || "/contato";
+export const contactEmail = "contato@graziellafusari.com";
 
 export const navLinks = [
   { href: "/", label: "Início" },
-  { href: "/sobre", label: "Sobre" },
   { href: "/servicos", label: "Serviços" },
-  { href: "/processo", label: "Processo" },
+  { href: "/sobre", label: "Sobre" },
   { href: "/contato", label: "Contato" },
 ];
 
-export const services: Array<{
+export const serviceNavLinks = [
+  { href: "/arquitetura-terapeutica", label: "Arquitetura Terapêutica" },
+  { href: "/perfumaria-terapeutica", label: "Perfumaria Terapêutica" },
+  { href: "/terapias-individuais", label: "Terapias Individuais" },
+];
+
+export const architectureServices: Array<{
   icon: LucideIcon;
   title: string;
   description: string;
   items: string[];
+  ideal: string;
+  cta: string;
   featured?: boolean;
 }> = [
   {
     icon: Leaf,
     title: "Consultoria Essencial",
     description:
-      "Para transformar o ambiente com clareza, reorganização, direção estética e uma leitura sensorial do que já existe.",
-    items: ["Diagnóstico do ambiente", "Paleta sensorial", "Plano de implantação", "Card aromático"],
+      "A porta de entrada para quem deseja transformar a casa sem necessariamente reformar ou comprar novos móveis. Ela parte do que já existe no ambiente e propõe ajustes possíveis, conscientes e transformadores.",
+    items: [
+      "diagnóstico do espaço",
+      "leitura sensível e energética do ambiente",
+      "identificação de bloqueios, excessos e desequilíbrios",
+      "orientação para reorganização",
+      "harmonização do espaço",
+      "melhoria de fluxos, função e bem-estar",
+      "sugestões práticas usando recursos já presentes na casa",
+    ],
+    ideal:
+      "Ideal para quem sente que a casa precisa respirar melhor, ficar mais leve e se alinhar ao momento atual da vida.",
+    cta: "Quero começar pela Consultoria Essencial",
     featured: true,
   },
   {
     icon: Brush,
     title: "Consultoria Completa",
     description:
-      "Para quem precisa de um projeto mais elaborado, com curadoria visual, materiais, mobiliário e composição.",
-    items: ["Moodboard completo", "Cores e materiais", "Sugestões de peças", "Direção de compras"],
+      "Inclui tudo o que está na Consultoria Essencial, com um aprofundamento em interiores. Além da leitura e harmonização do espaço, entram direcionamentos de layout, mobiliário, objetos, paleta, materiais e composição estética. É indicada para quem deseja uma transformação mais visível, funcional e sensorial da casa.",
+    items: [
+      "diagnóstico e harmonização do ambiente",
+      "proposta de layout",
+      "orientação de mobiliário",
+      "paleta de cores e materiais",
+      "sugestões de decoração",
+      "organização estética e funcional",
+      "construção de uma atmosfera mais alinhada à pessoa",
+    ],
+    ideal: "Ideal para quem quer unir energia, beleza, função e identidade no mesmo processo.",
+    cta: "Quero uma transformação mais completa",
   },
   {
-    icon: Sparkles,
-    title: "Limpeza Energética",
+    icon: Home,
+    title: "Projeto Integral",
     description:
-      "Para renovar a atmosfera da casa com um ritual simples, bonito e conectado à intenção do novo momento.",
-    items: ["Preparo do espaço", "Ritual sugerido", "Aromas indicados", "Forma de uso"],
+      "Indicado quando a transformação envolve reforma, mudanças estruturais ou um projeto mais completo para o ambiente. Ele une a base da Arquitetura Terapêutica ao desenvolvimento de soluções de projeto, criando uma transformação profunda e coerente entre espaço, função, estética e bem-estar.",
+    items: [
+      "diagnóstico do espaço",
+      "leitura e harmonização",
+      "projeto de reforma",
+      "soluções integradas de layout e interiores",
+      "orientação estética, funcional e sensorial",
+      "acompanhamento conceitual da transformação",
+    ],
+    ideal:
+      "Ideal para quem deseja transformar a casa em profundidade e criar um espaço mais alinhado à vida que deseja viver.",
+    cta: "Quero falar sobre um projeto",
   },
 ];
 
-export const pillars = [
+export const homePillars = [
   {
     icon: Home,
-    title: "Casa revela",
-    text: "A casa mostra fluxos, excessos, memórias e necessidades que muitas vezes passam despercebidas.",
+    title: "Arquitetura Terapêutica",
+    text: "O principal caminho de transformação da marca. Inclui diagnóstico do espaço, leitura sensível do ambiente, harmonização, organização de fluxos, orientação estética e soluções para tornar a casa mais equilibrada e funcional.",
+    href: "/arquitetura-terapeutica",
+    cta: "Conhecer a Consultoria Essencial",
+    featured: true,
+  },
+  {
+    icon: HeartHandshake,
+    title: "Terapias Individuais",
+    text: "Atendimentos voltados para a pessoa, quando o processo pede um olhar mais profundo para padrões, bloqueios, fases de transição ou questões individuais que impactam a relação com a vida e com o ambiente.",
+    href: "/terapias-individuais",
+    cta: "Agendar atendimento individual",
   },
   {
     icon: Flower2,
-    title: "Pessoa aprofunda",
-    text: "O projeto nasce da rotina, do corpo, da emoção e da intenção de quem habita o espaço.",
+    title: "Perfumaria Terapêutica",
+    text: "A dimensão sensorial do cuidado. Aromas, perfumes e composições autorais que ajudam a sustentar a experiência de bem-estar, presença e harmonia no espaço.",
+    href: "/perfumaria-terapeutica",
+    cta: "Conhecer criações olfativas",
   },
-  {
-    icon: Leaf,
-    title: "Aroma ancora",
-    text: "O aroma transforma a intenção em sensação cotidiana e cria um ritual de presença.",
-  },
+];
+
+export const therapyResources = [
+  "mesa radiônica",
+  "ferramentas de Access Consciousness®",
+  "radiestesia",
+  "outros recursos integrativos alinhados ao processo",
+];
+
+export const perfumeryApplications = [
+  "aromas para ambientes",
+  "perfumes terapêuticos",
+  "composições autorais",
+  "assinatura olfativa para espaços",
+  "recursos olfativos complementares aos atendimentos e projetos",
 ];
 
 export const processSteps = [
@@ -92,13 +159,25 @@ export const processSteps = [
   },
 ];
 
-export const essentialDeliverables = [
-  "Resumo do ambiente e intenção principal",
-  "Diagnóstico sensorial com pontos de atenção",
-  "Paleta de cores, texturas, luz e aromas",
-  "Recomendações do que manter, retirar, reorganizar e incluir",
-  "Ritual de limpeza energética quando fizer sentido",
-  "Plano de implantação por prioridade",
+export const contactPaths = [
+  {
+    icon: MessageCircle,
+    title: "WhatsApp",
+    text: "Agendar conversa pelo WhatsApp",
+    href: whatsappHref,
+  },
+  {
+    icon: MoveRight,
+    title: "Orientação",
+    text: "Quero entender qual serviço é ideal para mim",
+    href: whatsappHref,
+  },
+  {
+    icon: Wind,
+    title: "Atendimento",
+    text: "Online e presencial sob consulta",
+    href: null,
+  },
 ];
 
 export const moodboard = [
@@ -112,20 +191,8 @@ export const moodboard = [
   { label: "Marrom", color: "bg-brown" },
 ];
 
-export const rituals = [
-  {
-    icon: Moon,
-    title: "Preparar",
-    text: "Abrir janelas, retirar excessos visuais e deixar a casa receber luz e ar.",
-  },
-  {
-    icon: Sparkles,
-    title: "Limpar",
-    text: "Escolher ervas, spray, difusor ou outra ferramenta que faça sentido para o espaço.",
-  },
-  {
-    icon: Flower2,
-    title: "Ancorar",
-    text: "Finalizar com um aroma que represente a energia que você quer manter.",
-  },
+export const architectureHighlights = [
+  { icon: Armchair, text: "função, fluxo e organização" },
+  { icon: Sparkles, text: "beleza com sentido" },
+  { icon: Leaf, text: "atmosfera sensorial e acolhedora" },
 ];

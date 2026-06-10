@@ -1,11 +1,17 @@
-import { ArrowRight, ClipboardList, Flower2, Sparkles } from "lucide-react";
+import type { Metadata } from "next";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ContactCTA } from "@/components/ContactCTA";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
-import { ServiceGrid } from "@/components/ServiceGrid";
-import { essentialDeliverables, pillars, processSteps } from "@/lib/site-content";
+import { architectureHighlights, homePillars, whatsappHref } from "@/lib/site-content";
+
+export const metadata: Metadata = {
+  title: "Graziella Fusari | Arquitetura Terapêutica e Ambientes Sensoriais",
+  description:
+    "Arquitetura terapêutica, harmonização de ambientes, terapias integrativas e perfumaria terapêutica para transformar sua casa em um espaço de equilíbrio e bem-estar.",
+};
 
 export default function HomePage() {
   return (
@@ -23,68 +29,81 @@ export default function HomePage() {
         <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-ink/62 to-transparent" />
 
         <div className="relative mx-auto flex min-h-[calc(100svh-72px)] max-w-7xl items-center px-5 py-16 md:px-8 md:py-20">
-          <div className="w-full max-w-[calc(100vw-40px)] text-surface drop-shadow-[0_2px_18px_rgba(36,26,21,0.32)] md:max-w-[760px]">
-            <p className="max-w-[18rem] text-[0.68rem] font-bold uppercase leading-6 tracking-[0.16em] text-blush md:max-w-[34rem] md:text-xs md:tracking-[0.22em]">
-              Arquitetura terapêutica e interiores sensoriais
+          <div className="w-full max-w-[calc(100vw-40px)] text-surface drop-shadow-[0_2px_18px_rgba(36,26,21,0.32)] md:max-w-[780px]">
+            <p className="max-w-[22rem] text-[0.68rem] font-bold uppercase leading-6 tracking-[0.16em] text-blush md:max-w-[36rem] md:text-xs md:tracking-[0.22em]">
+              Arquitetura terapêutica, harmonização de ambientes e recursos sensoriais
             </p>
-            <h1 className="mt-5 max-w-[11ch] font-heading text-[3.4rem] font-semibold leading-[0.92] md:text-[5.9rem]">
-              Casas com beleza, presença e bem-estar.
+            <h1 className="mt-5 max-w-[12ch] font-heading text-[3.15rem] font-semibold leading-[0.94] md:text-[5.8rem]">
+              Transforme sua casa em um espaço que cuida de você
             </h1>
-            <p className="mt-6 max-w-[21rem] text-base font-medium leading-8 text-surface/88 md:max-w-2xl md:text-lg">
-              Ambientes pensados para acolher a vida real, unindo função, estética, biofilia, aromas e
-              energia com delicadeza.
+            <p className="mt-6 max-w-[22rem] text-base font-medium leading-8 text-surface/88 md:max-w-2xl md:text-lg">
+              Arquitetura terapêutica, harmonização de ambientes e recursos sensoriais para alinhar sua casa ao
+              momento que você está vivendo.
             </p>
             <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row">
-              <Link
-                href="/contato"
+              <a
+                href={whatsappHref}
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-terracotta px-6 py-3 text-[0.72rem] font-bold uppercase tracking-[0.13em] text-surface shadow-soft transition hover:bg-soft-terracotta"
               >
-                Agendar conversa
+                <MessageCircle size={16} />
+                Agendar conversa pelo WhatsApp
+              </a>
+              <Link
+                href="/arquitetura-terapeutica"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-surface/55 px-6 py-3 text-[0.72rem] font-bold uppercase tracking-[0.13em] text-surface transition hover:bg-surface/12"
+              >
+                Conhecer os serviços
                 <ArrowRight size={16} />
               </Link>
-              <Link
-                href="/servicos"
-                className="inline-flex min-h-12 items-center justify-center rounded-full border border-surface/55 px-6 py-3 text-[0.72rem] font-bold uppercase tracking-[0.13em] text-surface transition hover:bg-surface/12"
-              >
-                Conhecer serviços
-              </Link>
             </div>
-            <p className="mt-8 max-w-[22rem] font-script text-[2.2rem] leading-none text-blush md:max-w-xl md:text-5xl">
-              A casa revela. A pessoa aprofunda. O aroma ancora.
-            </p>
           </div>
         </div>
       </section>
 
       <section className="bg-surface py-18 md:py-24">
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
+        <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-[0.9fr_1.1fr] md:px-8">
           <SectionHeading
-            eyebrow="Conceito"
-            title="O espaço onde você vive também fala sobre você."
-            subtitle="A casa carrega fluxos, memórias, excessos, vazios e sensações. A arquitetura terapêutica observa esses sinais e propõe mudanças bonitas, possíveis e conectadas à rotina."
-            centered
+            eyebrow="A casa como ponto de partida"
+            title="Há momentos em que a casa deixa de acompanhar quem você é"
           />
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
-            {pillars.map((pillar) => (
-              <article key={pillar.title} className="rounded-card border border-line bg-background p-7 text-center shadow-soft">
-                <pillar.icon className="mx-auto text-sage" size={31} />
-                <h3 className="mt-5 font-heading text-3xl font-semibold">{pillar.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-light-brown">{pillar.text}</p>
-              </article>
-            ))}
+          <div className="space-y-5 text-sm leading-8 text-light-brown md:text-base">
+            <p>
+              O espaço pode parecer pesado, desorganizado, sem vida ou simplesmente desconectado da fase que você
+              está vivendo.
+            </p>
+            <p>
+              Às vezes, não se trata apenas de mudar móveis ou decorar melhor. É preciso olhar para o ambiente como
+              um todo: sua energia, seus fluxos, suas memórias, sua função e a forma como ele afeta quem mora ali.
+            </p>
+            <p className="font-semibold text-brown">
+              A Arquitetura Terapêutica olha para a casa como parte ativa da sua experiência de vida.
+            </p>
           </div>
         </div>
       </section>
 
       <section className="py-18 md:py-24">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <SectionHeading
-            eyebrow="Serviços"
-            title="Escolha o nível de transformação para o seu momento."
-            subtitle="Da consultoria essencial ao projeto completo, cada caminho organiza prioridades e cria uma atmosfera coerente com quem habita o espaço."
-          />
-          <div className="mt-12">
-            <ServiceGrid />
+          <div className="grid gap-10 md:grid-cols-[1.08fr_0.92fr] md:items-center">
+            <div>
+              <SectionHeading
+                eyebrow="O que é Arquitetura Terapêutica"
+                title="Arquitetura Terapêutica é uma forma sensível e integrada de transformar ambientes"
+                subtitle="Ela considera a funcionalidade, a estética, a organização, a energia do espaço e a relação emocional que a pessoa estabelece com a própria casa."
+              />
+              <p className="mt-5 text-sm leading-8 text-light-brown md:text-base">
+                O objetivo não é apenas deixar o ambiente mais bonito. É criar um espaço mais coerente, acolhedor
+                e alinhado com a vida de quem o habita.
+              </p>
+            </div>
+            <div className="grid gap-3">
+              {architectureHighlights.map((item) => (
+                <div key={item.text} className="flex items-center gap-4 rounded-card border border-line bg-surface p-5 shadow-soft">
+                  <item.icon className="shrink-0 text-terracotta" size={24} />
+                  <p className="text-sm font-semibold text-brown">{item.text}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -92,18 +111,34 @@ export default function HomePage() {
       <section className="bg-brown py-18 text-surface md:py-24">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
-            eyebrow="Processo"
-            title="Um método sensível, claro e aplicável."
-            subtitle="Cada etapa traduz percepção em decisão prática para que a transformação não dependa de uma obra grande ou de excesso de informação."
+            eyebrow="Uma abordagem integrada"
+            title="O trabalho de Graziella Fusari se organiza em três pilares complementares"
             tone="light"
           />
-          <div className="mt-12 grid gap-4 md:grid-cols-4">
-            {processSteps.map((step, index) => (
-              <article key={step.title} className="border-t border-surface/25 pt-6">
-                <span className="text-sm font-bold text-blush">0{index + 1}</span>
-                <step.icon className="mt-6 text-blush" size={28} />
-                <h3 className="mt-4 font-heading text-3xl font-semibold">{step.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-surface/70">{step.text}</p>
+          <div className="mt-12 grid gap-5 lg:grid-cols-[1.35fr_0.85fr_0.85fr]">
+            {homePillars.map((pillar) => (
+              <article
+                key={pillar.title}
+                className={`rounded-card border p-7 shadow-soft ${
+                  pillar.featured
+                    ? "border-blush bg-surface text-brown lg:p-9"
+                    : "border-surface/18 bg-surface/8 text-surface"
+                }`}
+              >
+                <pillar.icon className={pillar.featured ? "text-terracotta" : "text-blush"} size={pillar.featured ? 36 : 30} />
+                <h3 className="mt-5 font-heading text-3xl font-semibold md:text-4xl">{pillar.title}</h3>
+                <p className={`mt-4 text-sm leading-7 ${pillar.featured ? "text-light-brown" : "text-surface/74"}`}>
+                  {pillar.text}
+                </p>
+                <Link
+                  href={pillar.href}
+                  className={`mt-7 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] ${
+                    pillar.featured ? "text-terracotta" : "text-blush"
+                  }`}
+                >
+                  {pillar.cta}
+                  <ArrowRight size={16} />
+                </Link>
               </article>
             ))}
           </div>
@@ -112,55 +147,28 @@ export default function HomePage() {
 
       <section className="bg-surface py-18 md:py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-[0.9fr_1.1fr] md:px-8">
-          <div>
-            <SectionHeading
-              eyebrow="Consultoria Essencial"
-              title="Uma entrega objetiva para criar movimento agora."
-              subtitle="Ideal para quem sente que a casa precisa respirar, mas não quer iniciar uma obra ou um processo longo."
-            />
-          </div>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {essentialDeliverables.map((item) => (
-              <div key={item} className="flex gap-3 rounded-card border border-line bg-background p-5">
-                <ClipboardList className="mt-1 shrink-0 text-terracotta" size={18} />
-                <p className="text-sm font-medium leading-6 text-brown">{item}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-18 md:py-24">
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <div className="grid overflow-hidden rounded-card border border-line bg-surface shadow-lift md:grid-cols-2">
-            <div className="relative min-h-[360px]">
-              <Image
-                src="/hero-interior.png"
-                alt="Interior acolhedor com materiais naturais"
-                fill
-                sizes="(min-width: 768px) 50vw, 100vw"
-                className="object-cover"
-              />
-            </div>
-            <div className="p-8 md:p-12">
-              <Flower2 className="text-sage" size={34} />
-              <h2 className="mt-6 font-heading text-4xl font-semibold leading-tight md:text-5xl">
-                Beleza sem excesso. Presença sem rigidez.
-              </h2>
-              <p className="mt-5 text-sm leading-7 text-light-brown">
-                A proposta é criar ambientes elegantes, vivos e possíveis: uma casa com menos ruído,
-                mais intenção e escolhas que sustentam o cotidiano com delicadeza.
-              </p>
-              <div className="mt-8 flex items-center gap-3 text-sm font-bold text-terracotta">
-                <Sparkles size={18} />
-                interiores, energia e sensorialidade em uma mesma leitura
-              </div>
-            </div>
+          <SectionHeading eyebrow="Para quem é" title="Para quem sente que a casa precisa mudar" />
+          <div className="space-y-5 text-sm leading-8 text-light-brown md:text-base">
+            <p>
+              Este trabalho é para pessoas que sentem que a casa precisa mudar, mas não sabem exatamente por onde
+              começar.
+            </p>
+            <p>
+              É para quem percebe que o ambiente influencia o humor, a energia, o descanso e a organização da vida.
+            </p>
+            <p>
+              Também é para quem está vivendo uma fase de transição, recomeço ou reorganização interna, e deseja
+              que a casa acompanhe esse novo momento com mais beleza, presença e sentido.
+            </p>
           </div>
         </div>
       </section>
 
-      <ContactCTA />
+      <ContactCTA
+        title="Como o processo pode começar"
+        text="Você pode começar de forma simples, com uma Consultoria Essencial, ou aprofundar o processo com uma transformação mais completa do ambiente. Também é possível iniciar por um atendimento individual ou por uma criação olfativa, dependendo da necessidade do momento. Cada caminho faz parte de um mesmo ecossistema de cuidado: casa, pessoa e experiência sensorial."
+        cta="Quero entender qual serviço é ideal para mim"
+      />
     </PageShell>
   );
 }
