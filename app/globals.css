@@ -40,9 +40,9 @@
   --blush: #e5b8a9;
   --line: #e2d4c4;
   --ink: #241a15;
-  --font-heading: "Cormorant Garamond";
-  --font-body: Montserrat;
-  --font-script: Allura;
+  --font-heading: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: Montserrat, Avenir, "Segoe UI", system-ui, sans-serif;
+  --font-script: Allura, "Segoe Script", "Brush Script MT", cursive;
 }
 
 html {
@@ -53,7 +53,7 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  font-family: Montserrat, Avenir, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-body);
   background: var(--background);
   color: var(--brown);
   -webkit-font-smoothing: antialiased;
@@ -68,11 +68,19 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-family: var(--font-heading);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
 }
 
 .font-script {
-  font-family: Allura, "Segoe Script", "Brush Script MT", cursive;
+  font-family: var(--font-script);
 }
 
 a {
