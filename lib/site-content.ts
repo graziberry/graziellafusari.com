@@ -15,6 +15,7 @@ import {
   SunMedium,
   Wind,
 } from "lucide-react";
+import { serviceRoutes } from "@/lib/seo";
 import { whatsappHref } from "@/lib/whatsapp";
 
 export const contactEmail = "contato@graziellafusari.com";
@@ -29,17 +30,17 @@ export const navLinks = [
 
 export const serviceNavLinks = [
   {
-    href: "/servicos/arquitetura-terapeutica",
+    href: serviceRoutes.architecture,
     label: "Arquitetura Terapêutica",
     microcopy: "Ambientes que cuidam",
   },
   {
-    href: "/servicos/perfumaria-terapeutica",
+    href: serviceRoutes.perfumery,
     label: "Perfumaria Terapêutica",
     microcopy: "Aromas e rituais sensoriais",
   },
   {
-    href: "/servicos/atendimentos-terapeuticos-individuais",
+    href: serviceRoutes.therapy,
     label: "Atendimentos Terapêuticos Individuais",
     microcopy: "Cuidado energético e pessoal",
   },
@@ -52,7 +53,7 @@ export const serviceOverviewCards = [
     description:
       "Um olhar profundo para a casa como extensão da vida. A consultoria identifica bloqueios, excessos, necessidades práticas e sensoriais do ambiente, criando direcionamentos para que o espaço acolha melhor a rotina, o corpo e a energia de quem vive nele.",
     cta: "Conhecer Arquitetura Terapêutica",
-    href: "/servicos/arquitetura-terapeutica",
+    href: serviceRoutes.architecture,
     featured: true,
     icon: Home,
   },
@@ -62,7 +63,7 @@ export const serviceOverviewCards = [
     description:
       "A criação de aromas terapêuticos amplia a experiência do cuidado no espaço. Por meio de fragrâncias naturais, rituais olfativos e composições sensoriais, o ambiente ganha presença, memória e identidade.",
     cta: "Conhecer Perfumaria Terapêutica",
-    href: "/servicos/perfumaria-terapeutica",
+    href: serviceRoutes.perfumery,
     featured: false,
     icon: Flower2,
   },
@@ -72,7 +73,7 @@ export const serviceOverviewCards = [
     description:
       "Sessões voltadas ao cuidado energético, emocional e pessoal, apoiando processos de reorganização interna, clareza e reconexão. Um espaço de escuta sensível para quem busca cuidado além do ambiente físico.",
     cta: "Conhecer Atendimentos",
-    href: "/servicos/atendimentos-terapeuticos-individuais",
+    href: serviceRoutes.therapy,
     featured: false,
     icon: HeartHandshake,
   },
@@ -147,7 +148,7 @@ export const homePillars = [
     icon: Home,
     title: "Arquitetura Terapêutica",
     text: "O principal caminho de transformação da marca. Inclui diagnóstico do espaço, leitura sensível do ambiente, harmonização, organização de fluxos, orientação estética e soluções para tornar a casa mais equilibrada e funcional.",
-    href: "/servicos/arquitetura-terapeutica",
+    href: serviceRoutes.architecture,
     cta: "Conhecer a Consultoria Essencial",
     featured: true,
   },
@@ -155,14 +156,14 @@ export const homePillars = [
     icon: HeartHandshake,
     title: "Atendimentos Terapêuticos Individuais",
     text: "Atendimentos voltados para a pessoa, quando o processo pede um olhar mais profundo para padrões, bloqueios, fases de transição ou questões individuais que impactam a relação com a vida e com o ambiente.",
-    href: "/servicos/atendimentos-terapeuticos-individuais",
+    href: serviceRoutes.therapy,
     cta: "Agendar atendimento individual",
   },
   {
     icon: Flower2,
     title: "Perfumaria Terapêutica",
     text: "A dimensão sensorial do cuidado. Aromas, perfumes e composições autorais que ajudam a sustentar a experiência de bem-estar, presença e harmonia no espaço.",
-    href: "/servicos/perfumaria-terapeutica",
+    href: serviceRoutes.perfumery,
     cta: "Conhecer criações olfativas",
   },
 ];

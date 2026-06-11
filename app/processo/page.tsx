@@ -4,12 +4,14 @@ import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
 import { processSteps } from "@/lib/site-content";
+import { canonicalRoutes, createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Método",
   description:
     "Conheça o método de Arquitetura Terapêutica que integra leitura do ambiente, direção sensorial e plano de ação.",
-};
+  path: canonicalRoutes.process,
+});
 
 export default function ProcessoPage() {
   return (

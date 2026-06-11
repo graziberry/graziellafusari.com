@@ -4,12 +4,14 @@ import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { ServiceOverviewCards } from "@/components/ServiceOverviewCards";
 import { SectionHeading } from "@/components/SectionHeading";
+import { canonicalRoutes, createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Serviços",
   description:
     "Três caminhos de cuidado com Arquitetura Terapêutica, Perfumaria Terapêutica e Atendimentos Terapêuticos Individuais.",
-};
+  path: canonicalRoutes.services,
+});
 
 export default function ServicosPage() {
   return (

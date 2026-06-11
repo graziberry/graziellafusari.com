@@ -8,19 +8,21 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceOverviewCards } from "@/components/ServiceOverviewCards";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
 import { architectureHighlights, homePillars } from "@/lib/site-content";
+import { canonicalRoutes, createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Graziella Fusari | Arquitetura Terapêutica e Ambientes Sensoriais",
   description:
     "Arquitetura terapêutica, harmonização de ambientes, terapias integrativas e perfumaria terapêutica para transformar sua casa em um espaço de equilíbrio e bem-estar.",
-};
+  path: canonicalRoutes.home,
+});
 
 export default function HomePage() {
   return (
     <PageShell>
       <section className="relative isolate min-h-[calc(100svh-72px)] overflow-hidden bg-ink">
         <Image
-          src="/hero-interior.png"
+          src="/hero-interior.webp"
           alt="Sala elegante com luz natural, plantas e texturas acolhedoras"
           fill
           priority

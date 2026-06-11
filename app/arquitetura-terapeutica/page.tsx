@@ -1,21 +1,40 @@
 import type { Metadata } from "next";
 import { Check, MessageCircle } from "lucide-react";
 import { ContactCTA } from "@/components/ContactCTA";
+import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
 import { architectureServices, processSteps } from "@/lib/site-content";
+import { canonicalRoutes, createBreadcrumbJsonLd, createPageMetadata, createServiceJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
+const pageTitle = "Arquitetura Terapêutica";
+const pageDescription =
+  "Consultoria de arquitetura terapêutica para transformar ambientes com função, beleza, energia e bem-estar.";
+
+export const metadata: Metadata = createPageMetadata({
   title: "Arquitetura Terapêutica",
-  description:
-    "Consultoria Essencial, Consultoria Completa e Projeto Integral para transformar ambientes com função, beleza, energia e bem-estar.",
-};
+  description: pageDescription,
+  path: canonicalRoutes.architecture,
+});
 
 export default function ArquiteturaTerapeuticaPage() {
   return (
     <PageShell>
+      <JsonLd
+        data={[
+          createServiceJsonLd({
+            name: pageTitle,
+            description: pageDescription,
+            path: canonicalRoutes.architecture,
+          }),
+          createBreadcrumbJsonLd([
+            { name: "Início", path: canonicalRoutes.home },
+            { name: "Arquitetura Terapêutica", path: canonicalRoutes.architecture },
+          ]),
+        ]}
+      />
       <PageHero
         eyebrow="Arquitetura Terapêutica"
         title="Sua casa pode sustentar melhor sua vida"

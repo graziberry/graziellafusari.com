@@ -5,12 +5,14 @@ import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
 import { homePillars } from "@/lib/site-content";
+import { canonicalRoutes, createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Sobre",
   description:
     "Conheça a abordagem autoral de Graziella Fusari, que integra arquitetura, harmonização de ambientes, terapias integrativas e perfumaria terapêutica.",
-};
+  path: canonicalRoutes.about,
+});
 
 export default function SobrePage() {
   return (
@@ -25,7 +27,7 @@ export default function SobrePage() {
         <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-[0.9fr_1.1fr] md:px-8">
           <div className="relative min-h-[420px] overflow-hidden rounded-card border border-line shadow-soft">
             <Image
-              src="/hero-interior.png"
+              src="/hero-interior.webp"
               alt="Ambiente residencial com luz natural e materiais acolhedores"
               fill
               sizes="(min-width: 768px) 45vw, 100vw"
@@ -65,7 +67,7 @@ export default function SobrePage() {
             {homePillars.map((pillar) => (
               <article key={pillar.title} className="rounded-card border border-line bg-surface p-7 shadow-soft">
                 <pillar.icon className="text-sage" size={30} />
-                <h2 className="mt-5 font-heading text-3xl font-semibold">{pillar.title}</h2>
+                <h3 className="mt-5 font-heading text-3xl font-semibold">{pillar.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-light-brown">{pillar.text}</p>
               </article>
             ))}

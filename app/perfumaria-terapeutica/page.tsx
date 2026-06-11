@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
 import { Flower2, Leaf, Sparkles } from "lucide-react";
 import { ContactCTA } from "@/components/ContactCTA";
+import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
+import { canonicalRoutes, createBreadcrumbJsonLd, createPageMetadata, createServiceJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
+const pageTitle = "Perfumaria Terapêutica";
+const pageDescription =
+  "Perfumaria terapêutica com aromas com intenção, recursos sensoriais e presença para apoiar a relação entre ambiente, emoção e cuidado.";
+
+export const metadata: Metadata = createPageMetadata({
   title: "Perfumaria Terapêutica",
-  description:
-    "A arte de criar aromas com intenção, presença e escuta para harmonizar corpo, emoção e ambiente.",
-};
+  description: pageDescription,
+  path: canonicalRoutes.perfumery,
+});
 
 const supportMoments = [
   {
@@ -41,6 +47,19 @@ const supportMoments = [
 export default function PerfumariaTerapeuticaPage() {
   return (
     <PageShell>
+      <JsonLd
+        data={[
+          createServiceJsonLd({
+            name: pageTitle,
+            description: pageDescription,
+            path: canonicalRoutes.perfumery,
+          }),
+          createBreadcrumbJsonLd([
+            { name: "Início", path: canonicalRoutes.home },
+            { name: "Perfumaria Terapêutica", path: canonicalRoutes.perfumery },
+          ]),
+        ]}
+      />
       <PageHero
         eyebrow="Perfumaria Terapêutica"
         title="Perfumaria Terapêutica"
@@ -103,7 +122,7 @@ export default function PerfumariaTerapeuticaPage() {
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {supportMoments.map((moment) => (
               <article key={moment.title} className="rounded-card border border-line bg-surface p-6 shadow-soft">
-                <h2 className="font-heading text-3xl font-semibold leading-tight text-brown">{moment.title}</h2>
+                <h3 className="font-heading text-3xl font-semibold leading-tight text-brown">{moment.title}</h3>
                 <p className="mt-4 text-sm leading-7 text-light-brown">{moment.text}</p>
               </article>
             ))}

@@ -1,21 +1,40 @@
 import type { Metadata } from "next";
 import { Check, MessageCircle } from "lucide-react";
 import { ContactCTA } from "@/components/ContactCTA";
+import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
 import { therapyResources } from "@/lib/site-content";
+import { canonicalRoutes, createBreadcrumbJsonLd, createPageMetadata, createServiceJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
+const pageTitle = "Atendimentos Terapêuticos Individuais";
+const pageDescription =
+  "Atendimentos terapêuticos individuais para cuidado pessoal, reorganização interna, equilíbrio e processos de transformação.";
+
+export const metadata: Metadata = createPageMetadata({
   title: "Atendimentos Terapêuticos Individuais",
-  description:
-    "Atendimentos terapêuticos individuais que complementam o cuidado com a casa e apoiam processos de reorganização, equilíbrio e transformação pessoal.",
-};
+  description: pageDescription,
+  path: canonicalRoutes.therapy,
+});
 
 export default function TerapiasIndividuaisPage() {
   return (
     <PageShell>
+      <JsonLd
+        data={[
+          createServiceJsonLd({
+            name: pageTitle,
+            description: pageDescription,
+            path: canonicalRoutes.therapy,
+          }),
+          createBreadcrumbJsonLd([
+            { name: "Início", path: canonicalRoutes.home },
+            { name: "Atendimentos Terapêuticos Individuais", path: canonicalRoutes.therapy },
+          ]),
+        ]}
+      />
       <PageHero
         eyebrow="Atendimentos Terapêuticos Individuais"
         title="Quando o cuidado também precisa olhar para a pessoa"

@@ -4,12 +4,14 @@ import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
 import { contactEmail, contactPaths } from "@/lib/site-content";
+import { canonicalRoutes, createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Contato",
   description:
-    "Entre em contato para conversar sobre consultoria de arquitetura terapêutica, projetos, atendimentos terapêuticos individuais ou perfumaria terapêutica.",
-};
+    "Entre em contato pelo WhatsApp ou email para conversar sobre arquitetura terapêutica, perfumaria terapêutica e atendimentos terapêuticos individuais.",
+  path: canonicalRoutes.contact,
+});
 
 export default function ContatoPage() {
   return (
@@ -25,7 +27,7 @@ export default function ContatoPage() {
           {contactPaths.map((contact) => (
             <article key={contact.title} className="rounded-card border border-line bg-surface p-7 shadow-soft">
               <contact.icon className="text-terracotta" size={30} />
-              <h2 className="mt-5 font-heading text-3xl font-semibold">{contact.title}</h2>
+              <h3 className="mt-5 font-heading text-3xl font-semibold">{contact.title}</h3>
               {contact.href ? (
                 <WhatsAppLink
                   messageKey="homepage"
