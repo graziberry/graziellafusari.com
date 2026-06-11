@@ -59,7 +59,7 @@ export default function ProcessoPage() {
         </div>
       </section>
 
-      <ContactCTA cta="Agendar conversa pelo WhatsApp" />
+      <ContactCTA text="" cta="Agendar conversa pelo WhatsApp" />
     </PageShell>
   );
 }
