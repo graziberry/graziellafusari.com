@@ -59,11 +59,6 @@ export default function ArquiteturaTerapeuticaPage() {
                   service.featured ? "border-terracotta bg-surface lg:scale-[1.02]" : "border-line bg-surface/85"
                 }`}
               >
-                {service.featured ? (
-                  <span className="mb-5 inline-flex rounded-full bg-blush/55 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-brown">
-                    Principal porta de entrada
-                  </span>
-                ) : null}
                 <service.icon className="text-sage" size={31} />
                 <h2 className="mt-5 font-heading text-3xl font-semibold text-brown">{service.title}</h2>
                 <p className="mt-3 text-sm leading-7 text-light-brown">{service.description}</p>
