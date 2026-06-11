@@ -81,7 +81,12 @@ export default function SobrePage() {
         </div>
       </section>
 
-      <ContactCTA cta="Conversar com Graziella" />
+      <ContactCTA
+        cta="Conversar com Graziella"
+        page="sobre"
+        service="architecture"
+        whatsappMessageKey="homepage"
+      />
     </PageShell>
   );
 }

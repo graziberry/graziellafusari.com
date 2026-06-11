@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Mail, MessageCircle } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
-import { contactEmail, contactPaths, whatsappHref } from "@/lib/site-content";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
+import { contactEmail, contactPaths } from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: "Contato",
@@ -26,9 +27,14 @@ export default function ContatoPage() {
               <contact.icon className="text-terracotta" size={30} />
               <h2 className="mt-5 font-heading text-3xl font-semibold">{contact.title}</h2>
               {contact.href ? (
-                <a href={contact.href} className="mt-3 block text-sm font-semibold leading-6 text-light-brown transition hover:text-terracotta">
+                <WhatsAppLink
+                  messageKey="homepage"
+                  tracking={{ page: "contato", service: contact.title, cta_text: contact.text }}
+                  aria-label={contact.text}
+                  className="mt-3 block text-sm font-semibold leading-6 text-light-brown transition hover:text-terracotta"
+                >
                   {contact.text}
-                </a>
+                </WhatsAppLink>
               ) : (
                 <p className="mt-3 text-sm font-semibold leading-6 text-light-brown">{contact.text}</p>
               )}
@@ -55,13 +61,15 @@ export default function ContatoPage() {
               Completa, Projeto Integral, Atendimentos Terapêuticos Individuais ou Perfumaria Terapêutica.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <a
-                href={whatsappHref}
+              <WhatsAppLink
+                messageKey="homepage"
+                tracking={{ page: "contato", service: "general", cta_text: "Chamar no WhatsApp" }}
+                aria-label="Chamar no WhatsApp"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-brown px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-surface transition hover:bg-terracotta"
               >
                 <MessageCircle size={16} />
                 Chamar no WhatsApp
-              </a>
+              </WhatsAppLink>
               <a
                 href={`mailto:${contactEmail}`}
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-line px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-brown transition hover:border-terracotta hover:text-terracotta"

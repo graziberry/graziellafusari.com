@@ -4,7 +4,8 @@ import { ContactCTA } from "@/components/ContactCTA";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
-import { architectureServices, processSteps, whatsappHref } from "@/lib/site-content";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
+import { architectureServices, processSteps } from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: "Arquitetura Terapêutica",
@@ -73,13 +74,19 @@ export default function ArquiteturaTerapeuticaPage() {
                 <p className="mt-7 border-t border-line pt-5 text-sm font-semibold leading-7 text-light-brown">
                   {service.ideal}
                 </p>
-                <a
-                  href={whatsappHref}
+                <WhatsAppLink
+                  messageKey="architecture"
+                  tracking={{
+                    page: "arquitetura-terapeutica",
+                    service: service.title,
+                    cta_text: service.cta,
+                  }}
+                  aria-label={service.cta}
                   className="mt-6 inline-flex max-w-full items-center justify-center gap-2 rounded-full bg-brown px-5 py-3 text-center text-[0.68rem] font-bold uppercase leading-5 tracking-[0.12em] text-surface transition hover:bg-terracotta"
                 >
                   <MessageCircle size={15} />
                   {service.cta}
-                </a>
+                </WhatsAppLink>
               </article>
             ))}
           </div>
@@ -107,7 +114,12 @@ export default function ArquiteturaTerapeuticaPage() {
         </div>
       </section>
 
-      <ContactCTA cta="Falar sobre meu espaço" />
+      <ContactCTA
+        cta="Falar sobre meu espaço"
+        page="arquitetura-terapeutica"
+        service="architecture"
+        whatsappMessageKey="architecture"
+      />
     </PageShell>
   );
 }

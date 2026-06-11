@@ -4,7 +4,8 @@ import { ContactCTA } from "@/components/ContactCTA";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
-import { therapyResources, whatsappHref } from "@/lib/site-content";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
+import { therapyResources } from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: "Atendimentos Terapêuticos Individuais",
@@ -59,13 +60,15 @@ export default function TerapiasIndividuaisPage() {
               </div>
             ))}
           </div>
-          <a
-            href={whatsappHref}
+          <WhatsAppLink
+            messageKey="therapy"
+            tracking={{ page: "terapias-individuais", service: "therapy", cta_text: "Agendar atendimento individual" }}
+            aria-label="Agendar atendimento individual"
             className="mt-10 inline-flex items-center justify-center gap-2 rounded-full bg-brown px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-surface transition hover:bg-terracotta"
           >
             <MessageCircle size={16} />
             Agendar atendimento individual
-          </a>
+          </WhatsAppLink>
         </div>
       </section>
 
@@ -73,6 +76,9 @@ export default function TerapiasIndividuaisPage() {
         title="Quer entender se este cuidado faz sentido para o seu momento?"
         text="A primeira conversa ajuda a compreender se o atendimento terapêutico individual é o melhor caminho agora ou se a Arquitetura Terapêutica deve ser o ponto de partida."
         cta="Agendar atendimento individual"
+        page="terapias-individuais"
+        service="therapy"
+        whatsappMessageKey="therapy"
       />
     </PageShell>
   );

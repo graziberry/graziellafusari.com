@@ -3,7 +3,8 @@
 import { ChevronDown, Flower2, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { navLinks, serviceNavLinks, whatsappHref } from "@/lib/site-content";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
+import { navLinks, serviceNavLinks } from "@/lib/site-content";
 
 export function SiteHeader() {
   const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
@@ -113,14 +114,16 @@ export function SiteHeader() {
           )}
         </nav>
 
-        <a
-          href={whatsappHref}
+        <WhatsAppLink
+          messageKey="homepage"
+          tracking={{ page: "header", service: "architecture", cta_text: "Agendar" }}
+          aria-label="Agendar conversa pelo WhatsApp"
           className="hidden min-h-10 min-w-[108px] items-center justify-center rounded-full bg-brown px-4 py-3 text-[0.68rem] font-bold uppercase tracking-[0.12em] transition hover:bg-terracotta sm:inline-flex sm:px-5"
           style={{ color: "#fffdf8" }}
         >
           <MessageCircle className="mr-2" size={15} />
           <span>Agendar</span>
-        </a>
+        </WhatsAppLink>
       </div>
 
       <nav
@@ -147,9 +150,14 @@ export function SiteHeader() {
               </Link>
             )
           )}
-          <a href={whatsappHref} className="flex min-h-11 shrink-0 items-center text-terracotta">
+          <WhatsAppLink
+            messageKey="homepage"
+            tracking={{ page: "mobile-header", service: "architecture", cta_text: "Agendar" }}
+            aria-label="Agendar conversa pelo WhatsApp"
+            className="flex min-h-11 shrink-0 items-center text-terracotta"
+          >
             Agendar
-          </a>
+          </WhatsAppLink>
         </div>
         {mobileServicesOpen ? (
           <div role="menu" className="mt-2 grid gap-2 rounded-card border border-line bg-surface p-2 shadow-soft">

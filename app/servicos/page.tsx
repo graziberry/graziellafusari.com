@@ -45,6 +45,9 @@ export default function ServicosPage() {
         title="Quer entender por onde começar?"
         text="A primeira conversa ajuda a perceber se o melhor caminho é transformar o ambiente, criar uma atmosfera sensorial ou iniciar um cuidado terapêutico individual."
         cta="Quero entender qual serviço é ideal para mim"
+        page="servicos"
+        service="general"
+        whatsappMessageKey="homepage"
       />
     </PageShell>
   );

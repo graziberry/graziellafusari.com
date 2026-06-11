@@ -6,7 +6,8 @@ import { ContactCTA } from "@/components/ContactCTA";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceOverviewCards } from "@/components/ServiceOverviewCards";
-import { architectureHighlights, homePillars, whatsappHref } from "@/lib/site-content";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
+import { architectureHighlights, homePillars } from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: "Graziella Fusari | Arquitetura Terapêutica e Ambientes Sensoriais",
@@ -34,7 +35,7 @@ export default function HomePage() {
             <p className="max-w-[22rem] text-[0.68rem] font-bold uppercase leading-6 tracking-[0.16em] text-blush md:max-w-[36rem] md:text-xs md:tracking-[0.22em]">
               Arquitetura terapêutica, harmonização de ambientes e recursos sensoriais
             </p>
-            <h1 className="mt-5 max-w-[12ch] font-heading text-[3.15rem] font-semibold leading-[0.94] md:text-[5.8rem]">
+            <h1 className="mt-5 max-w-[13.5ch] font-heading text-[2.85rem] font-semibold leading-[0.96] md:text-[4.65rem] lg:text-[5.1rem] xl:text-[5.35rem]">
               Transforme sua casa em um espaço que cuida de você
             </h1>
             <p className="mt-6 max-w-[22rem] text-base font-medium leading-8 text-surface/88 md:max-w-2xl md:text-lg">
@@ -42,13 +43,15 @@ export default function HomePage() {
               momento que você está vivendo.
             </p>
             <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row">
-              <a
-                href={whatsappHref}
+              <WhatsAppLink
+                messageKey="homepage"
+                tracking={{ page: "homepage", service: "architecture", cta_text: "Agendar conversa pelo WhatsApp" }}
+                aria-label="Agendar conversa pelo WhatsApp"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-terracotta px-6 py-3 text-[0.72rem] font-bold uppercase tracking-[0.13em] text-surface shadow-soft transition hover:bg-soft-terracotta"
               >
                 <MessageCircle size={16} />
                 Agendar conversa pelo WhatsApp
-              </a>
+              </WhatsAppLink>
               <Link
                 href="/servicos"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-surface/55 px-6 py-3 text-[0.72rem] font-bold uppercase tracking-[0.13em] text-surface transition hover:bg-surface/12"
@@ -189,6 +192,9 @@ export default function HomePage() {
         title="Como o processo pode começar"
         text="Você pode começar de forma simples, com uma Consultoria Essencial, ou aprofundar o processo com uma transformação mais completa do ambiente. Também é possível iniciar por um atendimento individual ou por uma criação olfativa, dependendo da necessidade do momento. Cada caminho faz parte de um mesmo ecossistema de cuidado: casa, pessoa e experiência sensorial."
         cta="Quero entender qual serviço é ideal para mim"
+        page="homepage"
+        service="architecture"
+        whatsappMessageKey="homepage"
       />
     </PageShell>
   );

@@ -15,8 +15,8 @@ import {
   SunMedium,
   Wind,
 } from "lucide-react";
+import { whatsappHref } from "@/lib/whatsapp";
 
-export const whatsappHref = process.env.NEXT_PUBLIC_WHATSAPP_URL || "/contato";
 export const contactEmail = "contato@graziellafusari.com";
 
 export const navLinks = [
