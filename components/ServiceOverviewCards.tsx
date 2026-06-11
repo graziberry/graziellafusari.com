@@ -18,11 +18,6 @@ export function ServiceOverviewCards({ compact = false }: ServiceOverviewCardsPr
               : "border-line bg-surface/90"
           }`}
         >
-          {service.featured ? (
-            <span className="mb-5 inline-flex rounded-full bg-blush/55 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-brown">
-              Serviço principal
-            </span>
-          ) : null}
           <service.icon className={service.featured ? "text-terracotta" : "text-sage"} size={service.featured ? 36 : 30} />
           <h3 className="mt-5 font-heading text-3xl font-semibold leading-tight text-brown md:text-4xl">
             {service.title}
