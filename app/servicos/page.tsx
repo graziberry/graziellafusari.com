@@ -30,7 +30,7 @@ export default function ServicosPage() {
 
       <section className="bg-surface py-14 md:py-18">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <p className="font-heading text-4xl font-semibold leading-tight text-brown md:text-6xl">
+          <p className="font-heading text-3xl font-semibold leading-tight text-brown md:text-5xl">
             Casa <span className="text-terracotta">→</span> Pessoa <span className="text-terracotta">→</span> Aroma
           </p>
         </div>
@@ -95,7 +95,7 @@ export default function ServicosPage() {
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {serviceComparisonCards.map((card) => (
               <article key={card.title} className="rounded-card border border-line bg-surface p-6 shadow-soft">
-                <h3 className="font-heading text-3xl font-semibold text-brown">{card.title}</h3>
+                <h3 className="font-heading text-2xl font-semibold text-brown">{card.title}</h3>
                 <dl className="mt-6 space-y-5 text-sm leading-7">
                   <div>
                     <dt className="font-bold uppercase tracking-[0.12em] text-terracotta">Para quem é</dt>

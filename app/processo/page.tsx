@@ -54,7 +54,7 @@ export default function ProcessoPage() {
               <article key={step.title} className="border-t border-line pt-6">
                 <span className="text-sm font-bold text-terracotta">0{index + 1}</span>
                 <step.icon className="mt-6 text-sage" size={28} />
-                <h2 className="mt-4 font-heading text-3xl font-semibold text-brown">{step.title}</h2>
+                <h2 className="mt-4 font-heading text-2xl font-semibold text-brown">{step.title}</h2>
                 <p className="mt-3 text-sm leading-7 text-light-brown">{step.text}</p>
               </article>
             ))}

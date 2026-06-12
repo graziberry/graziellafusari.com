@@ -134,7 +134,7 @@ export default function PerfumariaTerapeuticaPage() {
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {supportMoments.map((moment) => (
               <article key={moment.title} className="rounded-card border border-line bg-cream p-6">
-                <h3 className="font-heading text-3xl font-semibold leading-tight text-brown">{moment.title}</h3>
+                <h3 className="font-heading text-2xl font-semibold leading-tight text-brown">{moment.title}</h3>
                 <p className="mt-4 text-sm leading-7 text-light-brown">{moment.text}</p>
               </article>
             ))}

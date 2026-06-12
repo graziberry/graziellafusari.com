@@ -108,7 +108,7 @@ export default function SobrePage() {
 
       <section className="bg-surface py-18 md:py-24">
         <div className="mx-auto max-w-4xl px-5 text-center md:px-8">
-          <p className="font-heading text-4xl font-semibold leading-tight text-brown md:text-5xl">
+          <p className="font-heading text-3xl font-semibold leading-tight text-brown md:text-4xl">
             Transformar a casa é também transformar a forma como a vida pode acontecer dentro dela.
           </p>
         </div>

@@ -24,7 +24,7 @@ export function ContactCTA({
     <section className="bg-brown py-18 text-surface md:py-24">
       <div className="mx-auto flex max-w-5xl flex-col items-center px-5 text-center md:px-8">
         <p className="text-xs font-bold uppercase tracking-[0.24em] text-blush">Contato</p>
-        <h2 className="mt-4 font-heading text-4xl font-semibold leading-tight md:text-6xl">{title}</h2>
+        <h2 className="mt-4 font-heading text-3xl font-semibold leading-tight md:text-5xl">{title}</h2>
         {text ? <p className="mt-6 max-w-2xl text-sm leading-7 text-surface/75 md:text-base">{text}</p> : null}
         <div className="mt-9 flex flex-col gap-3 sm:flex-row">
           <WhatsAppLink

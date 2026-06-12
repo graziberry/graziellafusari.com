@@ -98,7 +98,7 @@ export default function ArquiteturaTerapeuticaPage() {
                 }`}
               >
                 <service.icon className="text-sage" size={31} />
-                <h2 className="mt-5 font-heading text-3xl font-semibold text-brown">{service.title}</h2>
+                <h2 className="mt-5 font-heading text-2xl font-semibold text-brown">{service.title}</h2>
                 <p className="mt-3 text-sm leading-7 text-light-brown">{service.description}</p>
                 <ul className="mt-7 space-y-3 text-sm font-medium text-brown">
                   {service.items.map((item) => (
@@ -161,7 +161,7 @@ export default function ArquiteturaTerapeuticaPage() {
               <article key={step.title} className="border-t border-surface/25 pt-6">
                 <span className="text-sm font-bold text-blush">0{index + 1}</span>
                 <step.icon className="mt-6 text-blush" size={28} />
-                <h3 className="mt-4 font-heading text-3xl font-semibold">{step.title}</h3>
+                <h3 className="mt-4 font-heading text-2xl font-semibold">{step.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-surface/70">{step.text}</p>
               </article>
             ))}

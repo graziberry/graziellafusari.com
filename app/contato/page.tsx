@@ -27,7 +27,7 @@ export default function ContatoPage() {
           {contactPaths.map((contact) => (
             <article key={contact.title} className="rounded-card border border-line bg-surface p-7 shadow-soft">
               <contact.icon className="text-terracotta" size={30} />
-              <h3 className="mt-5 font-heading text-3xl font-semibold">{contact.title}</h3>
+              <h3 className="mt-5 font-heading text-2xl font-semibold">{contact.title}</h3>
               {contact.href ? (
                 <WhatsAppLink
                   messageKey="homepage"
@@ -49,7 +49,7 @@ export default function ContatoPage() {
         <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-[0.95fr_1.05fr] md:px-8">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.24em] text-terracotta">Primeira conversa</p>
-            <h2 className="mt-4 font-heading text-4xl font-semibold leading-tight md:text-6xl">
+            <h2 className="mt-4 font-heading text-3xl font-semibold leading-tight md:text-5xl">
               Conte brevemente o que você está vivendo
             </h2>
           </div>

@@ -19,7 +19,7 @@ export function ServiceOverviewCards({ compact = false }: ServiceOverviewCardsPr
           }`}
         >
           <service.icon className={service.featured ? "text-terracotta" : "text-sage"} size={service.featured ? 36 : 30} />
-          <h3 className="mt-5 font-heading text-3xl font-semibold leading-tight text-brown md:text-4xl">
+          <h3 className="mt-5 font-heading text-2xl font-semibold leading-tight text-brown md:text-3xl">
             {service.title}
           </h3>
           <p className="mt-4 text-sm leading-7 text-light-brown">

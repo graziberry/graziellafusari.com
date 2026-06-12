@@ -46,7 +46,7 @@ export default function HomePage() {
             <p className="max-w-[22rem] text-[0.68rem] font-bold uppercase leading-6 tracking-[0.16em] text-blush md:max-w-[36rem] md:text-xs md:tracking-[0.22em]">
               Arquitetura Terapêutica e Ambientes Sensoriais
             </p>
-            <h1 className="mt-5 max-w-[13.5ch] font-heading text-[2.85rem] font-semibold leading-[0.96] md:text-[4.65rem] lg:text-[5.1rem] xl:text-[5.35rem]">
+            <h1 className="mt-5 max-w-[14.5ch] font-heading text-[2.45rem] font-semibold leading-[1.02] md:text-[3.75rem] lg:text-[4.15rem] xl:text-[4.45rem]">
               Transforme sua casa em um espaço que cuida de você
             </h1>
             <p className="mt-6 max-w-[22rem] text-base font-medium leading-8 text-surface/88 md:max-w-2xl md:text-lg">
@@ -171,7 +171,7 @@ export default function HomePage() {
             {methodLayers.map((layer) => (
               <article key={layer.title} className="rounded-card border border-surface/18 bg-surface/8 p-6 shadow-soft">
                 <layer.icon className="text-blush" size={28} />
-                <h3 className="mt-5 font-heading text-3xl font-semibold">{layer.title}</h3>
+                <h3 className="mt-5 font-heading text-2xl font-semibold">{layer.title}</h3>
                 <p className="mt-4 text-sm leading-7 text-surface/74">{layer.text}</p>
               </article>
             ))}
@@ -213,7 +213,7 @@ export default function HomePage() {
                 }`}
               >
                 <pillar.icon className={pillar.featured ? "text-terracotta" : "text-sage"} size={pillar.featured ? 36 : 30} />
-                <h3 className="mt-5 font-heading text-3xl font-semibold md:text-4xl">{pillar.title}</h3>
+                <h3 className="mt-5 font-heading text-2xl font-semibold md:text-3xl">{pillar.title}</h3>
                 <p className="mt-4 text-sm leading-7 text-light-brown">{pillar.text}</p>
                 <Link
                   href={pillar.href}
