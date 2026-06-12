@@ -114,23 +114,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-surface py-18 md:py-24">
+      <section className="relative isolate bg-surface py-18 md:py-24">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             eyebrow="Serviços"
             title="Como posso cuidar do seu espaço e da sua energia"
             subtitle="Arquitetura Terapêutica é a porta principal. Perfumaria Terapêutica e Atendimentos Terapêuticos Individuais entram como aprofundamentos complementares."
           />
-          <div className="mt-12">
+          <div className="relative z-0 mt-12">
             <ServiceOverviewCards compact />
           </div>
-          <Link
-            href="/servicos"
-            className="mt-10 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-brown px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-surface transition hover:bg-terracotta"
-          >
-            Entender qual serviço é ideal para mim
-            <ArrowRight size={16} />
-          </Link>
+          <div className="relative z-10 mt-10 flex">
+            <Link
+              href="/servicos"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-brown px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-surface shadow-soft ring-1 ring-brown/10 transition hover:bg-terracotta"
+              style={{ color: "#fffdf8" }}
+            >
+              Entender qual serviço é ideal para mim
+              <ArrowRight size={16} />
+            </Link>
+          </div>
         </div>
       </section>
 
