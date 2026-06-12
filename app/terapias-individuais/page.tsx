@@ -11,7 +11,7 @@ import { canonicalRoutes, createBreadcrumbJsonLd, createPageMetadata, createServ
 
 const pageTitle = "Atendimentos Terapêuticos Individuais";
 const pageDescription =
-  "Atendimentos terapêuticos individuais para cuidado pessoal, reorganização interna, equilíbrio e processos de transformação.";
+  "Atendimentos terapêuticos individuais complementares para escuta, percepção e reorganização energética, sem substituir acompanhamento médico ou psicológico.";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Atendimentos Terapêuticos Individuais",
@@ -37,8 +37,8 @@ export default function TerapiasIndividuaisPage() {
       />
       <PageHero
         eyebrow="Atendimentos Terapêuticos Individuais"
-        title="Quando o cuidado também precisa olhar para a pessoa"
-        subtitle="Alguns processos não estão apenas no ambiente. Eles também pedem escuta, reorganização interna e cuidado individual."
+        title="Um cuidado complementar para quem habita a casa"
+        subtitle="Alguns processos não estão apenas no ambiente. Eles também pedem escuta, percepção e reorganização interna, sempre como complemento ao cuidado principal com a casa."
       />
 
       <section className="bg-surface py-18 md:py-24">
@@ -53,12 +53,16 @@ export default function TerapiasIndividuaisPage() {
               pede um olhar mais profundo para a pessoa.
             </p>
             <p>
-              Elas podem apoiar momentos de transição, bloqueios, sobrecargas, padrões repetitivos ou fases em que
+              Eles podem apoiar momentos de transição, bloqueios, sobrecargas, padrões repetitivos ou fases em que
               a pessoa sente necessidade de clareza e reorganização.
             </p>
             <p>
               O foco é ampliar a percepção, favorecer equilíbrio e sustentar mudanças que muitas vezes começam no
               ambiente, mas também passam pela vida interna de quem o habita.
+            </p>
+            <p className="rounded-card border border-line bg-cream p-5 font-semibold text-brown">
+              Os atendimentos individuais não substituem acompanhamento médico, psicológico ou terapêutico convencional.
+              Eles são recursos integrativos de escuta, percepção e reorganização energética.
             </p>
           </div>
         </div>

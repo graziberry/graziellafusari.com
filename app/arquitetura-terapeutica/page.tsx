@@ -6,12 +6,12 @@ import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
-import { architectureServices, processSteps } from "@/lib/site-content";
+import { architectureFoundations, architectureServices, consultingDeliverables, processSteps } from "@/lib/site-content";
 import { canonicalRoutes, createBreadcrumbJsonLd, createPageMetadata, createServiceJsonLd } from "@/lib/seo";
 
 const pageTitle = "Arquitetura Terapêutica";
 const pageDescription =
-  "Consultoria de arquitetura terapêutica para transformar ambientes com função, beleza, energia e bem-estar.";
+  "Consultoria de arquitetura terapêutica para transformar ambientes com função, beleza, energia, natureza, aroma e bem-estar.";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Arquitetura Terapêutica",
@@ -67,6 +67,24 @@ export default function ArquiteturaTerapeuticaPage() {
       <section className="py-18 md:py-24">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
+            eyebrow="O que sustenta a leitura"
+            title="As bases da consultoria"
+            subtitle="O olhar integra técnica, sensibilidade e recursos complementares para compreender a casa como espaço físico, energético e sensorial."
+          />
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {architectureFoundations.map((item) => (
+              <div key={item} className="flex gap-3 rounded-card border border-line bg-surface p-5 shadow-soft">
+                <Check className="mt-0.5 shrink-0 text-terracotta" size={18} />
+                <p className="text-sm font-semibold leading-7 text-brown">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-surface py-18 md:py-24">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <SectionHeading
             eyebrow="Serviços"
             title="Escolha o nível de transformação para o seu momento"
             subtitle="Da Consultoria Essencial ao Projeto Integral, cada caminho organiza prioridades e cria uma atmosfera coerente com quem habita o espaço."
@@ -107,6 +125,24 @@ export default function ArquiteturaTerapeuticaPage() {
                   {service.cta}
                 </WhatsAppLink>
               </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-18 md:py-24">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <SectionHeading
+            eyebrow="O que você recebe"
+            title="Um plano claro para transformar a casa com prioridade e direção"
+            subtitle="A entrega organiza a leitura do ambiente em recomendações práticas, possíveis e coerentes com o nível de transformação escolhido."
+          />
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {consultingDeliverables.map((item) => (
+              <div key={item} className="flex gap-3 rounded-card border border-line bg-surface p-5 shadow-soft">
+                <Check className="mt-0.5 shrink-0 text-terracotta" size={18} />
+                <p className="text-sm font-semibold leading-7 text-brown">{item}</p>
+              </div>
             ))}
           </div>
         </div>

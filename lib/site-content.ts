@@ -1,7 +1,7 @@
 import type { LucideIcon } from "lucide-react";
 import {
   Armchair,
-  Brush,
+  Brain,
   CheckCircle2,
   ClipboardList,
   Flower2,
@@ -11,6 +11,8 @@ import {
   Map,
   MessageCircle,
   MoveRight,
+  Palette,
+  Recycle,
   Sparkles,
   SunMedium,
   Wind,
@@ -49,9 +51,9 @@ export const serviceNavLinks = [
 export const serviceOverviewCards = [
   {
     title: "Arquitetura Terapêutica",
-    summary: "Para transformar ambientes em espaços de acolhimento, equilíbrio e presença.",
+    summary: "O eixo principal para transformar ambientes em espaços de acolhimento, coerência e presença.",
     description:
-      "Um olhar profundo para a casa como extensão da vida. A consultoria identifica bloqueios, excessos, necessidades práticas e sensoriais do ambiente, criando direcionamentos para que o espaço acolha melhor a rotina, o corpo e a energia de quem vive nele.",
+      "Um olhar profundo para a casa como espaço físico, emocional, energético e sensorial. A consultoria observa função, fluxo, organização, luz, memórias, atmosfera e relação emocional para criar direcionamentos práticos.",
     cta: "Conhecer Arquitetura Terapêutica",
     href: serviceRoutes.architecture,
     featured: true,
@@ -59,9 +61,9 @@ export const serviceOverviewCards = [
   },
   {
     title: "Perfumaria Terapêutica",
-    summary: "Para criar aromas, rituais e experiências sensoriais conectadas ao espaço.",
+    summary: "Aromas naturais e composições olfativas conectadas à pessoa, à casa e à intenção do espaço.",
     description:
-      "A criação de aromas terapêuticos amplia a experiência do cuidado no espaço. Por meio de fragrâncias naturais, rituais olfativos e composições sensoriais, o ambiente ganha presença, memória e identidade.",
+      "A criação olfativa entra como aprofundamento sensorial do cuidado. Óleos essenciais, tinturas botânicas e matérias-primas naturais ajudam a criar atmosfera, memória e presença.",
     cta: "Conhecer Perfumaria Terapêutica",
     href: serviceRoutes.perfumery,
     featured: false,
@@ -69,13 +71,214 @@ export const serviceOverviewCards = [
   },
   {
     title: "Atendimentos Terapêuticos Individuais",
-    summary: "Para processos pessoais de cuidado energético, escuta e reorganização interna.",
+    summary: "Recursos integrativos complementares para processos pessoais de escuta e reorganização energética.",
     description:
-      "Sessões voltadas ao cuidado energético, emocional e pessoal, apoiando processos de reorganização interna, clareza e reconexão. Um espaço de escuta sensível para quem busca cuidado além do ambiente físico.",
+      "Sessões voltadas à pessoa quando o processo pede um olhar além do ambiente. Não substituem acompanhamento médico ou psicológico; são um espaço complementar de percepção, clareza e cuidado.",
     cta: "Conhecer Atendimentos",
     href: serviceRoutes.therapy,
     featured: false,
     icon: HeartHandshake,
+  },
+];
+
+export const careSignals = [
+  "o ambiente parece pesado, parado ou sem vida",
+  "você não descansa bem em casa",
+  "a decoração não combina mais com quem você é",
+  "há excesso de objetos, memórias ou desordem",
+  "os espaços não fluem na rotina",
+  "você sente vontade de mudar, mas não sabe por onde começar",
+  "sua casa não acompanha a fase que você está vivendo",
+];
+
+export const methodLayers: Array<{ icon: LucideIcon; title: string; text: string }> = [
+  {
+    icon: Armchair,
+    title: "Arquitetura e funcionalidade",
+    text: "Fluxos, layout, uso dos ambientes, ergonomia, luz, circulação, organização e soluções práticas.",
+  },
+  {
+    icon: Sparkles,
+    title: "Energia do ambiente",
+    text: "Feng Shui tradicional, geobiologia, radiestesia e harmonização energética como recursos de leitura sutil do espaço.",
+  },
+  {
+    icon: Leaf,
+    title: "Natureza e sustentabilidade",
+    text: "Biofilia, materiais naturais, plantas, ciclos vivos e consciência ambiental como parte da forma de habitar.",
+  },
+  {
+    icon: Brain,
+    title: "Corpo, emoção e percepção",
+    text: "Neuroarquitetura e psicologia da arquitetura para observar como os espaços afetam descanso, foco, humor, rotina e presença.",
+  },
+  {
+    icon: SunMedium,
+    title: "Antroposofia",
+    text: "Uma visão ampliada do ser humano, das cores, dos ritmos, da natureza e dos espaços que acolhem a vida.",
+  },
+  {
+    icon: Flower2,
+    title: "Aroma e atmosfera",
+    text: "Perfumaria natural, óleos essenciais e tinturas botânicas para criar uma dimensão olfativa coerente com a casa e com a pessoa.",
+  },
+];
+
+export const consultingDeliverables = [
+  "diagnóstico do ambiente",
+  "leitura energética e sensorial",
+  "análise de luz, circulação, uso, organização e fluxos",
+  "identificação de excessos, bloqueios, vazios e pontos de acolhimento",
+  "recomendações de layout e reorganização",
+  "sugestões de cores, materiais, objetos, plantas e decoração",
+  "orientação de aromas naturais e atmosfera sensorial",
+  "plano de ação por prioridade",
+  "indicação do que pode ser feito sem reforma",
+  "quando necessário, direcionamento para projeto completo ou reforma",
+];
+
+export const processDeliverables = [
+  "diagnóstico do espaço",
+  "leitura energética e sensorial",
+  "recomendações de layout",
+  "orientação de decoração",
+  "paleta sensorial",
+  "sugestões de aromas naturais",
+  "plano de implantação",
+  "prioridades de ação",
+  "indicação do que pode ser feito agora e do que pode ficar para uma etapa futura",
+];
+
+export const aboutFoundations = [
+  "Arquitetura e interiores",
+  "Pós-graduação em Gestão Ambiental",
+  "Perfumaria natural",
+  "Feng Shui tradicional",
+  "Geobiologia e radiestesia",
+  "Biofilia e sustentabilidade",
+  "Neuroarquitetura e psicologia da arquitetura",
+  "Antroposofia",
+  "Harmonização energética dos ambientes",
+  "Atendimentos energéticos complementares",
+];
+
+export const architectureFoundations = [
+  "Arquitetura, função e layout",
+  "Feng Shui tradicional",
+  "Geobiologia e radiestesia",
+  "Biofilia e sustentabilidade",
+  "Neuroarquitetura e psicologia da arquitetura",
+  "Antroposofia",
+  "Perfumaria natural",
+  "Harmonização energética",
+];
+
+export const serviceDecisionCards = [
+  {
+    title: "Quero mudar minha casa",
+    destination: "Arquitetura Terapêutica",
+    text: "Para reorganizar, harmonizar e transformar ambientes, com ou sem reforma.",
+    href: serviceRoutes.architecture,
+  },
+  {
+    title: "Quero transformar visual, energia e sensação do ambiente",
+    destination: "Consultoria Completa ou Projeto Integral",
+    text: "Para quem deseja aprofundar layout, decoração, materiais, atmosfera e funcionalidade.",
+    href: serviceRoutes.architecture,
+  },
+  {
+    title: "Quero um aroma personalizado ou uma atmosfera olfativa",
+    destination: "Perfumaria Terapêutica",
+    text: "Para criar uma composição natural conectada à pessoa, à casa e à intenção do espaço.",
+    href: serviceRoutes.perfumery,
+  },
+  {
+    title: "Sinto que a questão está mais em mim do que na casa",
+    destination: "Atendimentos Terapêuticos Individuais",
+    text: "Para processos pessoais de escuta, clareza e reorganização interna.",
+    href: serviceRoutes.therapy,
+  },
+  {
+    title: "Não sei por onde começar",
+    destination: "Conversa inicial pelo WhatsApp",
+    text: "A conversa inicial ajuda a entender o caminho mais adequado para o seu momento.",
+    href: null,
+  },
+];
+
+export const serviceComparisonCards = [
+  {
+    title: "Consultoria Essencial",
+    forWhom: "quer mudar sem reforma",
+    includes: "diagnóstico, leitura, reorganização, aroma e plano de ação",
+    result: "casa mais leve, coerente e funcional",
+  },
+  {
+    title: "Consultoria Completa",
+    forWhom: "quer transformar visual, energia e atmosfera",
+    includes: "Essencial + layout, decoração, paleta, materiais e composição estética",
+    result: "ambiente mais funcional, bonito e sensorial",
+  },
+  {
+    title: "Projeto Integral",
+    forWhom: "vai reformar ou mudar profundamente",
+    includes: "projeto com olhar terapêutico, energético, funcional e sensorial",
+    result: "transformação profunda da casa",
+  },
+  {
+    title: "Perfumaria Terapêutica",
+    forWhom: "quer aroma natural, ritual ou assinatura olfativa",
+    includes: "composição natural personalizada",
+    result: "atmosfera, memória e presença",
+  },
+  {
+    title: "Atendimento Individual",
+    forWhom: "quer olhar para processos pessoais",
+    includes: "mesa radiônica, Access, radiestesia e recursos integrativos",
+    result: "clareza e reorganização interna",
+  },
+];
+
+export const faqItems = [
+  {
+    question: "Arquitetura Terapêutica é a mesma coisa que decoração?",
+    answer:
+      "Não. A decoração pode fazer parte do processo, mas a Arquitetura Terapêutica vai além da estética. Ela observa função, fluxo, organização, luz, energia, memória, sensação e relação emocional com a casa.",
+  },
+  {
+    question: "Preciso reformar minha casa?",
+    answer:
+      "Não necessariamente. A Consultoria Essencial parte do que já existe e propõe ajustes possíveis com móveis, objetos, organização, cores, plantas, aromas e fluxos. Quando há necessidade de mudanças maiores, o Projeto Integral pode ser indicado.",
+  },
+  {
+    question: "Você atende online?",
+    answer:
+      "Sim, alguns processos podem acontecer online ou em formato híbrido. A modalidade ideal depende do tipo de ambiente, da profundidade da transformação e da necessidade da pessoa.",
+  },
+  {
+    question: "Você usa Feng Shui?",
+    answer:
+      "Sim. O Feng Shui tradicional pode fazer parte da leitura do ambiente, junto com arquitetura, geobiologia, radiestesia, biofilia, neuroarquitetura, psicologia da arquitetura, antroposofia e perfumaria natural.",
+  },
+  {
+    question: "O que é leitura energética do ambiente?",
+    answer:
+      "É uma escuta sensível do espaço, observando sensação, peso, fluidez, excessos, bloqueios, memórias, usos e pontos que pedem reorganização ou harmonização.",
+  },
+  {
+    question: "A consultoria inclui aroma?",
+    answer:
+      "Pode incluir orientação olfativa ou sugestão de aromas naturais quando isso fizer sentido para a casa e para o momento da pessoa.",
+  },
+  {
+    question: "O atendimento substitui terapia médica ou psicológica?",
+    answer:
+      "Não. O trabalho é integrativo e complementar. Ele não substitui acompanhamento médico, psicológico ou qualquer tratamento profissional de saúde.",
+  },
+  {
+    question: "O que recebo depois da consultoria?",
+    answer:
+      "Você recebe uma direção clara de transformação, com diagnóstico, recomendações práticas, prioridades, sugestões de organização, layout, estética, aromas e próximos passos.",
   },
 ];
 
@@ -92,15 +295,14 @@ export const architectureServices: Array<{
     icon: Leaf,
     title: "Consultoria Essencial",
     description:
-      "A porta de entrada para quem deseja transformar a casa sem necessariamente reformar ou comprar novos móveis. Ela parte do que já existe no ambiente e propõe ajustes possíveis, conscientes e transformadores.",
+      "A porta de entrada para quem deseja transformar a casa sem reforma, usando principalmente o que já existe. O processo observa ambiente, rotina, fluxos, energia, organização e atmosfera para propor ajustes possíveis, conscientes e transformadores.",
     items: [
       "diagnóstico do espaço",
       "leitura sensível e energética do ambiente",
-      "identificação de bloqueios, excessos e desequilíbrios",
-      "orientação para reorganização",
-      "harmonização do espaço",
-      "melhoria de fluxos, função e bem-estar",
-      "sugestões práticas usando recursos já presentes na casa",
+      "identificação de bloqueios, excessos e vazios",
+      "reorganização de fluxos, objetos e usos",
+      "sugestões de cores, plantas, aromas e pontos de acolhimento",
+      "plano de ação por prioridade",
     ],
     ideal:
       "Ideal para quem sente que a casa precisa respirar melhor, ficar mais leve e se alinhar ao momento atual da vida.",
@@ -108,18 +310,17 @@ export const architectureServices: Array<{
     featured: true,
   },
   {
-    icon: Brush,
+    icon: Palette,
     title: "Consultoria Completa",
     description:
-      "Inclui tudo o que está na Consultoria Essencial, com um aprofundamento em interiores. Além da leitura e harmonização do espaço, entram direcionamentos de layout, mobiliário, objetos, paleta, materiais e composição estética. É indicada para quem deseja uma transformação mais visível, funcional e sensorial da casa.",
+      "Inclui a base da Consultoria Essencial e aprofunda direção estética, layout, decoração, paleta, materiais e atmosfera. É indicada para quem deseja transformar visual, energia e sensação do ambiente com mais presença e coerência.",
     items: [
       "diagnóstico e harmonização do ambiente",
       "proposta de layout",
-      "orientação de mobiliário",
+      "orientação de mobiliário e decoração",
       "paleta de cores e materiais",
-      "sugestões de decoração",
-      "organização estética e funcional",
-      "construção de uma atmosfera mais alinhada à pessoa",
+      "composição estética e sensorial",
+      "orientação de aromas naturais",
     ],
     ideal: "Ideal para quem quer unir energia, beleza, função e identidade no mesmo processo.",
     cta: "Quero uma transformação mais completa",
@@ -128,13 +329,13 @@ export const architectureServices: Array<{
     icon: Home,
     title: "Projeto Integral",
     description:
-      "Indicado quando a transformação envolve reforma, mudanças estruturais ou um projeto mais completo para o ambiente. Ele une a base da Arquitetura Terapêutica ao desenvolvimento de soluções de projeto, criando uma transformação profunda e coerente entre espaço, função, estética e bem-estar.",
+      "Indicado quando há reforma, mudanças estruturais ou transformação profunda da casa. O projeto une olhar terapêutico, energético, funcional e sensorial ao desenvolvimento completo das soluções de arquitetura e interiores.",
     items: [
       "diagnóstico do espaço",
-      "leitura e harmonização",
-      "projeto de reforma",
+      "leitura e harmonização energética",
+      "projeto de reforma ou transformação profunda",
       "soluções integradas de layout e interiores",
-      "orientação estética, funcional e sensorial",
+      "direção estética, funcional e sensorial",
       "acompanhamento conceitual da transformação",
     ],
     ideal:
@@ -147,24 +348,24 @@ export const homePillars = [
   {
     icon: Home,
     title: "Arquitetura Terapêutica",
-    text: "O principal caminho de transformação da marca. Inclui diagnóstico do espaço, leitura sensível do ambiente, harmonização, organização de fluxos, orientação estética e soluções para tornar a casa mais equilibrada e funcional.",
+    text: "O principal caminho de transformação da marca. Inclui diagnóstico do espaço, escuta do ambiente, harmonização energética, organização de fluxos, direção estética e soluções práticas para tornar a casa mais consciente, funcional e sensorial.",
     href: serviceRoutes.architecture,
     cta: "Conhecer a Consultoria Essencial",
     featured: true,
   },
   {
-    icon: HeartHandshake,
-    title: "Atendimentos Terapêuticos Individuais",
-    text: "Atendimentos voltados para a pessoa, quando o processo pede um olhar mais profundo para padrões, bloqueios, fases de transição ou questões individuais que impactam a relação com a vida e com o ambiente.",
-    href: serviceRoutes.therapy,
-    cta: "Agendar atendimento individual",
-  },
-  {
     icon: Flower2,
     title: "Perfumaria Terapêutica",
-    text: "A dimensão sensorial do cuidado. Aromas, perfumes e composições autorais que ajudam a sustentar a experiência de bem-estar, presença e harmonia no espaço.",
+    text: "A dimensão olfativa do cuidado. Aromas naturais, óleos essenciais e tinturas botânicas criam atmosferas que favorecem presença, acolhimento, memória e intenção no espaço.",
     href: serviceRoutes.perfumery,
     cta: "Conhecer criações olfativas",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Atendimentos Terapêuticos Individuais",
+    text: "Atendimentos complementares para a pessoa, quando o processo pede um olhar para padrões, fases de transição, sobrecargas ou reorganização energética interna.",
+    href: serviceRoutes.therapy,
+    cta: "Agendar atendimento individual",
   },
 ];
 
@@ -176,33 +377,34 @@ export const therapyResources = [
 ];
 
 export const perfumeryApplications = [
-  "aromas para ambientes",
-  "perfumes terapêuticos",
-  "composições autorais",
-  "assinatura olfativa para espaços",
-  "recursos olfativos complementares aos atendimentos e projetos",
+  "aroma para acolhimento",
+  "aroma para clareza e foco",
+  "aroma para limpeza e renovação energética",
+  "aroma para descanso",
+  "aroma para vitalidade",
+  "assinatura olfativa para ambientes",
 ];
 
 export const processSteps = [
   {
     icon: ClipboardList,
     title: "Conversa inicial",
-    text: "Entendimento do momento, dos incômodos, da rotina e do desejo para o ambiente.",
+    text: "Entendimento do momento de vida, incômodos, rotina, desejos, necessidades práticas e sensação atual da casa.",
   },
   {
     icon: Map,
     title: "Leitura do ambiente",
-    text: "Análise de luz, circulação, uso, texturas, excessos, vazios e pontos de acolhimento.",
+    text: "Análise de luz, circulação, usos, organização, fluxos, excessos, vazios, memórias, pontos de acolhimento e leitura energética do espaço.",
   },
   {
     icon: SunMedium,
-    title: "Direção sensorial",
-    text: "Definição de atmosfera, cores, materiais, aromas, prioridades e ajustes possíveis.",
+    title: "Direção estética e sensorial",
+    text: "Definição de atmosfera, cores, materiais, objetos, plantas, aromas naturais, prioridades e ajustes possíveis com ou sem reforma.",
   },
   {
     icon: CheckCircle2,
     title: "Plano de ação",
-    text: "Entrega organizada por etapas para que a mudança aconteça com autonomia e leveza.",
+    text: "Entrega organizada com recomendações práticas, prioridades, caminhos de implantação e orientações para que a mudança aconteça com clareza.",
   },
 ];
 
@@ -241,5 +443,5 @@ export const moodboard = [
 export const architectureHighlights = [
   { icon: Armchair, text: "função, fluxo e organização" },
   { icon: Sparkles, text: "beleza com sentido" },
-  { icon: Leaf, text: "atmosfera sensorial e acolhedora" },
+  { icon: Recycle, text: "natureza, energia e atmosfera sensorial" },
 ];

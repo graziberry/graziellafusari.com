@@ -5,11 +5,12 @@ import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
+import { perfumeryApplications } from "@/lib/site-content";
 import { canonicalRoutes, createBreadcrumbJsonLd, createPageMetadata, createServiceJsonLd } from "@/lib/seo";
 
 const pageTitle = "Perfumaria Terapêutica";
 const pageDescription =
-  "Perfumaria terapêutica com aromas com intenção, recursos sensoriais e presença para apoiar a relação entre ambiente, emoção e cuidado.";
+  "Perfumaria terapêutica natural com óleos essenciais, tinturas botânicas e matérias-primas naturais para criar atmosferas sensoriais e olfativas.";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Perfumaria Terapêutica",
@@ -20,27 +21,27 @@ export const metadata: Metadata = createPageMetadata({
 const supportMoments = [
   {
     title: "Autocuidado e amor próprio",
-    text: "Quando a pessoa precisa voltar para si, se acolher, se nutrir e lembrar do próprio valor.",
+    text: "Pode apoiar pequenos rituais de presença, acolhimento e reconexão com o próprio tempo.",
   },
   {
     title: "Clareza e presença",
-    text: "Quando há excesso mental, cansaço, dispersão ou dificuldade de escutar o próprio caminho.",
+    text: "Ajuda a criar uma atmosfera mais limpa, silenciosa e favorável ao foco.",
   },
   {
     title: "Acolhimento emocional",
-    text: "Quando a casa ou a pessoa pedem suavidade, colo, silêncio e reconexão.",
+    text: "Convida ao recolhimento, à suavidade e à criação de um espaço mais gentil para estar.",
   },
   {
     title: "Vitalidade e movimento",
-    text: "Quando é preciso reacender ânimo, coragem, sensualidade, criatividade ou força de ação.",
+    text: "Pode favorecer uma sensação de ânimo, criatividade e abertura para a ação.",
   },
   {
     title: "Limpeza e renovação energética",
-    text: "Quando o ambiente parece pesado, estagnado ou carregado por memórias, conflitos e excessos.",
+    text: "Sustenta uma intenção de renovação quando o ambiente parece parado, pesado ou carregado de excessos.",
   },
   {
     title: "Criação de atmosfera",
-    text: "Para transformar um espaço em lugar de repouso, concentração, intimidade, meditação, prosperidade ou celebração.",
+    text: "Ajuda a marcar repouso, concentração, intimidade, meditação, celebração ou chegada em casa.",
   },
 ];
 
@@ -67,6 +68,20 @@ export default function PerfumariaTerapeuticaPage() {
       />
 
       <section className="bg-surface py-18 md:py-24">
+        <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-[0.9fr_1.1fr] md:px-8">
+          <SectionHeading
+            eyebrow="Perfumaria natural"
+            title="Aromas criados apenas com matérias-primas naturais"
+          />
+          <p className="text-sm leading-8 text-light-brown md:text-base">
+            Trabalho com óleos essenciais, tinturas botânicas, flores, madeiras, resinas, especiarias e plantas
+            aromáticas. Não uso fragrâncias sintéticas. Cada composição nasce da escuta da pessoa, da casa e da
+            atmosfera que se deseja criar.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-18 md:py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-[0.85fr_1.15fr] md:px-8">
           <div>
             <SectionHeading
@@ -77,7 +92,7 @@ export default function PerfumariaTerapeuticaPage() {
               {[
                 { icon: Flower2, label: "planta" },
                 { icon: Leaf, label: "presença" },
-                { icon: Sparkles, label: "alma" },
+                { icon: Sparkles, label: "atmosfera" },
               ].map((item) => (
                 <div key={item.label} className="border-t border-line pt-5">
                   <item.icon className="text-sage" size={24} />
@@ -89,42 +104,52 @@ export default function PerfumariaTerapeuticaPage() {
           <div className="space-y-5 text-sm leading-8 text-light-brown md:text-base">
             <p>
               A perfumaria terapêutica é a arte de criar aromas com intenção, presença e escuta. Ela vai além de um
-              perfume bonito: é um encontro entre planta, pessoa, casa e alma.
+              perfume bonito: é um encontro entre planta, pessoa, casa e atmosfera.
             </p>
             <p>
               Cada aroma carrega uma linguagem sutil. Algumas plantas acolhem, outras despertam. Algumas trazem chão,
-              outras abrem o coração, clareiam a mente ou convidam o corpo a voltar para si. Na perfumaria terapêutica,
-              os óleos essenciais, resinas, flores, madeiras e especiarias são escolhidos não apenas pelo cheiro, mas
-              pela sensação, pela memória e pela energia que evocam.
+              outras convidam ao silêncio, à clareza ou ao movimento. Na perfumaria terapêutica, óleos essenciais,
+              resinas, flores, madeiras e especiarias são escolhidos pela sensação, pela memória e pela intenção que
+              ajudam a sustentar.
             </p>
             <p>
-              O olfato é uma porta antiga. Antes mesmo da razão compreender, o cheiro toca nossas emoções, desperta
-              lembranças, muda atmosferas e cria estados internos. Por isso, um perfume pode se tornar um pequeno
-              ritual: uma forma de ancorar presença, intenção, cuidado e transformação no dia a dia.
+              O olfato é uma porta antiga. Antes mesmo da razão compreender, o cheiro toca lembranças, muda atmosferas e
+              cria pequenos rituais de presença no dia a dia.
             </p>
             <p>
-              Na Arquitetura Terapêutica, a perfumaria entra como uma extensão sensorial do espaço. Assim como a luz, as
-              cores, os objetos e a organização da casa influenciam quem habita ali, os aromas também comunicam. Eles
-              ajudam a criar ambientes mais acolhedores, vivos, protegidos, leves ou expansivos, conforme a necessidade
-              da pessoa e da casa.
+              Na Arquitetura Terapêutica, a perfumaria entra como uma extensão sensorial do espaço. Assim como luz,
+              cores, objetos e organização comunicam, os aromas também participam da experiência de habitar.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-surface py-18 md:py-24">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <SectionHeading
+            eyebrow="Para que pode apoiar"
+            title="Para harmonizar a relação entre corpo, emoção e ambiente"
+            subtitle="A perfumaria natural ajuda a criar atmosfera, favorece presença, convida ao acolhimento e sustenta uma intenção para o espaço."
+          />
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {supportMoments.map((moment) => (
+              <article key={moment.title} className="rounded-card border border-line bg-cream p-6">
+                <h3 className="font-heading text-3xl font-semibold leading-tight text-brown">{moment.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-light-brown">{moment.text}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
       <section className="py-18 md:py-24">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <SectionHeading
-            eyebrow="Para que serve"
-            title="Para harmonizar a relação entre corpo, emoção e ambiente"
-            subtitle="Ela pode apoiar momentos de cuidado, clareza, acolhimento, vitalidade, renovação e criação de atmosfera."
-          />
+          <SectionHeading title="Como a perfumaria entra na casa" eyebrow="Aplicações" />
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {supportMoments.map((moment) => (
-              <article key={moment.title} className="rounded-card border border-line bg-surface p-6 shadow-soft">
-                <h3 className="font-heading text-3xl font-semibold leading-tight text-brown">{moment.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-light-brown">{moment.text}</p>
-              </article>
+            {perfumeryApplications.map((item) => (
+              <div key={item} className="rounded-card border border-line bg-surface p-6 shadow-soft">
+                <p className="font-heading text-2xl font-semibold leading-tight text-brown">{item}</p>
+              </div>
             ))}
           </div>
         </div>

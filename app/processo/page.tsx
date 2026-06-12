@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { Check } from "lucide-react";
 import { ContactCTA } from "@/components/ContactCTA";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
-import { processSteps } from "@/lib/site-content";
+import { processDeliverables, processSteps } from "@/lib/site-content";
 import { canonicalRoutes, createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -56,6 +57,24 @@ export default function ProcessoPage() {
                 <h2 className="mt-4 font-heading text-3xl font-semibold text-brown">{step.title}</h2>
                 <p className="mt-3 text-sm leading-7 text-light-brown">{step.text}</p>
               </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-surface py-18 md:py-24">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <SectionHeading
+            eyebrow="Entregáveis"
+            title="O que pode fazer parte do processo"
+            subtitle="A entrega se adapta ao nível de transformação necessário, sempre com orientações claras para sair da percepção e chegar à ação."
+          />
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {processDeliverables.map((item) => (
+              <div key={item} className="flex gap-3 rounded-card border border-line bg-cream p-5">
+                <Check className="mt-0.5 shrink-0 text-terracotta" size={18} />
+                <p className="text-sm font-semibold leading-7 text-brown">{item}</p>
+              </div>
             ))}
           </div>
         </div>

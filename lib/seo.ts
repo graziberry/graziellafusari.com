@@ -5,7 +5,7 @@ export const SITE_NAME = "Graziella Fusari";
 export const SITE_LOCALE = "pt_BR";
 export const SITE_LANGUAGE = "pt-BR";
 export const DEFAULT_DESCRIPTION =
-  "Arquitetura terapêutica, harmonização de ambientes, terapias integrativas e perfumaria terapêutica para transformar sua casa em um espaço de equilíbrio e bem-estar.";
+  "Arquitetura Terapêutica e Ambientes Sensoriais por Graziella Fusari: consultorias que integram arquitetura, energia, natureza, antroposofia e perfumaria natural para transformar casas.";
 export const DEFAULT_OG_IMAGE = "/og-graziella-fusari.png";
 
 export const canonicalRoutes = {
@@ -144,6 +144,21 @@ export function createBreadcrumbJsonLd(items: Array<{ name: string; path: string
       position: index + 1,
       name: item.name,
       item: absoluteUrl(item.path),
+    })),
+  };
+}
+
+export function createFaqJsonLd(items: Array<{ question: string; answer: string }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
     })),
   };
 }
