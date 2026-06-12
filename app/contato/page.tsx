@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Mail, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
+import { EmailContactActions } from "@/components/EmailContactActions";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
@@ -72,14 +73,8 @@ export default function ContatoPage() {
                 <MessageCircle size={16} />
                 Chamar no WhatsApp
               </WhatsAppLink>
-              <a
-                href={`mailto:${contactEmail}`}
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-line px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-brown transition hover:border-terracotta hover:text-terracotta"
-              >
-                <Mail size={16} />
-                Enviar mensagem por email
-              </a>
             </div>
+            <EmailContactActions email={contactEmail} />
           </div>
         </div>
       </section>
