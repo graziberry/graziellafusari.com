@@ -96,6 +96,16 @@ a {
   color: currentColor;
 }
 
+a[class*="bg-brown"][class*="text-surface"],
+button[class*="bg-brown"][class*="text-surface"] {
+  color: #fffdf8 !important;
+}
+
+a[class*="bg-brown"][class*="text-surface"] svg,
+button[class*="bg-brown"][class*="text-surface"] svg {
+  color: currentColor;
+}
+
 img {
   max-width: 100%;
 }
