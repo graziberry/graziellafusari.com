@@ -120,6 +120,7 @@ export default function ArquiteturaTerapeuticaPage() {
                   }}
                   aria-label={service.cta}
                   className="cta-on-dark mt-6 inline-flex max-w-full items-center justify-center gap-2 rounded-full bg-brown px-5 py-3 text-center text-[0.68rem] font-bold uppercase leading-5 tracking-[0.12em] text-surface transition hover:bg-terracotta"
+                  style={{ color: "#fffdf8" }}
                 >
                   <MessageCircle size={15} />
                   {service.cta}
