@@ -68,7 +68,7 @@ export default function ContatoPage() {
                 messageKey="homepage"
                 tracking={{ page: "contato", service: "general", cta_text: "Chamar no WhatsApp" }}
                 aria-label="Chamar no WhatsApp"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-brown px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-surface transition hover:bg-terracotta"
+                className="cta-on-dark inline-flex items-center justify-center gap-2 rounded-full bg-brown px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-surface transition hover:bg-terracotta"
               >
                 <MessageCircle size={16} />
                 Chamar no WhatsApp

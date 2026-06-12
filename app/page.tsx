@@ -127,8 +127,7 @@ export default function HomePage() {
           <div className="relative z-10 mt-10 flex">
             <Link
               href="/servicos"
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-brown px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-surface shadow-soft ring-1 ring-brown/10 transition hover:bg-terracotta"
-              style={{ color: "#fffdf8" }}
+              className="cta-on-dark inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-brown px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-surface shadow-soft ring-1 ring-brown/10 transition hover:bg-terracotta"
             >
               Entender qual serviço é ideal para mim
               <ArrowRight size={16} />

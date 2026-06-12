@@ -88,6 +88,14 @@ a {
   text-decoration: none;
 }
 
+.cta-on-dark {
+  color: #fffdf8 !important;
+}
+
+.cta-on-dark svg {
+  color: currentColor;
+}
+
 img {
   max-width: 100%;
 }

@@ -87,7 +87,7 @@ export default function TerapiasIndividuaisPage() {
             messageKey="therapy"
             tracking={{ page: "terapias-individuais", service: "therapy", cta_text: "Agendar atendimento individual" }}
             aria-label="Agendar atendimento individual"
-            className="mt-10 inline-flex items-center justify-center gap-2 rounded-full bg-brown px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-surface transition hover:bg-terracotta"
+            className="cta-on-dark mt-10 inline-flex items-center justify-center gap-2 rounded-full bg-brown px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-surface transition hover:bg-terracotta"
           >
             <MessageCircle size={16} />
             Agendar atendimento individual
