@@ -348,7 +348,7 @@ export const homePillars = [
   {
     icon: Home,
     title: "Arquitetura Terapêutica",
-    text: "O principal caminho de transformação da marca. Inclui diagnóstico do espaço, escuta do ambiente, harmonização energética, organização de fluxos, direção estética e soluções práticas para tornar a casa mais consciente, funcional e sensorial.",
+    text: "Inclui diagnóstico do espaço, escuta do ambiente, harmonização energética, organização de fluxos, direção estética e soluções práticas para tornar a casa mais consciente, funcional e sensorial.",
     href: serviceRoutes.architecture,
     cta: "Conhecer a Consultoria Essencial",
     featured: true,
