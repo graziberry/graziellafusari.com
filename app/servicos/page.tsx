@@ -41,7 +41,6 @@ export default function ServicosPage() {
           <SectionHeading
             eyebrow="Caminhos de cuidado"
             title="Escolha o caminho que mais conversa com o seu momento"
-            subtitle="Arquitetura Terapêutica é o eixo principal da marca. Perfumaria Terapêutica e Atendimentos Terapêuticos Individuais ampliam o cuidado quando a experiência pede mais sensorialidade, escuta e presença."
           />
           <div className="mt-12">
             <ServiceOverviewCards />
