@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { TrackedLink } from "@/components/TrackedLink";
 import { serviceOverviewCards } from "@/lib/site-content";
 
 type ServiceOverviewCardsProps = {
@@ -25,13 +25,15 @@ export function ServiceOverviewCards({ compact = false }: ServiceOverviewCardsPr
           <p className="mt-4 text-sm leading-7 text-light-brown">
             {compact ? service.summary : service.description}
           </p>
-          <Link
+          <TrackedLink
             href={service.href}
+            eventNames={["service_cta_click"]}
+            tracking={{ cta_label: service.cta, service_name: service.title }}
             className="mt-7 inline-flex min-h-11 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-terracotta transition hover:text-brown"
           >
             {service.cta}
             <ArrowRight size={16} />
-          </Link>
+          </TrackedLink>
         </article>
       ))}
     </div>

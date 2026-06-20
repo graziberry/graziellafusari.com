@@ -1,45 +1,29 @@
 "use client";
 
 import type { AnchorHTMLAttributes, MouseEvent, ReactNode } from "react";
+import { trackCtaEvents, type AnalyticsEventName, type CtaAnalyticsProperties } from "@/lib/analytics";
 import { getWhatsAppHref, type WhatsAppMessageKey } from "@/lib/whatsapp";
-
-type TrackingProperties = {
-  page: string;
-  service?: string;
-  cta_text: string;
-};
 
 type WhatsAppLinkProps = Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href" | "target" | "rel"> & {
   children: ReactNode;
   messageKey?: WhatsAppMessageKey;
-  tracking: TrackingProperties;
+  tracking: CtaAnalyticsProperties;
+  eventNames?: AnalyticsEventName[];
 };
 
-type AnalyticsWindow = Window & {
-  gtag?: (command: "event", eventName: string, properties: Record<string, string>) => void;
-  dataLayer?: Array<Record<string, string>>;
-  plausible?: (eventName: string, options: { props: Record<string, string> }) => void;
-  posthog?: {
-    capture: (eventName: string, properties: Record<string, string>) => void;
-  };
-};
-
-function trackWhatsAppClick(properties: TrackingProperties & { destination: string }) {
-  const eventName = "whatsapp_cta_click";
-  const analyticsWindow = window as AnalyticsWindow;
-
-  analyticsWindow.gtag?.("event", eventName, properties);
-  analyticsWindow.dataLayer?.push({ event: eventName, ...properties });
-  analyticsWindow.plausible?.(eventName, { props: properties });
-  analyticsWindow.posthog?.capture(eventName, properties);
-}
-
-export function WhatsAppLink({ children, messageKey = "homepage", tracking, onClick, ...props }: WhatsAppLinkProps) {
+export function WhatsAppLink({
+  children,
+  messageKey = "homepage",
+  tracking,
+  eventNames = ["whatsapp_click"],
+  onClick,
+  ...props
+}: WhatsAppLinkProps) {
   const href = getWhatsAppHref(messageKey);
 
   function handleClick(event: MouseEvent<HTMLAnchorElement>) {
     onClick?.(event);
-    trackWhatsAppClick({ ...tracking, destination: href });
+    trackCtaEvents(eventNames, { ...tracking, destination: href });
   }
 
   return (

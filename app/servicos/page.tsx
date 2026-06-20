@@ -70,7 +70,12 @@ export default function ServicosPage() {
                 ) : (
                   <WhatsAppLink
                     messageKey="homepage"
-                    tracking={{ page: "servicos", service: "general", cta_text: "Conversar pelo WhatsApp" }}
+                    eventNames={["whatsapp_click", "service_cta_click"]}
+                    tracking={{
+                      page_path: "/servicos",
+                      service_name: "general",
+                      cta_label: "Conversar pelo WhatsApp",
+                    }}
                     aria-label="Conversar pelo WhatsApp"
                     className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-brown"
                   >
@@ -133,9 +138,10 @@ export default function ServicosPage() {
         title="Quer entender por onde começar?"
         text="A primeira conversa ajuda a perceber se o melhor caminho é transformar o ambiente, criar uma atmosfera sensorial ou iniciar um cuidado terapêutico individual."
         cta="Quero entender qual serviço é ideal para mim"
-        page="servicos"
+        page="/servicos"
         service="general"
         whatsappMessageKey="homepage"
+        analyticsEvents={["whatsapp_click", "service_cta_click"]}
       />
     </PageShell>
   );

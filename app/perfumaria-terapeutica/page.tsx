@@ -159,9 +159,10 @@ export default function PerfumariaTerapeuticaPage() {
         title="Quer levar a perfumaria terapêutica para o seu espaço?"
         text="A perfumaria terapêutica pode apoiar a criação de atmosferas mais acolhedoras, vivas, protegidas, leves ou expansivas."
         cta="Falar sobre perfumaria terapêutica"
-        page="perfumaria-terapeutica"
+        page="/perfumaria-terapeutica"
         service="perfumery"
         whatsappMessageKey="perfumery"
+        analyticsEvents={["whatsapp_click", "service_cta_click"]}
       />
     </PageShell>
   );

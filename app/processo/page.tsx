@@ -83,9 +83,10 @@ export default function ProcessoPage() {
       <ContactCTA
         text=""
         cta="Agendar conversa pelo WhatsApp"
-        page="processo"
+        page="/processo"
         service="architecture"
         whatsappMessageKey="architecture"
+        analyticsEvents={["whatsapp_click", "schedule_click"]}
       />
     </PageShell>
   );

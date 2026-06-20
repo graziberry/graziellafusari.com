@@ -113,10 +113,11 @@ export default function ArquiteturaTerapeuticaPage() {
                 </p>
                 <WhatsAppLink
                   messageKey="architecture"
+                  eventNames={["whatsapp_click", "service_cta_click"]}
                   tracking={{
-                    page: "arquitetura-terapeutica",
-                    service: service.title,
-                    cta_text: service.cta,
+                    page_path: "/arquitetura-terapeutica",
+                    service_name: service.title,
+                    cta_label: service.cta,
                   }}
                   aria-label={service.cta}
                   className="cta-on-dark mt-6 inline-flex max-w-full items-center justify-center gap-2 rounded-full bg-brown px-5 py-3 text-center text-[0.68rem] font-bold uppercase leading-5 tracking-[0.12em] text-surface transition hover:bg-terracotta"
@@ -172,9 +173,10 @@ export default function ArquiteturaTerapeuticaPage() {
 
       <ContactCTA
         cta="Falar sobre meu espaço"
-        page="arquitetura-terapeutica"
+        page="/arquitetura-terapeutica"
         service="architecture"
         whatsappMessageKey="architecture"
+        analyticsEvents={["whatsapp_click", "service_cta_click"]}
       />
     </PageShell>
   );

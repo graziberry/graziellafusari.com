@@ -1,6 +1,7 @@
 import { ArrowRight, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
+import type { AnalyticsEventName } from "@/lib/analytics";
 import type { WhatsAppMessageKey } from "@/lib/whatsapp";
 
 type ContactCTAProps = {
@@ -10,15 +11,17 @@ type ContactCTAProps = {
   page?: string;
   service?: string;
   whatsappMessageKey?: WhatsAppMessageKey;
+  analyticsEvents?: AnalyticsEventName[];
 };
 
 export function ContactCTA({
   title = "Vamos olhar para a sua casa com mais intenção?",
   text = "Você pode começar de forma simples, com uma Consultoria Essencial, ou aprofundar o processo com uma transformação mais completa do ambiente.",
   cta = "Agendar conversa pelo WhatsApp",
-  page = "site",
+  page,
   service,
   whatsappMessageKey = "homepage",
+  analyticsEvents = ["whatsapp_click"],
 }: ContactCTAProps) {
   return (
     <section className="bg-brown py-18 text-surface md:py-24">
@@ -29,7 +32,8 @@ export function ContactCTA({
         <div className="mt-9 flex flex-col gap-3 sm:flex-row">
           <WhatsAppLink
             messageKey={whatsappMessageKey}
-            tracking={{ page, service, cta_text: cta }}
+            eventNames={analyticsEvents}
+            tracking={{ page_path: page, service_name: service, cta_label: cta }}
             aria-label={cta}
             className="inline-flex items-center justify-center gap-2 rounded-full bg-terracotta px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-surface transition hover:bg-soft-terracotta"
           >

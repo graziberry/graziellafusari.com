@@ -116,7 +116,7 @@ export default function SobrePage() {
 
       <ContactCTA
         cta="Conversar com Graziella"
-        page="sobre"
+        page="/sobre"
         service="architecture"
         whatsappMessageKey="homepage"
       />

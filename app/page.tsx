@@ -41,22 +41,27 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(36,26,21,0.90)_0%,rgba(90,51,35,0.72)_38%,rgba(90,51,35,0.22)_72%,rgba(36,26,21,0.10)_100%)]" />
         <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-ink/62 to-transparent" />
 
-        <div className="relative mx-auto flex min-h-[calc(100svh-72px)] max-w-7xl items-center px-5 py-16 md:px-8 md:py-20">
+        <div className="relative mx-auto flex min-h-[calc(100svh-72px)] max-w-7xl items-center px-5 py-10 md:px-8 md:py-12 lg:py-14">
           <div className="w-full max-w-[calc(100vw-40px)] text-surface drop-shadow-[0_2px_18px_rgba(36,26,21,0.32)] md:max-w-[780px]">
             <p className="max-w-[22rem] text-[0.68rem] font-bold uppercase leading-6 tracking-[0.16em] text-blush md:max-w-[36rem] md:text-xs md:tracking-[0.22em]">
               Arquitetura Terapêutica e Ambientes Sensoriais
             </p>
-            <h1 className="mt-5 max-w-[14.5ch] font-heading text-[2.45rem] font-semibold leading-[1.02] md:text-[3.75rem] lg:text-[4.15rem] xl:text-[4.45rem]">
+            <h1 className="mt-4 max-w-[14.5ch] font-heading text-[2.35rem] font-semibold leading-[0.98] md:text-[3.35rem] lg:text-[3.75rem] xl:text-[4rem]">
               Transforme sua casa em um espaço que cuida de você
             </h1>
-            <p className="mt-6 max-w-[22rem] text-base font-medium leading-8 text-surface/88 md:max-w-2xl md:text-lg">
+            <p className="mt-5 max-w-[22rem] text-base font-medium leading-7 text-surface/88 md:max-w-2xl md:text-lg md:leading-8">
               Um trabalho autoral que integra arquitetura, energia, natureza e aroma para criar casas mais conscientes,
               sensoriais e alinhadas com quem vive nelas.
             </p>
-            <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row">
+            <div className="mt-6 flex flex-col items-start gap-3 sm:flex-row md:mt-7">
               <WhatsAppLink
                 messageKey="homepage"
-                tracking={{ page: "homepage", service: "architecture", cta_text: "Agendar conversa pelo WhatsApp" }}
+                eventNames={["whatsapp_click", "schedule_click"]}
+                tracking={{
+                  page_path: "/",
+                  service_name: "architecture",
+                  cta_label: "Agendar conversa pelo WhatsApp",
+                }}
                 aria-label="Agendar conversa pelo WhatsApp"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-terracotta px-6 py-3 text-[0.72rem] font-bold uppercase tracking-[0.13em] text-surface shadow-soft transition hover:bg-soft-terracotta"
               >
@@ -276,9 +281,10 @@ export default function HomePage() {
         title="Como o processo pode começar"
         text="Você pode começar de forma simples, com uma Consultoria Essencial, ou aprofundar o processo com uma transformação mais completa do ambiente."
         cta="Quero entender qual serviço é ideal para mim"
-        page="homepage"
+        page="/"
         service="architecture"
         whatsappMessageKey="homepage"
+        analyticsEvents={["whatsapp_click"]}
       />
     </PageShell>
   );

@@ -116,7 +116,8 @@ export function SiteHeader() {
 
         <WhatsAppLink
           messageKey="homepage"
-          tracking={{ page: "header", service: "architecture", cta_text: "Agendar" }}
+          eventNames={["whatsapp_click", "schedule_click"]}
+          tracking={{ service_name: "architecture", cta_label: "Agendar" }}
           aria-label="Agendar conversa pelo WhatsApp"
           className="hidden min-h-10 min-w-[108px] items-center justify-center rounded-full bg-brown px-4 py-3 text-[0.68rem] font-bold uppercase tracking-[0.12em] transition hover:bg-terracotta sm:inline-flex sm:px-5"
           style={{ color: "#fffdf8" }}
@@ -152,7 +153,8 @@ export function SiteHeader() {
           )}
           <WhatsAppLink
             messageKey="homepage"
-            tracking={{ page: "mobile-header", service: "architecture", cta_text: "Agendar" }}
+            eventNames={["whatsapp_click", "schedule_click"]}
+            tracking={{ service_name: "architecture", cta_label: "Agendar" }}
             aria-label="Agendar conversa pelo WhatsApp"
             className="flex min-h-11 shrink-0 items-center text-terracotta"
           >

@@ -32,7 +32,8 @@ export default function ContatoPage() {
               {contact.href ? (
                 <WhatsAppLink
                   messageKey="homepage"
-                  tracking={{ page: "contato", service: contact.title, cta_text: contact.text }}
+                  eventNames={["whatsapp_click", "contact_cta_click"]}
+                  tracking={{ page_path: "/contato", service_name: contact.title, cta_label: contact.text }}
                   aria-label={contact.text}
                   className="mt-3 block text-sm font-semibold leading-6 text-light-brown transition hover:text-terracotta"
                 >
@@ -66,7 +67,8 @@ export default function ContatoPage() {
             <div className="flex flex-col gap-3 sm:flex-row">
               <WhatsAppLink
                 messageKey="homepage"
-                tracking={{ page: "contato", service: "general", cta_text: "Chamar no WhatsApp" }}
+                eventNames={["whatsapp_click", "contact_cta_click"]}
+                tracking={{ page_path: "/contato", service_name: "general", cta_label: "Chamar no WhatsApp" }}
                 aria-label="Chamar no WhatsApp"
                 className="cta-on-dark inline-flex items-center justify-center gap-2 rounded-full bg-brown px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-surface transition hover:bg-terracotta"
               >
@@ -74,7 +76,7 @@ export default function ContatoPage() {
                 Chamar no WhatsApp
               </WhatsAppLink>
             </div>
-            <EmailContactActions email={contactEmail} />
+            <EmailContactActions email={contactEmail} pagePath="/contato" extraEventNames={["contact_cta_click"]} />
           </div>
         </div>
       </section>

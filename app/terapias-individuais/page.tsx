@@ -85,7 +85,12 @@ export default function TerapiasIndividuaisPage() {
           </div>
           <WhatsAppLink
             messageKey="therapy"
-            tracking={{ page: "terapias-individuais", service: "therapy", cta_text: "Agendar atendimento individual" }}
+            eventNames={["whatsapp_click", "schedule_click", "service_cta_click"]}
+            tracking={{
+              page_path: "/terapias-individuais",
+              service_name: "therapy",
+              cta_label: "Agendar atendimento individual",
+            }}
             aria-label="Agendar atendimento individual"
             className="cta-on-dark mt-10 inline-flex items-center justify-center gap-2 rounded-full bg-brown px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-surface transition hover:bg-terracotta"
           >
@@ -99,9 +104,10 @@ export default function TerapiasIndividuaisPage() {
         title="Quer entender se este cuidado faz sentido para o seu momento?"
         text="A primeira conversa ajuda a compreender se o atendimento terapêutico individual é o melhor caminho agora ou se a Arquitetura Terapêutica deve ser o ponto de partida."
         cta="Agendar atendimento individual"
-        page="terapias-individuais"
+        page="/terapias-individuais"
         service="therapy"
         whatsappMessageKey="therapy"
+        analyticsEvents={["whatsapp_click", "schedule_click", "service_cta_click"]}
       />
     </PageShell>
   );
