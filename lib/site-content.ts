@@ -125,28 +125,19 @@ export const methodLayers: Array<{ icon: LucideIcon; title: string; text: string
 ];
 
 export const consultingDeliverables = [
-  "diagnóstico do ambiente",
-  "leitura energética e sensorial",
-  "análise de luz, circulação, uso, organização e fluxos",
-  "identificação de excessos, bloqueios, vazios e pontos de acolhimento",
-  "recomendações de layout e reorganização",
-  "sugestões de cores, materiais, objetos, plantas e decoração",
-  "orientação de aromas naturais e atmosfera sensorial",
-  "plano de ação por prioridade",
-  "indicação do que pode ser feito sem reforma",
-  "quando necessário, direcionamento para projeto completo ou reforma",
+  "clareza sobre o que sua casa está pedindo agora",
+  "orientações possíveis para trazer mais leveza e fluidez",
+  "direção estética e sensorial coerente com o seu momento",
+  "prioridades para transformar o ambiente sem excesso",
+  "caminhos para aprofundar o processo quando fizer sentido",
 ];
 
 export const processDeliverables = [
-  "diagnóstico do espaço",
-  "leitura energética e sensorial",
-  "recomendações de layout",
-  "orientação de decoração",
-  "paleta sensorial",
-  "sugestões de aromas naturais",
-  "plano de implantação",
-  "prioridades de ação",
-  "indicação do que pode ser feito agora e do que pode ficar para uma etapa futura",
+  "escuta do momento da casa e da pessoa",
+  "percepção do que pesa, trava ou não acompanha mais a rotina",
+  "direção de transformação com prioridades claras",
+  "orientações aplicáveis ao nível de mudança escolhido",
+  "encaminhamento para o serviço mais adequado quando necessário",
 ];
 
 export const aboutFoundations = [
@@ -209,33 +200,28 @@ export const serviceDecisionCards = [
 export const serviceComparisonCards = [
   {
     title: "Consultoria Essencial",
-    forWhom: "quer mudar sem reforma",
-    includes: "diagnóstico, leitura, reorganização, aroma e plano de ação",
-    result: "casa mais leve, coerente e funcional",
+    forWhom: "Para quem quer melhorar a casa sem reforma.",
+    focus: "leveza, organização, harmonia e ajustes possíveis.",
   },
   {
     title: "Consultoria Completa",
-    forWhom: "quer transformar visual, energia e atmosfera",
-    includes: "Essencial + layout, decoração, paleta, materiais e composição estética",
-    result: "ambiente mais funcional, bonito e sensorial",
+    forWhom: "Para quem quer transformar estética, energia e sensação dos ambientes.",
+    focus: "ambiente mais bonito, funcional, acolhedor e coerente com você.",
   },
   {
     title: "Projeto Integral",
-    forWhom: "vai reformar ou mudar profundamente",
-    includes: "projeto com olhar terapêutico, energético, funcional e sensorial",
-    result: "transformação profunda da casa",
+    forWhom: "Para quem vai reformar, construir ou começar um espaço desde o início.",
+    focus: "transformação profunda com olhar arquitetônico, terapêutico e sensorial.",
   },
   {
     title: "Perfumaria Terapêutica",
-    forWhom: "quer aroma natural, ritual ou assinatura olfativa",
-    includes: "composição natural personalizada",
-    result: "atmosfera, memória e presença",
+    forWhom: "Para quem quer criar uma atmosfera olfativa natural e personalizada.",
+    focus: "aroma, presença, memória e intenção no espaço.",
   },
   {
     title: "Atendimento Individual",
-    forWhom: "quer olhar para processos pessoais",
-    includes: "mesa radiônica, Access, radiestesia e recursos integrativos",
-    result: "clareza e reorganização interna",
+    forWhom: "Para quem sente que o cuidado precisa começar pela pessoa.",
+    focus: "clareza, reorganização interna e cuidado energético complementar.",
   },
 ];
 
@@ -278,7 +264,7 @@ export const faqItems = [
   {
     question: "O que recebo depois da consultoria?",
     answer:
-      "Você recebe uma direção clara de transformação, com diagnóstico, recomendações práticas, prioridades, sugestões de organização, layout, estética, aromas e próximos passos.",
+      "Você recebe uma direção clara para transformar a casa de acordo com o seu momento, com prioridades e orientações possíveis para começar sem se perder no excesso.",
   },
 ];
 
@@ -295,17 +281,14 @@ export const architectureServices: Array<{
     icon: Leaf,
     title: "Consultoria Essencial",
     description:
-      "A porta de entrada para quem deseja transformar a casa sem reforma, usando principalmente o que já existe. O processo observa ambiente, rotina, fluxos, energia, organização e atmosfera para propor ajustes possíveis, conscientes e transformadores.",
+      "Para quem sente que o ambiente precisa de mais leveza, ordem, acolhimento ou fluidez, mas não quer reformar agora. É um olhar direcionado para o que já existe, com orientações práticas para melhorar a sensação da casa no dia a dia.",
     items: [
-      "diagnóstico do espaço",
-      "leitura sensível e energética do ambiente",
-      "identificação de bloqueios, excessos e vazios",
-      "reorganização de fluxos, objetos e usos",
-      "sugestões de cores, plantas, aromas e pontos de acolhimento",
-      "plano de ação por prioridade",
+      "mais leveza e ordem para os ambientes",
+      "ajustes possíveis sem grandes mudanças estruturais",
+      "clareza para começar sem se perder no excesso",
     ],
     ideal:
-      "Ideal para quem sente que a casa precisa respirar melhor, ficar mais leve e se alinhar ao momento atual da vida.",
+      "Ideal para quem deseja começar com clareza e transformar a casa de forma simples, sensível e possível.",
     cta: "Quero começar pela Consultoria Essencial",
     featured: true,
   },
@@ -313,34 +296,28 @@ export const architectureServices: Array<{
     icon: Palette,
     title: "Consultoria Completa",
     description:
-      "Inclui a base da Consultoria Essencial e aprofunda direção estética, layout, decoração, paleta, materiais e atmosfera. É indicada para quem deseja transformar visual, energia e sensação do ambiente com mais presença e coerência.",
+      "Indicada quando a casa pede mais do que pequenos ajustes. O olhar se aprofunda na atmosfera do espaço, na beleza, na funcionalidade, na sensação dos ambientes e na identidade da pessoa que vive ali.",
     items: [
-      "diagnóstico e harmonização do ambiente",
-      "proposta de layout",
-      "orientação de mobiliário e decoração",
-      "paleta de cores e materiais",
-      "composição estética e sensorial",
-      "orientação de aromas naturais",
+      "transformação estética e sensorial com mais intenção",
+      "ambientes mais bonitos, funcionais e acolhedores",
+      "direção mais profunda para a energia e o uso da casa",
     ],
-    ideal: "Ideal para quem quer unir energia, beleza, função e identidade no mesmo processo.",
-    cta: "Quero uma transformação mais completa",
+    ideal: "Ideal para quem quer transformar o ambiente com profundidade, mas ainda não precisa de um projeto completo.",
+    cta: "Quero transformar meu ambiente com mais profundidade",
   },
   {
     icon: Home,
     title: "Projeto Integral",
     description:
-      "Indicado quando há reforma, mudanças estruturais ou transformação profunda da casa. O projeto une olhar terapêutico, energético, funcional e sensorial ao desenvolvimento completo das soluções de arquitetura e interiores.",
+      "Para quem está em um momento de transformação maior: reforma, mudança de imóvel, construção, criação de um novo ambiente ou reorganização completa da casa.",
     items: [
-      "diagnóstico do espaço",
-      "leitura e harmonização energética",
-      "projeto de reforma ou transformação profunda",
-      "soluções integradas de layout e interiores",
-      "direção estética, funcional e sensorial",
-      "acompanhamento conceitual da transformação",
+      "casa pensada com profundidade desde as primeiras decisões",
+      "funcionalidade, estética, energia e sensorialidade juntas",
+      "transformação maior com olhar arquitetônico e terapêutico",
     ],
     ideal:
-      "Ideal para quem deseja transformar a casa em profundidade e criar um espaço mais alinhado à vida que deseja viver.",
-    cta: "Quero falar sobre um projeto",
+      "Ideal para quem quer criar um espaço alinhado ao modo como deseja viver agora e nos próximos anos.",
+    cta: "Quero falar sobre um projeto integral",
   },
 ];
 
@@ -348,7 +325,7 @@ export const homePillars = [
   {
     icon: Home,
     title: "Arquitetura Terapêutica",
-    text: "Inclui diagnóstico do espaço, escuta do ambiente, harmonização energética, organização de fluxos, direção estética e soluções práticas para tornar a casa mais consciente, funcional e sensorial.",
+    text: "Um olhar para a casa como espaço vivo, unindo função, beleza, energia e sensorialidade para tornar os ambientes mais conscientes, acolhedores e coerentes com quem vive ali.",
     href: serviceRoutes.architecture,
     cta: "Conhecer a Consultoria Essencial",
     featured: true,
