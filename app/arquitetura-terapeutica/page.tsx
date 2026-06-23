@@ -99,18 +99,26 @@ export default function ArquiteturaTerapeuticaPage() {
               >
                 <service.icon className="text-sage" size={31} />
                 <h2 className="mt-5 font-heading text-2xl font-semibold text-brown">{service.title}</h2>
-                <p className="mt-3 text-sm leading-7 text-light-brown">{service.description}</p>
-                <ul className="mt-7 space-y-3 text-sm font-medium text-brown">
-                  {service.items.map((item) => (
-                    <li key={item} className="flex gap-3">
-                      <Check className="mt-0.5 shrink-0 text-terracotta" size={17} />
-                      <span>{item}</span>
-                    </li>
+                <div className="mt-3 space-y-4 text-sm leading-7 text-light-brown">
+                  {(service.paragraphs ?? [service.description]).map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
                   ))}
-                </ul>
-                <p className="mt-7 border-t border-line pt-5 text-sm font-semibold leading-7 text-light-brown">
-                  {service.ideal}
-                </p>
+                </div>
+                {service.items.length ? (
+                  <ul className="mt-7 space-y-3 text-sm font-medium text-brown">
+                    {service.items.map((item) => (
+                      <li key={item} className="flex gap-3">
+                        <Check className="mt-0.5 shrink-0 text-terracotta" size={17} />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+                {service.ideal ? (
+                  <p className="mt-7 border-t border-line pt-5 text-sm font-semibold leading-7 text-light-brown">
+                    {service.ideal}
+                  </p>
+                ) : null}
                 <WhatsAppLink
                   messageKey="architecture"
                   eventNames={["whatsapp_click", "service_cta_click"]}

@@ -272,6 +272,7 @@ export const architectureServices: Array<{
   icon: LucideIcon;
   title: string;
   description: string;
+  paragraphs?: string[];
   items: string[];
   ideal: string;
   cta: string;
@@ -281,14 +282,14 @@ export const architectureServices: Array<{
     icon: Leaf,
     title: "Consultoria Essencial",
     description:
-      "Para quem sente que o ambiente precisa de mais leveza, ordem, acolhimento ou fluidez, mas não quer reformar agora. É um olhar direcionado para o que já existe, com orientações práticas para melhorar a sensação da casa no dia a dia.",
-    items: [
-      "mais leveza e ordem para os ambientes",
-      "ajustes possíveis sem grandes mudanças estruturais",
-      "clareza para começar sem se perder no excesso",
+      "A Consultoria Essencial é para quem sente que o ambiente precisa de mais leveza, ordem, acolhimento ou fluidez, mas não quer reformar agora.",
+    paragraphs: [
+      "A Consultoria Essencial é para quem sente que o ambiente precisa de mais leveza, ordem, acolhimento ou fluidez, mas não quer reformar agora.",
+      "É um olhar direcionado para o que já existe, com orientações práticas para reorganizar a casa, melhorar a sensação dos ambientes e trazer mais harmonia para o dia a dia.",
+      "Ideal para quem deseja começar com clareza, sem grandes mudanças estruturais.",
     ],
-    ideal:
-      "Ideal para quem deseja começar com clareza e transformar a casa de forma simples, sensível e possível.",
+    items: [],
+    ideal: "",
     cta: "Quero começar pela Consultoria Essencial",
     featured: true,
   },
