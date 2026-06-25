@@ -38,7 +38,7 @@ export default function ArquiteturaTerapeuticaPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             eyebrow="Serviços"
-            title="Escolha o nível de transformação para o seu momento"
+            title="Escolha a transformação para o seu momento"
             subtitle="Da Consultoria Essencial ao Projeto Integral, cada caminho organiza prioridades e cria uma atmosfera coerente com quem habita o espaço."
           />
           <div className="mt-12 grid gap-5 lg:grid-cols-3">
