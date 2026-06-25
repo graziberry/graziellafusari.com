@@ -1,10 +1,35 @@
 "use client";
 
-import { ChevronDown, Flower2, MessageCircle } from "lucide-react";
+import { ChevronDown, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
 import { navLinks, serviceNavLinks } from "@/lib/site-content";
+
+function SeedOfLifeIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="21"
+      height="21"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="4.2" />
+      <circle cx="12" cy="7.8" r="4.2" />
+      <circle cx="15.64" cy="9.9" r="4.2" />
+      <circle cx="15.64" cy="14.1" r="4.2" />
+      <circle cx="12" cy="16.2" r="4.2" />
+      <circle cx="8.36" cy="14.1" r="4.2" />
+      <circle cx="8.36" cy="9.9" r="4.2" />
+    </svg>
+  );
+}
 
 export function SiteHeader() {
   const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
@@ -39,7 +64,7 @@ export function SiteHeader() {
       <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 md:px-8">
         <Link href="/" className="flex min-w-0 items-center gap-3" aria-label="Graziella Fusari - início">
           <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-terracotta text-surface shadow-soft">
-            <Flower2 size={21} strokeWidth={1.8} />
+            <SeedOfLifeIcon />
           </span>
           <span className="min-w-0 leading-none">
             <span className="block truncate font-heading text-[1.7rem] font-semibold leading-[0.9] text-brown">
