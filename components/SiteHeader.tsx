@@ -10,23 +10,23 @@ function SeedOfLifeIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="21"
-      height="21"
+      width="28"
+      height="28"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.4"
+      strokeWidth="1.7"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
     >
-      <circle cx="12" cy="12" r="4.2" />
-      <circle cx="12" cy="7.8" r="4.2" />
-      <circle cx="15.64" cy="9.9" r="4.2" />
-      <circle cx="15.64" cy="14.1" r="4.2" />
-      <circle cx="12" cy="16.2" r="4.2" />
-      <circle cx="8.36" cy="14.1" r="4.2" />
-      <circle cx="8.36" cy="9.9" r="4.2" />
+      <circle cx="12" cy="12" r="5" />
+      <circle cx="12" cy="7" r="5" />
+      <circle cx="16.33" cy="9.5" r="5" />
+      <circle cx="16.33" cy="14.5" r="5" />
+      <circle cx="12" cy="17" r="5" />
+      <circle cx="7.67" cy="14.5" r="5" />
+      <circle cx="7.67" cy="9.5" r="5" />
     </svg>
   );
 }
