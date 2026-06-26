@@ -207,7 +207,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             eyebrow="Uma abordagem integrada"
-            title="O trabalho de Graziella Fusari se organiza em três pilares complementares"
+            title="O trabalho é organizado em três pilares complementares"
           />
           <div className="mt-12 grid gap-5 lg:grid-cols-[1.35fr_0.85fr_0.85fr]">
             {homePillars.map((pillar) => (

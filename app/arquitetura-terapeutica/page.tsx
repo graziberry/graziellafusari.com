@@ -45,7 +45,7 @@ export default function ArquiteturaTerapeuticaPage() {
             {architectureServices.map((service) => (
               <article
                 key={service.title}
-                className={`rounded-card border p-7 shadow-soft ${
+                className={`flex h-full flex-col rounded-card border p-7 shadow-soft ${
                   service.featured ? "border-terracotta bg-surface lg:scale-[1.02]" : "border-line bg-surface/85"
                 }`}
               >
@@ -71,21 +71,23 @@ export default function ArquiteturaTerapeuticaPage() {
                     {service.ideal}
                   </p>
                 ) : null}
-                <WhatsAppLink
-                  messageKey="architecture"
-                  eventNames={["whatsapp_click", "service_cta_click"]}
-                  tracking={{
-                    page_path: "/arquitetura-terapeutica",
-                    service_name: service.title,
-                    cta_label: service.cta,
-                  }}
-                  aria-label={service.cta}
-                  className="cta-on-dark mt-6 inline-flex max-w-full items-center justify-center gap-2 rounded-full bg-brown px-5 py-3 text-center text-[0.68rem] font-bold uppercase leading-5 tracking-[0.12em] text-surface transition hover:bg-terracotta"
-                  style={{ color: "#fffdf8" }}
-                >
-                  <MessageCircle size={15} />
-                  {service.cta}
-                </WhatsAppLink>
+                <div className="mt-auto pt-8">
+                  <WhatsAppLink
+                    messageKey="architecture"
+                    eventNames={["whatsapp_click", "service_cta_click"]}
+                    tracking={{
+                      page_path: "/arquitetura-terapeutica",
+                      service_name: service.title,
+                      cta_label: service.cta,
+                    }}
+                    aria-label={service.cta}
+                    className="cta-on-dark inline-flex max-w-full items-center justify-center gap-2 rounded-full bg-brown px-5 py-3 text-center text-[0.68rem] font-bold uppercase leading-5 tracking-[0.12em] text-surface transition hover:bg-terracotta"
+                    style={{ color: "#fffdf8" }}
+                  >
+                    <MessageCircle size={15} />
+                    {service.cta}
+                  </WhatsAppLink>
+                </div>
               </article>
             ))}
           </div>
