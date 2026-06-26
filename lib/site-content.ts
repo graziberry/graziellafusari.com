@@ -310,14 +310,15 @@ export const architectureServices: Array<{
     icon: Home,
     title: "Projeto Integral",
     description:
-      "Para quem está em um momento de transformação maior: reforma, mudança de imóvel, construção, criação de um novo ambiente ou reorganização completa da casa.",
-    items: [
-      "casa pensada com profundidade desde as primeiras decisões",
-      "funcionalidade, estética, energia e sensorialidade juntas",
-      "transformação maior com olhar arquitetônico e terapêutico",
+      "Para quem vai reformar, construir ou criar um espaço desde o início.",
+    paragraphs: [
+      "Para quem vai reformar, construir ou criar um espaço desde o início.",
+      "O Projeto Integrado é indicado quando a transformação da casa envolve decisões maiores, como reforma, construção, nova distribuição dos ambientes, materiais, marcenaria, iluminação ou concepção completa de um espaço.",
+      "Nesse serviço, a arquitetura terapêutica entra desde as primeiras escolhas, unindo funcionalidade, estética, energia, sensorialidade e o modo como a pessoa deseja viver.",
+      "É o caminho mais completo para quem quer que o espaço seja pensado com profundidade desde a base.",
     ],
-    ideal:
-      "Ideal para quem quer criar um espaço alinhado ao modo como deseja viver agora e nos próximos anos.",
+    items: [],
+    ideal: "",
     cta: "Quero falar sobre um projeto integral",
   },
 ];
