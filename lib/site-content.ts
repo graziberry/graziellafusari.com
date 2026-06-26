@@ -282,11 +282,11 @@ export const architectureServices: Array<{
     icon: Leaf,
     title: "Consultoria Essencial",
     description:
-      "A Consultoria Essencial é para quem sente que o ambiente precisa de mais leveza, ordem, acolhimento ou fluidez, mas não quer reformar agora.",
+      "Para quem sente que a casa precisa de mais leveza, ordem e harmonia, mas não quer entrar em obra nem fazer grandes mudanças.",
     paragraphs: [
-      "A Consultoria Essencial é para quem sente que o ambiente precisa de mais leveza, ordem, acolhimento ou fluidez, mas não quer reformar agora.",
-      "É um olhar direcionado para o que já existe, com orientações práticas para reorganizar a casa, melhorar a sensação dos ambientes e trazer mais harmonia para o dia a dia.",
-      "Ideal para quem deseja começar com clareza, sem grandes mudanças estruturais.",
+      "Para quem sente que a casa precisa de mais leveza, ordem e harmonia, mas não quer entrar em obra nem fazer grandes mudanças.",
+      "A Consultoria Essencial traz um olhar terapêutico para o que já existe, ajudando a perceber o que pode ser ajustado para que o ambiente fique mais acolhedor, fluido e alinhado com o momento de vida da pessoa.",
+      "É uma forma de começar a transformação da casa com clareza, sensibilidade e mudanças possíveis.",
     ],
     items: [],
     ideal: "",
