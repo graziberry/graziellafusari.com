@@ -297,13 +297,13 @@ export const architectureServices: Array<{
     icon: Palette,
     title: "Consultoria Completa",
     description:
-      "Indicada quando a casa pede mais do que pequenos ajustes. O olhar se aprofunda na atmosfera do espaço, na beleza, na funcionalidade, na sensação dos ambientes e na identidade da pessoa que vive ali.",
-    items: [
-      "transformação estética e sensorial com mais intenção",
-      "ambientes mais bonitos, funcionais e acolhedores",
-      "direção mais profunda para a energia e o uso da casa",
+      "A Consultoria Completa engloba tudo o que existe na Consultoria Essencial, mas acrescenta a parte de design de interiores.",
+    paragraphs: [
+      "A Consultoria Completa engloba tudo o que existe na Consultoria Essencial, mas acrescenta a parte de design de interiores.",
+      "Ela é indicada para quem quer transformar o ambiente com mais profundidade estética e funcional, mas sem reforma.",
     ],
-    ideal: "Ideal para quem quer transformar o ambiente com profundidade, mas ainda não precisa de um projeto completo.",
+    items: [],
+    ideal: "",
     cta: "Quero transformar meu ambiente com mais profundidade",
   },
   {
