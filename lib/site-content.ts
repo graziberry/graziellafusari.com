@@ -313,7 +313,7 @@ export const architectureServices: Array<{
       "Para quem vai reformar, construir ou criar um espaço desde o início.",
     paragraphs: [
       "Para quem vai reformar, construir ou criar um espaço desde o início.",
-      "O Projeto Integrado é indicado quando a transformação da casa envolve decisões maiores, como reforma, construção, nova distribuição dos ambientes, materiais, marcenaria, iluminação ou concepção completa de um espaço.",
+      "O Projeto Integral é indicado quando a transformação da casa envolve decisões maiores, como reforma, construção, nova distribuição dos ambientes, materiais, marcenaria, iluminação ou concepção completa de um espaço.",
       "Nesse serviço, a arquitetura terapêutica entra desde as primeiras escolhas, unindo funcionalidade, estética, energia, sensorialidade e o modo como a pessoa deseja viver.",
       "É o caminho mais completo para quem quer que o espaço seja pensado com profundidade desde a base.",
     ],

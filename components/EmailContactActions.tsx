@@ -23,7 +23,7 @@ export function EmailContactActions({ email, pagePath, extraEventNames = [] }: E
   function trackEmailClick() {
     const properties = {
       page_path: pagePath,
-      cta_label: "Enviar mensagem por email",
+      cta_label: "Enviar mensagem por e-mail",
       destination: mailtoHref,
     };
 
@@ -40,7 +40,7 @@ export function EmailContactActions({ email, pagePath, extraEventNames = [] }: E
           className="inline-flex items-center justify-center gap-2 rounded-full border border-line px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-brown transition hover:border-terracotta hover:text-terracotta"
         >
           <Mail size={16} />
-          Enviar mensagem por email
+          Enviar mensagem por e-mail
         </a>
         <button
           type="button"
@@ -48,7 +48,7 @@ export function EmailContactActions({ email, pagePath, extraEventNames = [] }: E
           className="inline-flex items-center justify-center gap-2 rounded-full border border-line px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-brown transition hover:border-terracotta hover:text-terracotta"
         >
           {copied ? <Check size={16} /> : <Copy size={16} />}
-          {copied ? "Email copiado" : "Copiar email"}
+          {copied ? "E-mail copiado" : "Copiar e-mail"}
         </button>
       </div>
       <p className="flex items-center gap-2 text-sm font-semibold leading-6 text-light-brown">

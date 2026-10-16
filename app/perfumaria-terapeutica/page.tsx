@@ -20,7 +20,7 @@ export const metadata: Metadata = createPageMetadata({
 
 const supportMoments = [
   {
-    title: "Autocuidado e amor próprio",
+    title: "Autocuidado e amor-próprio",
     text: "Pode apoiar pequenos rituais de presença, acolhimento e reconexão com o próprio tempo.",
   },
   {
@@ -113,7 +113,7 @@ export default function PerfumariaTerapeuticaPage() {
               ajudam a sustentar.
             </p>
             <p>
-              O olfato é uma porta antiga. Antes mesmo da razão compreender, o cheiro toca lembranças, muda atmosferas e
+              O olfato é uma porta antiga. Antes mesmo de a razão compreender, o cheiro toca lembranças, muda atmosferas e
               cria pequenos rituais de presença no dia a dia.
             </p>
             <p>
@@ -127,7 +127,7 @@ export default function PerfumariaTerapeuticaPage() {
       <section className="bg-surface py-18 md:py-24">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
-            eyebrow="Para que pode apoiar"
+            eyebrow="Como pode ajudar"
             title="Para harmonizar a relação entre corpo, emoção e ambiente"
             subtitle="A perfumaria natural ajuda a criar atmosfera, favorece presença, convida ao acolhimento e sustenta uma intenção para o espaço."
           />
