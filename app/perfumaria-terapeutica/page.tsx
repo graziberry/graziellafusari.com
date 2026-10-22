@@ -8,12 +8,12 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { perfumeryApplications } from "@/lib/site-content";
 import { canonicalRoutes, createBreadcrumbJsonLd, createPageMetadata, createServiceJsonLd } from "@/lib/seo";
 
-const pageTitle = "Perfumaria Terapêutica";
+const pageTitle = "Perfumaria Natural";
 const pageDescription =
-  "Perfumaria terapêutica natural com óleos essenciais, tinturas botânicas e matérias-primas naturais para criar atmosferas sensoriais e olfativas.";
+  "Perfumaria Natural com óleos essenciais, tinturas botânicas e matérias-primas naturais: criações olfativas independentes para a pessoa e para os ambientes.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Perfumaria Terapêutica",
+  title: "Perfumaria Natural",
   description: pageDescription,
   path: canonicalRoutes.perfumery,
 });
@@ -57,14 +57,14 @@ export default function PerfumariaTerapeuticaPage() {
           }),
           createBreadcrumbJsonLd([
             { name: "Início", path: canonicalRoutes.home },
-            { name: "Perfumaria Terapêutica", path: canonicalRoutes.perfumery },
+            { name: "Perfumaria Natural", path: canonicalRoutes.perfumery },
           ]),
         ]}
       />
       <PageHero
-        eyebrow="Perfumaria Terapêutica"
-        title="Perfumaria Terapêutica"
-        subtitle="A arte de criar aromas com intenção, presença e escuta."
+        eyebrow="Perfumaria Natural"
+        title="Perfumaria Natural"
+        subtitle="A arte de criar aromas com intenção, presença e escuta. Um serviço independente de criação olfativa para a pessoa e para os ambientes."
       />
 
       <section className="bg-surface py-18 md:py-24">
@@ -103,12 +103,12 @@ export default function PerfumariaTerapeuticaPage() {
           </div>
           <div className="space-y-5 text-sm leading-8 text-light-brown md:text-base">
             <p>
-              A perfumaria terapêutica é a arte de criar aromas com intenção, presença e escuta. Ela vai além de um
+              A perfumaria natural é a arte de criar aromas com intenção, presença e escuta. Ela vai além de um
               perfume bonito: é um encontro entre planta, pessoa, casa e atmosfera.
             </p>
             <p>
               Cada aroma carrega uma linguagem sutil. Algumas plantas acolhem, outras despertam. Algumas trazem chão,
-              outras convidam ao silêncio, à clareza ou ao movimento. Na perfumaria terapêutica, óleos essenciais,
+              outras convidam ao silêncio, à clareza ou ao movimento. Na perfumaria natural, óleos essenciais,
               resinas, flores, madeiras e especiarias são escolhidos pela sensação, pela memória e pela intenção que
               ajudam a sustentar.
             </p>
@@ -117,8 +117,9 @@ export default function PerfumariaTerapeuticaPage() {
               cria pequenos rituais de presença no dia a dia.
             </p>
             <p>
-              Na Arquitetura Terapêutica, a perfumaria entra como uma extensão sensorial do espaço. Assim como luz,
-              cores, objetos e organização comunicam, os aromas também participam da experiência de habitar.
+              A Perfumaria Natural pode ser contratada de forma independente, para uso pessoal ou para criar uma
+              atmosfera olfativa no ambiente. Também pode dialogar com um projeto de Arquitetura Holística quando
+              esse encontro fizer sentido para a pessoa.
             </p>
           </div>
         </div>
@@ -156,9 +157,9 @@ export default function PerfumariaTerapeuticaPage() {
       </section>
 
       <ContactCTA
-        title="Quer levar a perfumaria terapêutica para o seu espaço?"
-        text="A perfumaria terapêutica pode apoiar a criação de atmosferas mais acolhedoras, vivas, protegidas, leves ou expansivas."
-        cta="Falar sobre perfumaria terapêutica"
+        title="Quer levar a perfumaria natural para o seu espaço?"
+        text="A perfumaria natural pode apoiar a criação de atmosferas mais acolhedoras, vivas, protegidas, leves ou expansivas."
+        cta="Falar sobre perfumaria natural"
         page="/perfumaria-terapeutica"
         service="perfumery"
         whatsappMessageKey="perfumery"

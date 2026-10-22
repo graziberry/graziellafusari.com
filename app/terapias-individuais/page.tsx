@@ -9,12 +9,12 @@ import { WhatsAppLink } from "@/components/WhatsAppLink";
 import { therapyResources } from "@/lib/site-content";
 import { canonicalRoutes, createBreadcrumbJsonLd, createPageMetadata, createServiceJsonLd } from "@/lib/seo";
 
-const pageTitle = "Atendimentos Terapêuticos Individuais";
+const pageTitle = "Atendimentos Integrativos";
 const pageDescription =
-  "Atendimentos terapêuticos individuais complementares para escuta, percepção e reorganização energética, sem substituir acompanhamento médico ou psicológico.";
+  "Atendimentos Integrativos individuais de escuta, percepção e cuidado energético, disponíveis de forma independente dos serviços para a casa.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Atendimentos Terapêuticos Individuais",
+  title: "Atendimentos Integrativos",
   description: pageDescription,
   path: canonicalRoutes.therapy,
 });
@@ -31,34 +31,34 @@ export default function TerapiasIndividuaisPage() {
           }),
           createBreadcrumbJsonLd([
             { name: "Início", path: canonicalRoutes.home },
-            { name: "Atendimentos Terapêuticos Individuais", path: canonicalRoutes.therapy },
+            { name: "Atendimentos Integrativos", path: canonicalRoutes.therapy },
           ]),
         ]}
       />
       <PageHero
-        eyebrow="Atendimentos Terapêuticos Individuais"
-        title="Um cuidado complementar para quem habita a casa"
-        subtitle="Alguns processos não estão apenas no ambiente. Eles também pedem escuta, percepção e reorganização interna, sempre como complemento ao cuidado principal com a casa."
+        eyebrow="Atendimentos Integrativos"
+        title="Um espaço de escuta e cuidado para você"
+        subtitle="Atendimentos individuais para o seu momento de vida. Você pode procurar este serviço de forma independente, sem contratar uma consultoria ou um projeto para a casa."
       />
 
       <section className="bg-surface py-18 md:py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-[0.9fr_1.1fr] md:px-8">
           <SectionHeading
-            eyebrow="Complemento do cuidado"
-            title="Um olhar mais profundo para quem habita a casa"
+            eyebrow="Cuidado individual"
+            title="Atenção ao seu ritmo e ao seu processo"
           />
           <div className="space-y-5 text-sm leading-8 text-light-brown md:text-base">
             <p>
-              Os Atendimentos Terapêuticos Individuais complementam o trabalho com a casa quando a transformação
-              pede um olhar mais profundo para a pessoa.
+              Os Atendimentos Integrativos são um serviço independente, voltado à pessoa e às suas necessidades.
+              A escuta inicial ajuda a escolher os recursos adequados ao seu momento.
             </p>
             <p>
               Eles podem apoiar momentos de transição, bloqueios, sobrecargas, padrões repetitivos ou fases em que
               a pessoa sente necessidade de clareza e reorganização.
             </p>
             <p>
-              O foco é ampliar a percepção, favorecer equilíbrio e sustentar mudanças que muitas vezes começam no
-              ambiente, mas também passam pela vida interna de quem o habita.
+              O foco é ampliar a percepção, favorecer equilíbrio e acompanhar processos pessoais de mudança,
+              respeitando o ritmo e as necessidades de cada pessoa.
             </p>
             <p className="rounded-card border border-line bg-cream p-5 font-semibold text-brown">
               Os atendimentos individuais não substituem acompanhamento médico, psicológico ou terapêutico convencional.
@@ -102,7 +102,7 @@ export default function TerapiasIndividuaisPage() {
 
       <ContactCTA
         title="Quer entender se este cuidado faz sentido para o seu momento?"
-        text="A primeira conversa ajuda a compreender se o atendimento terapêutico individual é o melhor caminho agora ou se a Arquitetura Terapêutica deve ser o ponto de partida."
+        text="A primeira conversa é dedicada ao seu momento e às suas necessidades, para compreender como os Atendimentos Integrativos podem acompanhar o seu processo."
         cta="Agendar atendimento individual"
         page="/terapias-individuais"
         service="therapy"

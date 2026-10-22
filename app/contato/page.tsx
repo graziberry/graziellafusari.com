@@ -10,7 +10,7 @@ import { canonicalRoutes, createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Contato",
   description:
-    "Entre em contato pelo WhatsApp ou email para conversar sobre arquitetura terapêutica, perfumaria terapêutica e atendimentos terapêuticos individuais.",
+    "Entre em contato pelo WhatsApp ou e-mail para conversar sobre Arquitetura Holística, Perfumaria Natural e Atendimentos Integrativos.",
   path: canonicalRoutes.contact,
 });
 
@@ -19,8 +19,8 @@ export default function ContatoPage() {
     <PageShell>
       <PageHero
         eyebrow="Contato"
-        title="Vamos olhar para a sua casa com mais intenção?"
-        subtitle="Se você sente que seu espaço precisa de mais equilíbrio, beleza, leveza ou sentido, o primeiro passo pode ser uma conversa."
+        title="Vamos conversar sobre o seu momento?"
+        subtitle="Para cuidar da casa, criar um aroma natural ou iniciar um atendimento individual, o primeiro passo pode ser uma conversa. Cada serviço pode ser contratado de forma independente."
       />
 
       <section className="py-18 md:py-24">
@@ -57,12 +57,12 @@ export default function ContatoPage() {
           </div>
           <div className="space-y-5 text-sm leading-8 text-light-brown md:text-base">
             <p>
-              Conte brevemente o que você está vivendo, o que sente em relação à sua casa e qual tipo de
-              transformação procura.
+              Conte brevemente o que você procura: uma mudança no espaço, uma criação olfativa ou um cuidado
+              individual. A conversa parte da sua necessidade.
             </p>
             <p>
               A partir disso, será possível indicar o caminho mais adequado: Consultoria Essencial, Consultoria
-              Completa, Projeto Integral, Atendimentos Terapêuticos Individuais ou Perfumaria Terapêutica.
+              Completa, Projeto Integral, Atendimentos Integrativos ou Perfumaria Natural.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <WhatsAppLink

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { canonicalRoutes, createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Perfumaria Terapêutica",
+  title: "Perfumaria Natural",
   description:
-    "Perfumaria terapêutica com aromas com intenção, recursos sensoriais e presença para apoiar a relação entre ambiente, emoção e cuidado.",
+    "Perfumaria Natural: criações olfativas independentes para a pessoa e para os ambientes, com matérias-primas naturais e escuta sensível.",
   path: canonicalRoutes.perfumery,
   robots: {
     index: false,

@@ -12,7 +12,7 @@ import { canonicalRoutes, createFaqJsonLd, createPageMetadata } from "@/lib/seo"
 export const metadata: Metadata = createPageMetadata({
   title: "Serviços",
   description:
-    "Consultoria Essencial, Consultoria Completa, Projeto Integral, Perfumaria Terapêutica e Atendimentos Individuais para transformar a relação com a casa.",
+    "Consultoria Essencial, Consultoria Completa, Projeto Integral, Perfumaria Natural e Atendimentos Individuais para transformar a relação com a casa.",
   path: canonicalRoutes.services,
 });
 
@@ -35,28 +35,28 @@ const architecturePaths = [
     title: "Projeto Integral",
     subtitle: "Para quem vai reformar, construir ou criar um espaço desde o início",
     text:
-      "Para reformas, mudanças de imóvel, construções, novos ambientes ou reorganizações completas, com a arquitetura terapêutica presente desde as primeiras decisões.",
+      "Para reformas, mudanças de imóvel, construções, novos ambientes ou reorganizações completas, com a arquitetura holística presente desde as primeiras decisões.",
     cta: "Quero falar sobre um projeto integral",
   },
 ];
 
-const complementaryServices = [
+const independentServices = [
   {
     icon: Flower2,
-    title: "Perfumaria Terapêutica",
+    title: "Perfumaria Natural",
     subtitle: "Para criar presença, memória e atmosfera através dos aromas naturais",
     text:
-      "Aromas naturais podem apoiar sensações de acolhimento, limpeza, vitalidade, repouso, concentração ou renovação. Pode ser um caminho independente ou complementar à Arquitetura Terapêutica.",
+      "Criações com matérias-primas naturais para a pessoa e para os ambientes. A Perfumaria Natural é um serviço independente, que pode ser contratado sem uma consultoria de Arquitetura Holística.",
     cta: "Quero criar uma atmosfera olfativa",
     messageKey: "perfumery" as const,
     service: "perfumery",
   },
   {
     icon: HeartHandshake,
-    title: "Atendimentos Terapêuticos Individuais",
+    title: "Atendimentos Integrativos",
     subtitle: "Para quando o cuidado precisa olhar também para a pessoa",
     text:
-      "Um espaço complementar de escuta, clareza e cuidado energético para fases de mudança, cansaço, bloqueios, excesso mental ou necessidade de reorganização interna.",
+      "Um serviço independente de escuta, clareza e cuidado energético para fases de mudança, cansaço ou necessidade de reorganização interna. Não depende de um trabalho com a casa.",
     cta: "Quero agendar um atendimento individual",
     messageKey: "therapy" as const,
     service: "therapy",
@@ -69,8 +69,8 @@ export default function ServicosPage() {
       <JsonLd data={createFaqJsonLd(faqItems)} />
       <PageHero
         eyebrow="Serviços"
-        title="Três caminhos para transformar a relação com a casa"
-        subtitle="A Arquitetura Terapêutica é o eixo principal do meu trabalho. A partir dela, olho para a casa como um espaço vivo: físico, emocional, energético e sensorial."
+        title="Três serviços para cuidar dos espaços e das pessoas"
+        subtitle="Arquitetura Holística, Perfumaria Natural e Atendimentos Integrativos têm propostas próprias e podem ser contratados de forma independente."
       />
 
       <section className="bg-surface py-16 md:py-22">
@@ -98,9 +98,9 @@ export default function ServicosPage() {
             <Home className="text-terracotta" size={34} />
             <div className="mt-6 grid gap-8 lg:grid-cols-[0.95fr_1.25fr]">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.24em] text-terracotta">Eixo principal</p>
+                <p className="text-xs font-bold uppercase tracking-[0.24em] text-terracotta">Projetos e consultorias</p>
                 <h2 className="mt-4 font-heading text-3xl font-semibold leading-tight text-brown md:text-5xl">
-                  Arquitetura Terapêutica
+                  Arquitetura Holística
                 </h2>
                 <p className="mt-5 font-heading text-2xl leading-tight text-brown">
                   Para casas que pedem mais equilíbrio, beleza, presença e sentido
@@ -108,13 +108,14 @@ export default function ServicosPage() {
               </div>
               <div className="space-y-5 text-sm leading-8 text-light-brown md:text-base">
                 <p>
-                  A Arquitetura Terapêutica é indicada para quem sente que a casa já não acompanha mais sua fase de vida,
+                  A Arquitetura Holística é indicada para quem sente que a casa já não acompanha mais sua fase de vida,
                   seja por excesso, desconforto, sensação de peso, falta de funcionalidade ou desejo de transformar o
                   ambiente com mais intenção.
                 </p>
                 <p>
-                  O trabalho une arquitetura, sensibilidade, energia dos espaços, natureza, aromas e escuta da pessoa que
-                  habita aquele lugar.
+                  O trabalho parte da formação de arquiteta e integra conhecimentos humanos, ambientais e sensoriais.
+                  A harmonização de ambientes participa das modalidades de Arquitetura Holística, junto com as decisões
+                  de layout, conforto, materiais e atmosfera.
                 </p>
                 <p>Você pode começar de forma mais simples ou aprofundar o processo, dependendo do momento da sua casa.</p>
                 <WhatsAppLink
@@ -162,11 +163,11 @@ export default function ServicosPage() {
       <section className="bg-surface py-18 md:py-24">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
-            eyebrow="Caminhos complementares"
-            title="Quando a transformação passa pelo aroma ou pela pessoa"
+            eyebrow="Serviços independentes"
+            title="Perfumaria Natural e Atendimentos Integrativos"
           />
           <div className="mt-12 grid gap-5 lg:grid-cols-2">
-            {complementaryServices.map((service) => (
+            {independentServices.map((service) => (
               <article key={service.title} className="rounded-card border border-line bg-cream p-7 shadow-soft">
                 <service.icon className="text-sage" size={31} />
                 <h3 className="mt-5 font-heading text-2xl font-semibold leading-tight text-brown md:text-3xl">

@@ -21,7 +21,7 @@ export default function SobrePage() {
       <PageHero
         eyebrow="Sobre Graziella"
         title="Uma trajetória entre arquitetura, natureza, energia e aroma"
-        subtitle="Sou arquiteta, perfumista natural e terapeuta de ambientes. Meu trabalho nasce da união entre técnica, sensibilidade, sustentabilidade, antroposofia, energia dos espaços e perfumaria natural."
+        subtitle="Sou arquiteta, com pós-graduação em Gestão Ambiental, perfumista natural e terapeuta de ambientes. Meu trabalho reúne técnica, escuta, sustentabilidade e atenção à experiência humana. A Antroposofia participa da minha filosofia de cuidado."
       />
 
       <section className="bg-surface py-18 md:py-24">
@@ -69,7 +69,7 @@ export default function SobrePage() {
               <SectionHeading
                 eyebrow="Antroposofia"
                 title="Uma visão ampliada do ser humano e dos espaços"
-                subtitle="A antroposofia atravessa minha história pessoal e profissional. Ela inspira uma forma de olhar para o ser humano, a casa, as cores, os ritmos, a matéria, a natureza e os ambientes como dimensões conectadas. Essa influência aparece no meu trabalho como uma camada de percepção, cuidado e respeito pela vida."
+                subtitle="A Antroposofia atravessa minha história pessoal e profissional e participa da minha filosofia de cuidado. Inspira a escuta, o respeito aos ritmos e a atenção à vida, sem ser oferecida como técnica de análise ou de projeto."
               />
             </div>
           </div>
@@ -80,12 +80,12 @@ export default function SobrePage() {
         <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-[0.9fr_1.1fr] md:px-8">
           <SectionHeading
             eyebrow="Como tudo se tornou método"
-            title="Arquitetura Terapêutica nasceu da integração entre técnica e sensibilidade"
+            title="Arquitetura Holística nasceu da integração entre técnica e sensibilidade"
             tone="light"
           />
           <p className="text-sm leading-8 text-surface/75 md:text-base">
-            Ao estudar Feng Shui tradicional, geobiologia, radiestesia, neuroarquitetura, psicologia da arquitetura,
-            biofilia e perfumaria natural, compreendi que todas essas áreas conversam. Cada uma observa uma dimensão da
+            Minha formação de arquiteta dialoga com a Neuroarquitetura, a Psicologia Ambiental, a Biofilia, o Feng Shui,
+            a Geobiologia do Habitat e a harmonização energética. Cada uma contribui para observar uma dimensão da
             experiência de habitar: o corpo, a emoção, a energia, os sentidos, a memória, a funcionalidade e a atmosfera
             do espaço.
           </p>

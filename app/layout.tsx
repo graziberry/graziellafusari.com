@@ -15,12 +15,12 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} | Arquitetura Terapêutica e Ambientes Sensoriais`,
+    default: `${SITE_NAME} | Arquitetura Holística e Ambientes Sensoriais`,
     template: `%s | ${SITE_NAME}`,
   },
   description: DEFAULT_DESCRIPTION,
   openGraph: {
-    title: `${SITE_NAME} | Arquitetura Terapêutica e Ambientes Sensoriais`,
+    title: `${SITE_NAME} | Arquitetura Holística e Ambientes Sensoriais`,
     description: DEFAULT_DESCRIPTION,
     url: SITE_URL,
     siteName: SITE_NAME,
@@ -31,13 +31,13 @@ export const metadata: Metadata = {
         url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: `${SITE_NAME} - Arquitetura terapêutica`,
+        alt: `${SITE_NAME} - Arquitetura Holística`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} | Arquitetura Terapêutica e Ambientes Sensoriais`,
+    title: `${SITE_NAME} | Arquitetura Holística e Ambientes Sensoriais`,
     description: DEFAULT_DESCRIPTION,
     images: [DEFAULT_OG_IMAGE],
   },

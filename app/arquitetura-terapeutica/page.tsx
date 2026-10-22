@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Check, MessageCircle } from "lucide-react";
 import { JsonLd } from "@/components/JsonLd";
 import { PageShell } from "@/components/PageShell";
+import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
 import { architectureServices } from "@/lib/site-content";
 import { canonicalRoutes, createBreadcrumbJsonLd, createPageMetadata, createServiceJsonLd } from "@/lib/seo";
 
-const pageTitle = "Arquitetura Terapêutica";
+const pageTitle = "Arquitetura Holística";
 const pageDescription =
-  "Consultoria de arquitetura terapêutica para transformar ambientes com função, beleza, energia, natureza, aroma e bem-estar.";
+  "Arquitetura Holística: projetos e consultorias que integram conhecimentos arquitetônicos, humanos, ambientais e sensoriais, com harmonização incluída nas modalidades.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Arquitetura Terapêutica",
+  title: "Arquitetura Holística",
   description: pageDescription,
   path: canonicalRoutes.architecture,
 });
@@ -29,17 +31,57 @@ export default function ArquiteturaTerapeuticaPage() {
           }),
           createBreadcrumbJsonLd([
             { name: "Início", path: canonicalRoutes.home },
-            { name: "Arquitetura Terapêutica", path: canonicalRoutes.architecture },
+            { name: "Arquitetura Holística", path: canonicalRoutes.architecture },
           ]),
         ]}
       />
 
+      <PageHero
+        eyebrow="Arquitetura Holística"
+        title="Um olhar completo para o espaço e para quem o habita"
+        subtitle="A formação de arquiteta é a base de uma análise que integra funcionalidade, conforto, percepção, natureza, energia e experiência sensorial. Cada decisão parte das necessidades da pessoa e das condições reais do ambiente."
+      />
       <section className="bg-surface py-18 md:py-24">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
-            eyebrow="Serviços"
+            eyebrow="Da análise às decisões"
+            title="Conhecimentos que orientam o projeto"
+            subtitle="O olhar holístico reúne diferentes dimensões do habitar para definir prioridades, soluções e escolhas coerentes com a rotina."
+          />
+          <dl className="mt-10 divide-y divide-line">
+            {[
+              ["Formação em Arquitetura", "Sustenta a leitura do espaço e as decisões de layout, circulação, ergonomia, iluminação, materiais e funcionalidade. As propostas consideram o uso dos ambientes e a viabilidade de cada intervenção."],
+              ["Neuroarquitetura", "Informa a observação dos estímulos do ambiente e de como são percebidos. Ajuda a orientar escolhas de luz, cores, texturas, acústica e organização conforme as necessidades de descanso, foco e conforto."],
+              ["Psicologia Ambiental", "Traz atenção aos hábitos, às memórias, à identidade, à privacidade e à relação afetiva com a casa. Essa escuta orienta a distribuição dos espaços e as escolhas que favorecem pertencimento e autonomia."],
+              ["Biofilia e Gestão Ambiental", "Orientam a conexão com a natureza e o cuidado com o ambiente construído: luz natural, ventilação, vegetação, materiais e uso consciente dos recursos, conforme as condições do local."],
+              ["Feng Shui e Geobiologia do Habitat", "O Feng Shui acrescenta uma leitura dos fluxos, da organização e da disposição dos elementos. A Geobiologia do Habitat amplia a observação da relação entre o local, o ambiente construído e quem o habita. Essas leituras dialogam com os critérios arquitetônicos, humanos e ambientais nas decisões de projeto."],
+              ["Dimensão energética e sensorial", "A harmonização energética faz parte da análise e das propostas de Arquitetura Holística, junto com o cuidado com a luz, os materiais, as cores e a atmosfera. Sua aplicação acompanha as necessidades e o alcance de cada modalidade."],
+            ].map(([title, text]) => (
+              <div key={title} className="grid gap-3 py-7 md:grid-cols-[0.4fr_0.6fr] md:gap-10">
+                <dt className="font-heading text-2xl font-semibold text-brown">{title}</dt>
+                <dd className="text-sm leading-8 text-light-brown md:text-base">{text}</dd>
+              </div>
+            ))}
+          </dl>
+          <div className="mt-8 border-l-2 border-terracotta pl-6">
+            <h2 className="font-heading text-2xl font-semibold text-brown">Antroposofia na filosofia de cuidado</h2>
+            <p className="mt-3 max-w-4xl text-sm leading-8 text-light-brown md:text-base">
+              A Antroposofia participa da filosofia de cuidado: inspira a escuta, o respeito aos ritmos e a atenção à
+              vida de quem habita. Essa referência filosófica acompanha a relação com a pessoa e com o espaço, sem
+              ser oferecida como técnica de projeto.
+            </p>
+          </div>
+          <Link href="/processo/" className="mt-8 inline-flex min-h-11 items-center text-sm font-semibold text-terracotta underline underline-offset-4">
+            Conhecer as etapas do trabalho
+          </Link>
+        </div>
+      </section>
+      <section className="py-18 md:py-24">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <SectionHeading
+            eyebrow="Modalidades de Arquitetura Holística"
             title="Escolha a transformação para o seu momento"
-            subtitle="Da Consultoria Essencial ao Projeto Integral, cada caminho organiza prioridades e cria uma atmosfera coerente com quem habita o espaço."
+            subtitle="Consultoria Essencial, Consultoria Completa e Projeto Integral integram a harmonização de ambientes ao cuidado arquitetônico, humano, ambiental e sensorial, conforme o alcance de cada modalidade."
           />
           <div className="mt-12 grid gap-5 lg:grid-cols-3">
             {architectureServices.map((service) => (

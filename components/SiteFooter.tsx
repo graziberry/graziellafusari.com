@@ -9,7 +9,7 @@ export function SiteFooter() {
         <div>
           <p className="font-heading text-3xl font-semibold text-brown">Graziella Fusari</p>
           <p className="mt-3 max-w-xl text-sm leading-7 text-light-brown">
-            Arquitetura terapêutica, harmonização de ambientes, terapias integrativas e perfumaria terapêutica.
+            Arquitetura Holística, Perfumaria Natural e Atendimentos Integrativos.
           </p>
           <p className="mt-2 max-w-xl text-sm leading-7 text-light-brown">{businessData.serviceArea}.</p>
         </div>

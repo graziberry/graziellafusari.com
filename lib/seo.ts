@@ -5,7 +5,7 @@ export const SITE_NAME = "Graziella Fusari";
 export const SITE_LOCALE = "pt_BR";
 export const SITE_LANGUAGE = "pt-BR";
 export const DEFAULT_DESCRIPTION =
-  "Arquitetura Terapêutica e Ambientes Sensoriais por Graziella Fusari: consultorias que integram arquitetura, energia, natureza, antroposofia e perfumaria natural para transformar casas.";
+  "Arquitetura Holística, Perfumaria Natural e Atendimentos Integrativos por Graziella Fusari: três serviços independentes para cuidar dos espaços e das pessoas.";
 export const DEFAULT_OG_IMAGE = "/og-graziella-fusari.png";
 
 export const canonicalRoutes = {
@@ -73,7 +73,7 @@ export function createPageMetadata({ title, description, path, robots }: Metadat
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: `${SITE_NAME} - Arquitetura terapêutica`,
+          alt: `${SITE_NAME} - Arquitetura Holística`,
         },
       ],
     },

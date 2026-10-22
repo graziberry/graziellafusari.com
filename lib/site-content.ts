@@ -24,8 +24,9 @@ export const contactEmail = "contato@graziellafusari.com";
 
 export const navLinks = [
   { href: "/", label: "Início" },
-  { href: "/processo", label: "Método" },
-  { href: "/servicos", label: "Serviços" },
+  { href: serviceRoutes.architecture, label: "Arquitetura Holística" },
+  { href: serviceRoutes.perfumery, label: "Perfumaria Natural" },
+  { href: serviceRoutes.therapy, label: "Atendimentos Integrativos" },
   { href: "/sobre", label: "Sobre" },
   { href: "/contato", label: "Contato" },
 ];
@@ -33,47 +34,47 @@ export const navLinks = [
 export const serviceNavLinks = [
   {
     href: serviceRoutes.architecture,
-    label: "Arquitetura Terapêutica",
+    label: "Arquitetura Holística",
     microcopy: "Ambientes que cuidam",
   },
   {
     href: serviceRoutes.perfumery,
-    label: "Perfumaria Terapêutica",
+    label: "Perfumaria Natural",
     microcopy: "Aromas e rituais sensoriais",
   },
   {
     href: serviceRoutes.therapy,
-    label: "Atendimentos Terapêuticos Individuais",
+    label: "Atendimentos Integrativos",
     microcopy: "Cuidado energético e pessoal",
   },
 ];
 
 export const serviceOverviewCards = [
   {
-    title: "Arquitetura Terapêutica",
-    summary: "O eixo principal para transformar ambientes em espaços de acolhimento, coerência e presença.",
+    title: "Arquitetura Holística",
+    summary: "Projetos e consultorias que unem conhecimentos arquitetônicos, humanos, ambientais e sensoriais.",
     description:
       "Um olhar profundo para a casa como espaço físico, emocional, energético e sensorial. A consultoria observa função, fluxo, organização, luz, memórias, atmosfera e relação emocional para criar direcionamentos práticos.",
-    cta: "Conhecer Arquitetura Terapêutica",
+    cta: "Conhecer Arquitetura Holística",
     href: serviceRoutes.architecture,
     featured: true,
     icon: Home,
   },
   {
-    title: "Perfumaria Terapêutica",
+    title: "Perfumaria Natural",
     summary: "Aromas naturais e composições olfativas conectadas à pessoa, à casa e à intenção do espaço.",
     description:
-      "A criação olfativa entra como aprofundamento sensorial do cuidado. Óleos essenciais, tinturas botânicas e matérias-primas naturais ajudam a criar atmosfera, memória e presença.",
-    cta: "Conhecer Perfumaria Terapêutica",
+      "Um serviço independente de criação olfativa com óleos essenciais, tinturas botânicas e matérias-primas naturais, para a pessoa ou para os ambientes.",
+    cta: "Conhecer Perfumaria Natural",
     href: serviceRoutes.perfumery,
     featured: false,
     icon: Flower2,
   },
   {
-    title: "Atendimentos Terapêuticos Individuais",
-    summary: "Recursos integrativos complementares para processos pessoais de escuta e reorganização energética.",
+    title: "Atendimentos Integrativos",
+    summary: "Sessões individuais de escuta e cuidado, disponíveis independentemente de um projeto para a casa.",
     description:
-      "Sessões voltadas à pessoa quando o processo pede um olhar além do ambiente. Não substituem acompanhamento médico ou psicológico; são um espaço complementar de percepção, clareza e cuidado.",
+      "Sessões individuais para processos pessoais de escuta, clareza e reorganização interna. Podem ser contratadas de forma independente e não substituem acompanhamento médico ou psicológico.",
     cta: "Conhecer Atendimentos",
     href: serviceRoutes.therapy,
     featured: false,
@@ -95,27 +96,27 @@ export const methodLayers: Array<{ icon: LucideIcon; title: string; text: string
   {
     icon: Armchair,
     title: "Arquitetura e funcionalidade",
-    text: "Fluxos, layout, uso dos ambientes, ergonomia, luz, circulação, organização e soluções práticas.",
+    text: "A formação de arquiteta orienta layout, ergonomia, luz, circulação, materiais e soluções adequadas ao uso e à rotina.",
   },
   {
     icon: Sparkles,
     title: "Energia do ambiente",
-    text: "Feng Shui tradicional, geobiologia, radiestesia e harmonização energética como recursos de leitura sutil do espaço.",
+    text: "Feng Shui, Geobiologia do Habitat e harmonização energética integram a leitura do espaço às decisões arquitetônicas, ambientais e sensoriais.",
   },
   {
     icon: Leaf,
     title: "Natureza e sustentabilidade",
-    text: "Biofilia, materiais naturais, plantas, ciclos vivos e consciência ambiental como parte da forma de habitar.",
+    text: "Biofilia e Gestão Ambiental orientam a conexão com a natureza, a escolha de materiais e o cuidado com os recursos e o ambiente construído.",
   },
   {
     icon: Brain,
     title: "Corpo, emoção e percepção",
-    text: "Neuroarquitetura e psicologia da arquitetura para observar como os espaços afetam descanso, foco, humor, rotina e presença.",
+    text: "Neuroarquitetura e Psicologia Ambiental informam escolhas de luz, cores, organização, privacidade e conforto a partir da percepção e dos hábitos de quem habita.",
   },
   {
     icon: SunMedium,
-    title: "Antroposofia",
-    text: "Uma visão ampliada do ser humano, das cores, dos ritmos, da natureza e dos espaços que acolhem a vida.",
+    title: "Filosofia de cuidado",
+    text: "A Antroposofia inspira a escuta, o respeito aos ritmos e o cuidado com a vida. Participa da filosofia do trabalho, sem ser apresentada como técnica de projeto.",
   },
   {
     icon: Flower2,
@@ -145,29 +146,26 @@ export const aboutFoundations = [
   "Pós-graduação em Gestão Ambiental",
   "Perfumaria natural",
   "Feng Shui tradicional",
-  "Geobiologia e radiestesia",
+  "Geobiologia do Habitat",
   "Biofilia e sustentabilidade",
-  "Neuroarquitetura e psicologia da arquitetura",
-  "Antroposofia",
-  "Harmonização energética dos ambientes",
+  "Neuroarquitetura e Psicologia Ambiental",
+  "Antroposofia como filosofia de cuidado",
   "Atendimentos energéticos complementares",
 ];
 
 export const architectureFoundations = [
   "Arquitetura, função e layout",
   "Feng Shui tradicional",
-  "Geobiologia e radiestesia",
+  "Geobiologia do Habitat",
   "Biofilia e sustentabilidade",
-  "Neuroarquitetura e psicologia da arquitetura",
-  "Antroposofia",
+  "Neuroarquitetura e Psicologia Ambiental",
   "Perfumaria natural",
-  "Harmonização energética",
 ];
 
 export const serviceDecisionCards = [
   {
     title: "Quero mudar minha casa",
-    destination: "Arquitetura Terapêutica",
+    destination: "Arquitetura Holística",
     text: "Para reorganizar, harmonizar e transformar ambientes, com ou sem reforma.",
     href: serviceRoutes.architecture,
   },
@@ -179,13 +177,13 @@ export const serviceDecisionCards = [
   },
   {
     title: "Quero um aroma personalizado ou uma atmosfera olfativa",
-    destination: "Perfumaria Terapêutica",
+    destination: "Perfumaria Natural",
     text: "Para criar uma composição natural conectada à pessoa, à casa e à intenção do espaço.",
     href: serviceRoutes.perfumery,
   },
   {
     title: "Sinto que a questão está mais em mim do que na casa",
-    destination: "Atendimentos Terapêuticos Individuais",
+    destination: "Atendimentos Integrativos",
     text: "Para processos pessoais de escuta, clareza e reorganização interna.",
     href: serviceRoutes.therapy,
   },
@@ -214,12 +212,12 @@ export const serviceComparisonCards = [
     focus: "transformação profunda com olhar arquitetônico, terapêutico e sensorial.",
   },
   {
-    title: "Perfumaria Terapêutica",
+    title: "Perfumaria Natural",
     forWhom: "Para quem quer criar uma atmosfera olfativa natural e personalizada.",
     focus: "aroma, presença, memória e intenção no espaço.",
   },
   {
-    title: "Atendimento Individual",
+    title: "Atendimentos Integrativos",
     forWhom: "Para quem sente que o cuidado precisa começar pela pessoa.",
     focus: "clareza, reorganização interna e cuidado energético complementar.",
   },
@@ -227,9 +225,9 @@ export const serviceComparisonCards = [
 
 export const faqItems = [
   {
-    question: "Arquitetura Terapêutica é a mesma coisa que decoração?",
+    question: "Arquitetura Holística é a mesma coisa que decoração?",
     answer:
-      "Não. A decoração pode fazer parte do processo, mas a Arquitetura Terapêutica vai além da estética. Ela observa função, fluxo, organização, luz, energia, memória, sensação e relação emocional com a casa.",
+      "Não. A decoração pode fazer parte do processo, mas a Arquitetura Holística vai além da estética. Ela observa função, fluxo, organização, luz, energia, memória, sensação e relação emocional com a casa.",
   },
   {
     question: "Preciso reformar minha casa?",
@@ -244,7 +242,7 @@ export const faqItems = [
   {
     question: "Você usa Feng Shui?",
     answer:
-      "Sim. O Feng Shui tradicional pode fazer parte da leitura do ambiente, junto com arquitetura, geobiologia, radiestesia, biofilia, neuroarquitetura, psicologia da arquitetura, antroposofia e perfumaria natural.",
+      "Sim. O Feng Shui participa de uma análise que também considera a formação de arquiteta, a Neuroarquitetura, a Psicologia Ambiental, a Biofilia, a Geobiologia do Habitat e a harmonização energética. A Antroposofia participa da filosofia de cuidado.",
   },
   {
     question: "O que é leitura energética do ambiente?",
@@ -288,7 +286,7 @@ export const architectureServices: Array<{
       "A Consultoria Essencial traz um olhar terapêutico para o que já existe, ajudando a perceber o que pode ser ajustado para que o ambiente fique mais acolhedor, fluido e alinhado com o momento de vida da pessoa.",
       "É uma forma de começar a transformação da casa com clareza, sensibilidade e mudanças possíveis.",
     ],
-    items: [],
+    items: ["Ajustes de uso, circulação e organização", "Orientações ambientais e sensoriais", "Harmonização integrada às recomendações"],
     ideal: "",
     cta: "Quero começar pela Consultoria Essencial",
     featured: true,
@@ -302,7 +300,7 @@ export const architectureServices: Array<{
       "A Consultoria Completa engloba tudo o que existe na Consultoria Essencial, mas acrescenta a parte de design de interiores.",
       "Ela é indicada para quem quer transformar o ambiente com mais profundidade estética e funcional, mas sem reforma.",
     ],
-    items: [],
+    items: ["Tudo o que faz parte da Consultoria Essencial", "Layout, decoração, cores e materiais", "Harmonização integrada à composição dos ambientes"],
     ideal: "",
     cta: "Quero transformar meu ambiente com mais profundidade",
   },
@@ -314,10 +312,10 @@ export const architectureServices: Array<{
     paragraphs: [
       "Para quem vai reformar, construir ou criar um espaço desde o início.",
       "O Projeto Integral é indicado quando a transformação da casa envolve decisões maiores, como reforma, construção, nova distribuição dos ambientes, materiais, marcenaria, iluminação ou concepção completa de um espaço.",
-      "Nesse serviço, a arquitetura terapêutica entra desde as primeiras escolhas, unindo funcionalidade, estética, energia, sensorialidade e o modo como a pessoa deseja viver.",
+      "Nesse serviço, a arquitetura holística entra desde as primeiras escolhas, unindo funcionalidade, estética, energia, sensorialidade e o modo como a pessoa deseja viver.",
       "É o caminho mais completo para quem quer que o espaço seja pensado com profundidade desde a base.",
     ],
-    items: [],
+    items: ["Concepção e distribuição dos espaços", "Escolhas de materiais, iluminação e marcenaria", "Harmonização considerada desde as primeiras decisões"],
     ideal: "",
     cta: "Quero falar sobre um projeto integral",
   },
@@ -326,7 +324,7 @@ export const architectureServices: Array<{
 export const homePillars = [
   {
     icon: Home,
-    title: "Arquitetura Terapêutica",
+    title: "Arquitetura Holística",
     text: "Um olhar para a casa como espaço vivo, unindo função, beleza, energia e sensorialidade para tornar os ambientes mais conscientes, acolhedores e coerentes com quem vive ali.",
     href: serviceRoutes.architecture,
     cta: "Conhecer a Consultoria Essencial",
@@ -334,15 +332,15 @@ export const homePillars = [
   },
   {
     icon: Flower2,
-    title: "Perfumaria Terapêutica",
+    title: "Perfumaria Natural",
     text: "A dimensão olfativa do cuidado. Aromas naturais, óleos essenciais e tinturas botânicas criam atmosferas que favorecem presença, acolhimento, memória e intenção no espaço.",
     href: serviceRoutes.perfumery,
     cta: "Conhecer criações olfativas",
   },
   {
     icon: HeartHandshake,
-    title: "Atendimentos Terapêuticos Individuais",
-    text: "Atendimentos complementares para a pessoa, quando o processo pede um olhar para padrões, fases de transição, sobrecargas ou reorganização energética interna.",
+    title: "Atendimentos Integrativos",
+    text: "Um serviço independente de cuidado individual para momentos de transição, sobrecargas e processos pessoais de escuta e reorganização interna.",
     href: serviceRoutes.therapy,
     cta: "Agendar atendimento individual",
   },

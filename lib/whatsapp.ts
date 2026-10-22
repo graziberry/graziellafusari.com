@@ -2,11 +2,11 @@ export const whatsappNumber = "5511976217579";
 
 export const whatsappMessages = {
   homepage:
-    "Olá, Graziella. Vim pelo site e gostaria de agendar uma conversa sobre arquitetura terapêutica.",
+    "Olá, Graziella. Vim pelo site e gostaria de conversar sobre os seus serviços.",
   architecture:
-    "Olá, Graziella. Tenho interesse em uma consultoria de arquitetura terapêutica para minha casa.",
+    "Olá, Graziella. Tenho interesse em uma consultoria de arquitetura holística para minha casa.",
   perfumery:
-    "Olá, Graziella. Vim pelo site e gostaria de saber mais sobre perfumaria terapêutica.",
+    "Olá, Graziella. Vim pelo site e gostaria de saber mais sobre perfumaria natural.",
   therapy: "Olá, Graziella. Gostaria de saber mais sobre os atendimentos individuais.",
 } as const;
 

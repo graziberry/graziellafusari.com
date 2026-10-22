@@ -19,9 +19,9 @@ import {
 import { canonicalRoutes, createFaqJsonLd, createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Graziella Fusari | Arquitetura Terapêutica e Ambientes Sensoriais",
+  title: "Graziella Fusari | Arquitetura Holística e Ambientes Sensoriais",
   description:
-    "Arquitetura Terapêutica e Ambientes Sensoriais por Graziella Fusari: consultorias que integram arquitetura, energia, natureza, antroposofia e perfumaria natural para transformar casas.",
+    "Arquitetura Holística, Perfumaria Natural e Atendimentos Integrativos por Graziella Fusari: três serviços independentes para cuidar dos espaços e das pessoas.",
   path: canonicalRoutes.home,
 });
 
@@ -44,7 +44,7 @@ export default function HomePage() {
         <div className="relative mx-auto flex min-h-[calc(100svh-72px)] max-w-7xl items-center px-5 py-10 md:px-8 md:py-12 lg:py-14">
           <div className="w-full max-w-[calc(100vw-40px)] text-surface drop-shadow-[0_2px_18px_rgba(36,26,21,0.32)] md:max-w-[780px]">
             <p className="max-w-[22rem] text-[0.68rem] font-bold uppercase leading-6 tracking-[0.16em] text-blush md:max-w-[36rem] md:text-xs md:tracking-[0.22em]">
-              Arquitetura Terapêutica e Ambientes Sensoriais
+              Arquitetura Holística e Ambientes Sensoriais
             </p>
             <h1 className="mt-4 max-w-[14.5ch] font-heading text-[2.35rem] font-semibold leading-[0.98] md:text-[3.35rem] lg:text-[3.75rem] xl:text-[4rem]">
               Transforme sua casa em um espaço que cuida de você
@@ -96,7 +96,7 @@ export default function HomePage() {
               todo: sua energia, seus fluxos, suas memórias, sua função e a forma como ele afeta quem mora ali.
             </p>
             <p className="font-semibold text-brown">
-              A Arquitetura Terapêutica olha para a casa como parte ativa da sua experiência de vida.
+              A Arquitetura Holística olha para a casa como parte ativa da sua experiência de vida.
             </p>
           </div>
         </div>
@@ -124,7 +124,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Serviços"
             title="Como posso cuidar do seu espaço e da sua energia"
-            subtitle="Arquitetura Terapêutica é a porta principal. Perfumaria Terapêutica e Atendimentos Terapêuticos Individuais entram como aprofundamentos complementares."
+            subtitle="Arquitetura Holística, Perfumaria Natural e Atendimentos Integrativos são serviços independentes. Você pode escolher cada um de acordo com o seu momento."
           />
           <div className="relative z-0 mt-12">
             <ServiceOverviewCards compact />
@@ -146,8 +146,8 @@ export default function HomePage() {
           <div className="grid gap-10 md:grid-cols-[1.08fr_0.92fr] md:items-start">
             <div>
               <SectionHeading
-                eyebrow="O que é Arquitetura Terapêutica"
-                title="Arquitetura Terapêutica é uma leitura profunda da casa como espaço físico, emocional, energético e sensorial"
+                eyebrow="O que é Arquitetura Holística"
+                title="Arquitetura Holística é uma leitura profunda da casa como espaço físico, emocional, energético e sensorial"
                 subtitle="Não é apenas decoração. É um processo que observa função, fluxo, luz, organização, cores, materiais, memórias, energia do espaço e a relação emocional que a pessoa estabelece com a própria casa."
               />
               <p className="mt-5 text-sm leading-8 text-light-brown md:text-base">
@@ -207,7 +207,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             eyebrow="Uma abordagem integrada"
-            title="O trabalho é organizado em três pilares complementares"
+            title="Três serviços, diferentes formas de cuidar"
           />
           <div className="mt-12 grid gap-5 lg:grid-cols-[1.35fr_0.85fr_0.85fr]">
             {homePillars.map((pillar) => (
@@ -245,11 +245,11 @@ export default function HomePage() {
             <p>
               Minha trajetória une arquitetura, natureza, energia e aroma. Sou arquiteta de formação, com
               pós-graduação em Gestão Ambiental, perfumista natural e estudiosa de caminhos que observam a casa como um
-              organismo vivo: Feng Shui tradicional, geobiologia, radiestesia, biofilia, neuroarquitetura, psicologia da
-              arquitetura e antroposofia.
+              organismo vivo: Neuroarquitetura, Psicologia Ambiental, Biofilia, Feng Shui e Geobiologia do Habitat.
+              A Antroposofia participa da minha filosofia de cuidado.
             </p>
             <p>
-              A Arquitetura Terapêutica nasce dessa integração entre técnica, escuta sensível e cuidado com os
+              A Arquitetura Holística nasce dessa integração entre técnica, escuta sensível e cuidado com os
               ambientes.
             </p>
             <Link

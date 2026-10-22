@@ -10,7 +10,7 @@ import { canonicalRoutes, createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Método",
   description:
-    "Conheça o método de Arquitetura Terapêutica que integra leitura do ambiente, direção sensorial e plano de ação.",
+    "Conheça o método de Arquitetura Holística que integra leitura do ambiente, direção sensorial e plano de ação.",
   path: canonicalRoutes.process,
 });
 
